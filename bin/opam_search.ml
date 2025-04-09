@@ -189,13 +189,21 @@ let run ~packages ~src f =
   if debug then print_s [%sexp (package_infos : (string * string * string) list)];
   match src with
   | `Opam_cache ->
-      let package_infos = Array.of_list package_infos in
+      let package_infos =
+        let seen = Hash_set.create (module String) in
+        package_infos
+        |> List.filter_map ~f:(fun (name, md5, _) ->
+               match Hash_set.strict_add seen md5 with
+               | Error _ -> None
+               | Ok () -> Some (md5, name))
+        |> Array.of_list
+      in
       concurrently (fun i n ->
           let chunk_size = (Array.length package_infos + n - 1) / n in
           let start = chunk_size * i in
           let end_ = min (start + chunk_size) (Array.length package_infos) in
           for i = start to end_ - 1 do
-            let name, md5, _ = package_infos.(i) in
+            let md5, name = package_infos.(i) in
             try
               with_tmpdir (fun tmpdir ->
                   let url =
