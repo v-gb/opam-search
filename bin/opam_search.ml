@@ -1,0 +1,290 @@
+module ZUnix = Unix
+open Core
+module Unix = ZUnix
+
+module Process_res = struct
+  type (_, _) t =
+    | Raise : ('a, 'a) t
+    | Detailed : ('a, ('a, Unix.process_status * Core.Sexp.t) Result.t) t
+end
+
+let with_process_full ?(env = []) ?cwd (type a res) (process_res : (a, res) Process_res.t)
+    argv f : res =
+  let argv =
+    match cwd with
+    | None -> argv
+    | Some cwd ->
+        (* We should probably use spawn in general. *)
+        [ "bash"
+        ; "-c"
+        ; (let env =
+             List.map env ~f:(fun (k, v_opt) ->
+                 match v_opt with
+                 | None -> "unset " ^ Core.Sys.quote k ^ " && "
+                 | Some v ->
+                     "export " ^ Core.Sys.quote k ^ "=" ^ Core.Sys.quote v ^ " && ")
+             |> String.concat
+           in
+           env ^ "cd " ^ Core.Sys.quote cwd ^ " && " ^ Core.Sys.concat_quoted argv)
+        ]
+  in
+  let prog = Option.value (List.hd argv) ~default:"" in
+  let res = ref (Unix.WEXITED 0) in
+  let (fres : a), stderr =
+    Exn.protectx
+      ~finally:(fun channels -> res := Unix.close_process_full channels)
+      (Unix.open_process_args_full prog (Array.of_list argv) (Unix.environment ()))
+      ~f:(fun (stdout, stdin, stderr) ->
+        let res = f (stdout, stdin) in
+        Out_channel.close stdin;
+        In_channel.close stdout;
+        (res, In_channel.input_all stderr))
+  in
+  match !res with
+  | WEXITED 0 -> ( match process_res with Raise -> fres | Detailed -> Ok fres)
+  | _ -> (
+      let explain =
+        match !res with
+        | WEXITED n -> "code " ^ Int.to_string n
+        | WSIGNALED n -> "signal " ^ Int.to_string n
+        | WSTOPPED _ -> assert false
+      in
+      let sexp =
+        [%sexp
+          ("process exited with " ^ explain : string)
+        , (argv : string list)
+        , ~~(stderr : string)]
+      in
+      match process_res with Raise -> raise_s sexp | Detailed -> Error (!res, sexp))
+
+let run_process ?env ?cwd process_res argv =
+  with_process_full ?env ?cwd process_res argv (fun (stdout, stdin) ->
+      Out_channel.close stdin;
+      (* we should use eio or async, as this can deadlock if stderr is big enough *)
+      In_channel.input_all stdout)
+
+let read_file_or_cache fname f =
+  if not (Sys_unix.file_exists_exn fname) then f fname;
+  In_channel.read_all fname
+
+let concurrently f =
+  let n = Domain.recommended_domain_count () in
+  List.init n ~f:(fun i -> Domain.spawn (fun () -> f i n)) |> List.iter ~f:Domain.join
+
+let with_tmpdir f =
+  let tmp_fname = Filename_unix.temp_dir "opam-search" "" in
+  Exn.protect
+    ~finally:(fun () ->
+      if false
+      then print_s [%sexp "left", (tmp_fname : string)]
+      else Sys_unix.command_exn ("rm -rf -- " ^ Sys.quote tmp_fname))
+    ~f:(fun () -> f tmp_fname)
+
+let curl url ~dst =
+  let s =
+    run_process Raise
+      [ "curl"
+      ; "--write-out"
+      ; "%{http_code}"
+      ; "--retry"
+      ; "3"
+      ; "--retry-delay"
+      ; "2"
+      ; "--user-agent"
+      ; "v-gb/search"
+      ; "-L"
+      ; "-o"
+      ; dst
+      ; "--"
+      ; url
+      ]
+  in
+  match Int.of_string s with
+  | 404 -> false
+  | 200 -> true
+  | _ -> failwith ("failed with code " ^ s)
+
+let debug = false
+
+let curl_untar url ~dst_dir =
+  let time_before = Time_ns.now () in
+  curl url ~dst:(dst_dir ^/ "dl.tar.gz")
+  && (match
+        run_process Detailed ~cwd:dst_dir
+          [ "tar"; "--strip-component=1"; "-xf"; "dl.tar.gz" ]
+      with
+     | Ok _ -> true
+     | Error (_, s) ->
+         (* Apparently this happens when we download a .zip instead of .tar.gz. I
+           suppose we could check the extension of what we're getting, or the magic
+           bits, but meh, it's like 20 packages out of 3200. *)
+         String.is_substring (Sexp.to_string s)
+           ~substring:"gzip: stdin has more than one entry")
+  &&
+  let duration = Time_ns.diff (Time_ns.now ()) time_before in
+  if debug then print_s [%sexp "curl untar", (url : string), (duration : Time_ns.Span.t)];
+  true
+
+let run ~packages ~src f =
+  let packages =
+    match packages with
+    | _ :: _ -> packages
+    | [] ->
+        read_file_or_cache "/tmp/opam-cache-packages" (fun f ->
+            Sys_unix.command_exn
+              ("opam list -a --short --coinstallable-with=ocaml.5.2 | LANG=C sort > "
+              ^ Sys.quote f))
+        |> String.split_lines
+  in
+  (* let packages = List.take packages 500 in *)
+  let digest = Md5.to_hex (Md5.digest_string (String.concat_lines packages)) in
+  let package_infos =
+    read_file_or_cache ("/tmp/opam-cache-show-" ^ digest) (fun f ->
+        Sys_unix.command_exn
+          ("opam show "
+          ^ Sys.concat_quoted packages
+          ^ " -f name,dev-repo,url.checksum --raw > "
+          ^ Sys.quote f))
+    |> String.split_lines
+    |> fun l ->
+    let name = ref None in
+    let key = ref None in
+    let current_checksum = ref None in
+    let dev_repo = ref None in
+    let q = Queue.create () in
+    let flush () =
+      (match (!name, !current_checksum, !dev_repo) with
+      | Some name, Some md5, Some dev_repo -> Queue.enqueue q (name, md5, dev_repo)
+      | _ -> ());
+      name := None;
+      current_checksum := None;
+      dev_repo := None
+    in
+    List.iter l ~f:(fun line ->
+        let key, value =
+          match String.lsplit2 line ~on:':' with
+          | None -> (Option.value_exn !key, line)
+          | Some (l, r) ->
+              key := Some l;
+              (l, r)
+        in
+        let key = String.strip key in
+        let value =
+          String.strip ~drop:(function ' ' | '"' -> true | _ -> false) value
+        in
+        if String.( = ) key "name"
+        then (
+          flush ();
+          name := Some value)
+        else if String.( = ) key "dev-repo"
+        then dev_repo := Some value
+        else if String.( = ) key "url.checksum"
+        then
+          match String.chop_prefix value ~prefix:"md5=" with
+          | None -> ()
+          | Some md5 -> current_checksum := Some md5);
+    flush ();
+    Queue.to_list q
+  in
+  if debug then print_s [%sexp (package_infos : (string * string * string) list)];
+  match src with
+  | `Opam_cache ->
+      let package_infos = Array.of_list package_infos in
+      concurrently (fun i n ->
+          let chunk_size = (Array.length package_infos + n - 1) / n in
+          let start = chunk_size * i in
+          let end_ = min (start + chunk_size) (Array.length package_infos) in
+          for i = start to end_ - 1 do
+            let name, md5, _ = package_infos.(i) in
+            try
+              with_tmpdir (fun tmpdir ->
+                  let url =
+                    "https://opam.ocaml.org/cache/md5/" ^ String.prefix md5 2 ^ "/" ^ md5
+                  in
+                  if curl_untar url ~dst_dir:tmpdir then f ~name tmpdir)
+            with e ->
+              print_string
+                (name
+                ^ ":\n"
+                ^ (String.split_lines (Exn.to_string e)
+                  |> List.map ~f:(Printf.sprintf "  %s")
+                  |> String.concat_lines))
+          done)
+  | `Github ->
+      let name_dev_repo =
+        List.map package_infos ~f:(fun (name, _md5, url) -> (url, name))
+        |> Hashtbl.of_alist_multi (module String)
+      in
+      Hashtbl.iteri name_dev_repo ~f:(fun ~key:url ~data:_repos ->
+          match
+            String.chop_prefix url ~prefix:"git+https://github.com/"
+            |> Option.bind ~f:(String.chop_suffix ~suffix:".git")
+          with
+          | None -> if debug then print_s [%sexp "skip url", (url : string)]
+          | Some url_rest ->
+              with_tmpdir (fun tmpdir ->
+                  if
+                    List.exists [ "main"; "master" ] ~f:(fun branch ->
+                        let url =
+                          "https://github.com/"
+                          ^ url_rest
+                          ^ "/archive/refs/heads/"
+                          ^ branch
+                          ^ ".tar.gz"
+                        in
+                        curl_untar url ~dst_dir:tmpdir)
+                  then f ~name:url tmpdir
+                  else if debug
+                  then print_s [%sexp "failed to dl", (url : string)]))
+
+let flag_optional_with_default_doc_custom name ~all:all_v ~to_string ~default ~doc =
+  let open Command.Let_syntax.Let_syntax.Open_on_rhs in
+  flag name
+    (optional_with_default default
+       (Arg_type.of_alist_exn ~list_values_in_help:false
+          (List.map all_v ~f:(fun v -> (to_string v, v)))))
+    ~doc:
+      (Printf.sprintf "%s %s (default: %s)"
+         (String.concat ~sep:"|" (List.map ~f:to_string all_v))
+         doc (to_string default))
+
+let cmd =
+  Command.basic ~summary:"Retrieve specified opam packages, and run code on them"
+    [%map_open.Command
+      let src =
+        flag_optional_with_default_doc_custom "src" ~all:[ `Opam_cache; `Github ]
+          ~to_string:(function `Opam_cache -> "opam-cache" | `Github -> "github")
+          ~default:`Opam_cache ~doc:"where to retrieve the source files from"
+      and packages =
+        flag "-p" (listed string)
+          ~doc:
+            "PACKAGE which opam packages to run on. If not specified, run on all \
+             packages compatible with ocaml 5.2"
+      and argv =
+        flag "--" escape
+          ~doc:
+            "ARGS The command to run on all source files, for instance grep -R foo. The \
+             working directory of the command will be the root of the package."
+      and exit_codes =
+        flag "-x" (listed int)
+          ~doc:
+            "EXIT_CODE exit codes that will be ignored. In particular, -x 1 when the \
+             command is a grep, since grep fails with exit code 1 when it finds no match"
+      in
+      fun () ->
+        match argv with
+        | None | Some [] ->
+            failwith
+              "the command to execute is required. opam-search -- rg -g '*.ml', for \
+               instance"
+        | Some argv ->
+            run ~packages ~src (fun ~name dir ->
+                match
+                  run_process ~env:[ ("FNAME_PREFIX", Some name) ] Detailed ~cwd:dir argv
+                with
+                | Ok s -> print_string s
+                | Error (WEXITED n, _) when List.mem exit_codes n ~equal:( = ) -> ()
+                | Error (_, sexp) -> raise_s sexp)]
+
+let main () = Command_unix.run ~version:"%%VERSION%%" cmd
+let () = main ()
