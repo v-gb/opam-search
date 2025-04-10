@@ -1,0 +1,13 @@
+(version 0.1.0)
+
+(build
+ (run dune build -p %{pkg-self:name} -j %{jobs}))
+
+(depends ocaml dune)
+
+(source
+ (fetch
+  (url
+   https://gitlab.com/gasche/domain-shims/-/archive/0.1.0/domain-shims-0.1.0.tar.gz)
+  (checksum
+   sha256=0867711591fa72a56a26a471a864f09f607212571ea0851cb4c07ee7f1304d31)))

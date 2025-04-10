@@ -67,9 +67,40 @@ let read_file_or_cache fname f =
   if not (Sys_unix.file_exists_exn fname) then f fname;
   In_channel.read_all fname
 
-let concurrently f =
-  let n = Domain.recommended_domain_count () in
-  List.init n ~f:(fun i -> Domain.spawn (fun () -> f i n)) |> List.iter ~f:Domain.join
+let concurrently a f =
+  (* Two stages in the computation we provide: the first stage is parallel, the second
+     stage is sequential. This allows to do things like [parallel -k], where the output
+     is printed in input order, depending on which stage the print happens in. *)
+  let chan = Domainslib.Chan.make_unbounded () in
+  let ndoms = Domain.recommended_domain_count () - 1 in
+  for i_dom = 0 to ndoms - 1 do
+    let rec self =
+      lazy
+        (Domain.spawn (fun () ->
+             let chunk_size = (Array.length a + ndoms - 1) / ndoms in
+             let start = chunk_size * i_dom in
+             let end_ = min (start + chunk_size) (Array.length a) in
+             for i = start to end_ - 1 do
+               Domainslib.Chan.send chan (`Elt (i, f a.(i)))
+             done;
+             Domainslib.Chan.send chan (`Join (fun () -> force self))))
+    in
+    ignore (force self)
+  done;
+  let rec drain next buf ndoms =
+    match Map.find buf next with
+    | Some (lazy ()) -> drain (next + 1) (Map.remove buf next) ndoms
+    | None -> (
+        if ndoms = 0
+        then ()
+        else
+          match Domainslib.Chan.recv chan with
+          | `Join domain ->
+              Domain.join (domain ());
+              drain next buf (ndoms - 1)
+          | `Elt (i, seq) -> drain next (Map.add_exn buf ~key:i ~data:seq) ndoms)
+  in
+  drain 0 (Map.empty (module Int)) ndoms
 
 let with_tmpdir f =
   let tmp_fname = Filename_unix.temp_dir "opam-search" "" in
@@ -198,26 +229,23 @@ let run ~packages ~src f =
                | Ok () -> Some (md5, name))
         |> Array.of_list
       in
-      concurrently (fun i n ->
-          let chunk_size = (Array.length package_infos + n - 1) / n in
-          let start = chunk_size * i in
-          let end_ = min (start + chunk_size) (Array.length package_infos) in
-          for i = start to end_ - 1 do
-            let md5, name = package_infos.(i) in
-            try
+      let string_of_exn name e =
+        String.split_lines (Exn.to_string e)
+        |> List.map ~f:(Printf.sprintf "%s:%s" name)
+        |> String.concat_lines
+      in
+      let catching_exn name f =
+        match f () with
+        | exception e -> lazy (print_string (string_of_exn name e))
+        | lazy_ -> lazy (try force lazy_ with e -> print_string (string_of_exn name e))
+      in
+      concurrently package_infos (fun (md5, name) ->
+          catching_exn name (fun () ->
               with_tmpdir (fun tmpdir ->
                   let url =
                     "https://opam.ocaml.org/cache/md5/" ^ String.prefix md5 2 ^ "/" ^ md5
                   in
-                  if curl_untar url ~dst_dir:tmpdir then f ~name tmpdir)
-            with e ->
-              print_string
-                (name
-                ^ ":\n"
-                ^ (String.split_lines (Exn.to_string e)
-                  |> List.map ~f:(Printf.sprintf "  %s")
-                  |> String.concat_lines))
-          done)
+                  if curl_untar url ~dst_dir:tmpdir then f ~name tmpdir else lazy ())))
   | `Github ->
       let name_dev_repo =
         List.map package_infos ~f:(fun (name, _md5, url) -> (url, name))
@@ -241,7 +269,7 @@ let run ~packages ~src f =
                           ^ ".tar.gz"
                         in
                         curl_untar url ~dst_dir:tmpdir)
-                  then f ~name:url tmpdir
+                  then force (f ~name:url tmpdir)
                   else if debug
                   then print_s [%sexp "failed to dl", (url : string)]))
 
@@ -287,12 +315,14 @@ let cmd =
                instance"
         | Some argv ->
             run ~packages ~src (fun ~name dir ->
-                match
+                let first_stage =
                   run_process ~env:[ ("FNAME_PREFIX", Some name) ] Detailed ~cwd:dir argv
-                with
-                | Ok s -> print_string s
-                | Error (WEXITED n, _) when List.mem exit_codes n ~equal:( = ) -> ()
-                | Error (_, sexp) -> raise_s sexp)]
+                in
+                lazy
+                  (match first_stage with
+                  | Ok s -> print_string s
+                  | Error (WEXITED n, _) when List.mem exit_codes n ~equal:( = ) -> ()
+                  | Error (_, sexp) -> raise_s sexp))]
 
 let main () = Command_unix.run ~version:"%%VERSION%%" cmd
 let () = main ()

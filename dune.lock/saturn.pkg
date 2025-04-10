@@ -1,0 +1,13 @@
+(version 0.4.0)
+
+(build
+ (run dune build -p %{pkg-self:name} -j %{jobs}))
+
+(depends ocaml dune domain_shims saturn_lockfree)
+
+(source
+ (fetch
+  (url
+   https://github.com/ocaml-multicore/saturn/releases/download/0.4.0/saturn-0.4.0.tbz)
+  (checksum
+   sha256=7c7bec95a27055b41aa83540fcc1c6a87c9b7ad61bc511a532b8605ea33788fb)))

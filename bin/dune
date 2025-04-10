@@ -7,6 +7,7 @@
    core.filename_base
    core_unix.command_unix
    core_unix.filename_unix
+   domainslib
    sexplib
    unix)
  (preprocess (pps ppx_sexp_conv ppx_compare ppx_sexp_value ppx_hash ppx_let ppx_partial ppx_pipebang)))
