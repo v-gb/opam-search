@@ -126,7 +126,7 @@ let curl ~dst_is_cache ~dst url =
         ; "--retry-delay"
         ; "2"
         ; "--user-agent"
-        ; "v-gb/search"
+        ; "opam-search"
         ; "-L"
         ; "-o"
         ; dst
