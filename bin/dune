@@ -9,5 +9,6 @@
    core_unix.filename_unix
    domainslib
    sexplib
-   unix)
+   unix
+   xdg)
  (preprocess (pps ppx_sexp_conv ppx_compare ppx_sexp_value ppx_hash ppx_let ppx_partial ppx_pipebang)))

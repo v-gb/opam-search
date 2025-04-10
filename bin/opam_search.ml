@@ -111,38 +111,42 @@ let with_tmpdir f =
       else Sys_unix.command_exn ("rm -rf -- " ^ Sys.quote tmp_fname))
     ~f:(fun () -> f tmp_fname)
 
-let curl url ~dst =
-  let s =
-    run_process Raise
-      [ "curl"
-      ; "--write-out"
-      ; "%{http_code}"
-      ; "--retry"
-      ; "3"
-      ; "--retry-delay"
-      ; "2"
-      ; "--user-agent"
-      ; "v-gb/search"
-      ; "-L"
-      ; "-o"
-      ; dst
-      ; "--"
-      ; url
-      ]
-  in
-  match Int.of_string s with
-  | 404 -> false
-  | 200 -> true
-  | _ -> failwith ("failed with code " ^ s)
+let curl ~dst_is_cache ~dst url =
+  if dst_is_cache && Sys_unix.file_exists_exn dst
+  then true
+  else (
+    Sys_unix.command_exn ("mkdir -p -- " ^ Sys.quote (Filename.dirname dst));
+    let s =
+      run_process Raise
+        [ "curl"
+        ; "--write-out"
+        ; "%{http_code}"
+        ; "--retry"
+        ; "3"
+        ; "--retry-delay"
+        ; "2"
+        ; "--user-agent"
+        ; "v-gb/search"
+        ; "-L"
+        ; "-o"
+        ; dst
+        ; "--"
+        ; url
+        ]
+    in
+    match Int.of_string s with
+    | 404 -> false
+    | 200 -> true
+    | _ -> failwith ("failed with code " ^ s))
 
 let debug = false
 
-let curl_untar url ~dst_dir =
+let curl_untar ~cache url ~dst_dir =
   let time_before = Time_ns.now () in
-  curl url ~dst:(dst_dir ^/ "dl.tar.gz")
+  let dst = match cache with None -> dst_dir ^/ "dl.tar.gz" | Some v -> v in
+  curl ~dst_is_cache:(Option.is_some cache) ~dst url
   && (match
-        run_process Detailed ~cwd:dst_dir
-          [ "tar"; "--strip-component=1"; "-xf"; "dl.tar.gz" ]
+        run_process Detailed ~cwd:dst_dir [ "tar"; "--strip-component=1"; "-xf"; dst ]
       with
      | Ok _ -> true
      | Error (_, s) ->
@@ -157,6 +161,7 @@ let curl_untar url ~dst_dir =
   true
 
 let run ~packages ~src f =
+  let xdg = Xdg.create ~env:Sys.getenv () in
   let packages =
     match packages with
     | _ :: _ -> packages
@@ -242,10 +247,12 @@ let run ~packages ~src f =
       concurrently package_infos (fun (md5, name) ->
           catching_exn name (fun () ->
               with_tmpdir (fun tmpdir ->
-                  let url =
-                    "https://opam.ocaml.org/cache/md5/" ^ String.prefix md5 2 ^ "/" ^ md5
-                  in
-                  if curl_untar url ~dst_dir:tmpdir then f ~name tmpdir else lazy ())))
+                  let hash_suffix = String.prefix md5 2 ^ "/" ^ md5 in
+                  let url = "https://opam.ocaml.org/cache/md5/" ^ hash_suffix in
+                  let cache = Xdg.cache_dir xdg ^/ "opam-search" ^/ hash_suffix in
+                  if curl_untar ~cache:(Some cache) url ~dst_dir:tmpdir
+                  then f ~name tmpdir
+                  else lazy ())))
   | `Github ->
       let name_dev_repo =
         List.map package_infos ~f:(fun (name, _md5, url) -> (url, name))
@@ -268,7 +275,7 @@ let run ~packages ~src f =
                           ^ branch
                           ^ ".tar.gz"
                         in
-                        curl_untar url ~dst_dir:tmpdir)
+                        curl_untar ~cache:None url ~dst_dir:tmpdir)
                   then force (f ~name:url tmpdir)
                   else if debug
                   then print_s [%sexp "failed to dl", (url : string)]))
