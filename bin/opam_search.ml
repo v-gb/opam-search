@@ -105,10 +105,7 @@ let concurrently a f =
 let with_tmpdir f =
   let tmp_fname = Filename_unix.temp_dir "opam-search" "" in
   Exn.protect
-    ~finally:(fun () ->
-      if false
-      then print_s [%sexp "left", (tmp_fname : string)]
-      else Sys_unix.command_exn ("rm -rf -- " ^ Sys.quote tmp_fname))
+    ~finally:(fun () -> Sys_unix.command_exn ("rm -rf -- " ^ Sys.quote tmp_fname))
     ~f:(fun () -> f tmp_fname)
 
 let curl ~dst_is_cache ~dst url =
