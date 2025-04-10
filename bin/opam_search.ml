@@ -295,7 +295,7 @@ let cmd =
         flag "-p" (listed string)
           ~doc:
             "PACKAGE which opam packages to run on. If not specified, run on all \
-             packages compatible with ocaml 5.2"
+             packages compatible with ocaml 5.2."
       and argv =
         flag "--" escape
           ~doc:
@@ -304,8 +304,8 @@ let cmd =
       and exit_codes =
         flag "-x" (listed int)
           ~doc:
-            "EXIT_CODE exit codes that will be ignored. In particular, -x 1 when the \
-             command is a grep, since grep fails with exit code 1 when it finds no match"
+            "EXIT_CODE exit codes that will be ignored. In particular, -x 1 is useful \
+             when ARGS is a call to grep, to treat no matches as a success"
       in
       fun () ->
         match argv with
