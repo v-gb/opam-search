@@ -306,6 +306,12 @@ let cmd =
           ~doc:
             "EXIT_CODE exit codes that will be ignored. In particular, -x 1 is useful \
              when ARGS is a call to grep, to treat no matches as a success"
+      and unprefixed =
+        flag "-unprefixed" no_arg
+          ~doc:
+            "by default, the name of the package is added in front of lines of output. \
+             This option disables the behavior. Instead, the command can consult the \
+             PACKAGE env var to clarify what package the output is from."
       in
       fun () ->
         match argv with
@@ -316,11 +322,18 @@ let cmd =
         | Some argv ->
             run ~packages ~src (fun ~name dir ->
                 let first_stage =
-                  run_process ~env:[ ("FNAME_PREFIX", Some name) ] Detailed ~cwd:dir argv
+                  run_process ~env:[ ("PACKAGE", Some name) ] Detailed ~cwd:dir argv
                 in
                 lazy
                   (match first_stage with
-                  | Ok s -> print_string s
+                  | Ok s ->
+                      if unprefixed
+                      then print_string s
+                      else
+                        print_string
+                          (String.split_lines s
+                          |> List.map ~f:(Printf.sprintf "%s:%s" name)
+                          |> String.concat_lines)
                   | Error (WEXITED n, _) when List.mem exit_codes n ~equal:( = ) -> ()
                   | Error (_, sexp) -> raise_s sexp))]
 
