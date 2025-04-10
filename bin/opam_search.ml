@@ -8,6 +8,25 @@ module Process_res = struct
     | Detailed : ('a, ('a, Unix.process_status * Core.Sexp.t) Result.t) t
 end
 
+let compute_env env_changes =
+  if List.is_empty env_changes
+  then Unix.environment ()
+  else
+    let env_changes_map =
+      Map.of_alist_reduce (module String) env_changes ~f:(fun _ y -> y)
+    in
+    let env_filtered =
+      Unix.environment ()
+      |> Array.filter_map ~f:(fun kv ->
+             match String.lsplit2 kv ~on:'=' with
+             | Some (k, _) when Map.mem env_changes_map k -> None
+             | _ -> Some kv)
+    in
+    Array.append env_filtered
+      (Array.of_list
+         (List.filter_map env_changes ~f:(fun (k, v_opt) ->
+              match v_opt with None -> None | Some v -> Some (k ^ "=" ^ v))))
+
 let with_process_full ?(env = []) ?cwd (type a res) (process_res : (a, res) Process_res.t)
     argv f : res =
   let argv =
@@ -17,15 +36,7 @@ let with_process_full ?(env = []) ?cwd (type a res) (process_res : (a, res) Proc
         (* We should probably use spawn in general. *)
         [ "bash"
         ; "-c"
-        ; (let env =
-             List.map env ~f:(fun (k, v_opt) ->
-                 match v_opt with
-                 | None -> "unset " ^ Core.Sys.quote k ^ " && "
-                 | Some v ->
-                     "export " ^ Core.Sys.quote k ^ "=" ^ Core.Sys.quote v ^ " && ")
-             |> String.concat
-           in
-           env ^ "cd " ^ Core.Sys.quote cwd ^ " && " ^ Core.Sys.concat_quoted argv)
+        ; "cd " ^ Core.Sys.quote cwd ^ " && " ^ Core.Sys.concat_quoted argv
         ]
   in
   let prog = Option.value (List.hd argv) ~default:"" in
@@ -33,7 +44,7 @@ let with_process_full ?(env = []) ?cwd (type a res) (process_res : (a, res) Proc
   let (fres : a), stderr =
     Exn.protectx
       ~finally:(fun channels -> res := Unix.close_process_full channels)
-      (Unix.open_process_args_full prog (Array.of_list argv) (Unix.environment ()))
+      (Unix.open_process_args_full prog (Array.of_list argv) (compute_env env))
       ~f:(fun (stdout, stdin, stderr) ->
         let res = f (stdout, stdin) in
         Out_channel.close stdin;
