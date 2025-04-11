@@ -119,11 +119,13 @@ let with_tmpdir f =
     ~finally:(fun () -> Sys_unix.command_exn ("rm -rf -- " ^ Sys.quote tmp_fname))
     ~f:(fun () -> f tmp_fname)
 
+let mkdir_p dir = Sys_unix.command_exn ("mkdir -p -- " ^ Sys.quote dir)
+
 let curl ~dst_is_cache ~dst url =
   if dst_is_cache && Sys_unix.file_exists_exn dst
   then true
   else (
-    Sys_unix.command_exn ("mkdir -p -- " ^ Sys.quote (Filename.dirname dst));
+    mkdir_p (Filename.dirname dst);
     let s =
       run_process Raise
         [ "curl"
@@ -149,26 +151,49 @@ let curl ~dst_is_cache ~dst url =
 
 let debug = false
 
-let curl_untar ~cache url ~dst_dir =
+let curl_untar ~cache url =
   let time_before = Time_ns.now () in
-  let dst = match cache with None -> dst_dir ^/ "dl.tar.gz" | Some v -> v in
-  curl ~dst_is_cache:(Option.is_some cache) ~dst url
-  && (match
-        run_process Detailed ~cwd:dst_dir [ "tar"; "--strip-component=1"; "-xf"; dst ]
-      with
-     | Ok _ -> true
-     | Error (_, s) ->
-         (* Apparently this happens when we download a .zip instead of .tar.gz. I
-           suppose we could check the extension of what we're getting, or the magic
-           bits, but meh, it's like 20 packages out of 3200. *)
-         String.is_substring (Sexp.to_string s)
-           ~substring:"gzip: stdin has more than one entry")
-  &&
-  let duration = Time_ns.diff (Time_ns.now ()) time_before in
-  if debug then print_s [%sexp "curl untar", (url : string), (duration : Time_ns.Span.t)];
-  true
+  let dst_compressed, dst_uncompressed =
+    match cache with
+    | `No_cache dst_dir -> (dst_dir ^/ "dl.tar.gz", dst_dir)
+    | `Cache (cache, `Compressed dst_dir) -> (cache, dst_dir)
+    | `Cache (cache, `Uncompressed) -> (cache, cache ^ ".uncompressed")
+  in
+  if
+    match cache with
+    | `Cache (_, `Uncompressed) when Sys_unix.file_exists_exn dst_uncompressed -> true
+    | _ ->
+        curl
+          ~dst_is_cache:(match cache with `No_cache _ -> false | `Cache _ -> true)
+          ~dst:dst_compressed url
+        &&
+        (mkdir_p dst_uncompressed;
+         match
+           run_process
+             ~env:[ ("LANG", Some "C") ]
+             Detailed ~cwd:dst_uncompressed
+             [ "tar"; "--strip-component=1"; "-xf"; dst_compressed ]
+         with
+         | Ok _ -> true
+         | Error (_, s) ->
+             (* Apparently this happens when we download a .zip instead of .tar.gz. I
+                suppose we could check the extension of what we're getting, or the magic
+                bits, but meh, it's like 20 packages out of 3200. *)
+             if
+               String.is_substring (Sexp.to_string s)
+                 ~substring:"gzip: stdin has more than one entry"
+               || String.is_substring (Sexp.to_string s)
+                    ~substring:"This does not look like a tar archive"
+             then false
+             else raise_s [%sexp (s : Sexp.t), (url : string)])
+  then (
+    let duration = Time_ns.diff (Time_ns.now ()) time_before in
+    if debug
+    then print_s [%sexp "curl untar", (url : string), (duration : Time_ns.Span.t)];
+    Some dst_uncompressed)
+  else None
 
-let run ~packages ~src f =
+let run ~cache_uncompressed ~packages ~src f =
   let xdg = Xdg.create ~env:Sys.getenv () in
   let packages =
     match packages with
@@ -179,6 +204,13 @@ let run ~packages ~src f =
               ("opam list -a --short --coinstallable-with=ocaml.5.2 | LANG=C sort > "
               ^ Sys.quote f))
         |> String.split_lines
+        |> List.filter ~f:(function
+             | "llvm" when not cache_uncompressed ->
+                 false
+                 (* This one package brings search time from 6s to 16s, because
+                         it's compressed with xz, which is dog slow. It's fine if we
+                         cache the decompression, but seems unreasonable otherwise. *)
+             | _ -> true)
   in
   (* let packages = List.take packages 500 in *)
   let digest = Md5.to_hex (Md5.digest_string (String.concat_lines packages)) in
@@ -258,9 +290,18 @@ let run ~packages ~src f =
                   let hash_suffix = String.prefix md5 2 ^ "/" ^ md5 in
                   let url = "https://opam.ocaml.org/cache/md5/" ^ hash_suffix in
                   let cache = Xdg.cache_dir xdg ^/ "opam-search" ^/ hash_suffix in
-                  if curl_untar ~cache:(Some cache) url ~dst_dir:tmpdir
-                  then f ~name tmpdir
-                  else lazy ())))
+                  match
+                    curl_untar
+                      ~cache:
+                        (`Cache
+                           ( cache
+                           , if cache_uncompressed
+                             then `Uncompressed
+                             else `Compressed tmpdir ))
+                      url
+                  with
+                  | Some dir -> f ~name dir
+                  | None -> lazy ())))
   | `Github ->
       let name_dev_repo =
         List.map package_infos ~f:(fun (name, _md5, url) -> (url, name))
@@ -274,8 +315,8 @@ let run ~packages ~src f =
           | None -> if debug then print_s [%sexp "skip url", (url : string)]
           | Some url_rest ->
               with_tmpdir (fun tmpdir ->
-                  if
-                    List.exists [ "main"; "master" ] ~f:(fun branch ->
+                  match
+                    List.find_map [ "main"; "master" ] ~f:(fun branch ->
                         let url =
                           "https://github.com/"
                           ^ url_rest
@@ -283,10 +324,10 @@ let run ~packages ~src f =
                           ^ branch
                           ^ ".tar.gz"
                         in
-                        curl_untar ~cache:None url ~dst_dir:tmpdir)
-                  then force (f ~name:url tmpdir)
-                  else if debug
-                  then print_s [%sexp "failed to dl", (url : string)]))
+                        curl_untar ~cache:(`No_cache tmpdir) url)
+                  with
+                  | Some dir -> force (f ~name:url dir)
+                  | None -> if debug then print_s [%sexp "failed to dl", (url : string)]))
 
 let flag_optional_with_default_doc_custom name ~all:all_v ~to_string ~default ~doc =
   let open Command.Let_syntax.Let_syntax.Open_on_rhs in
@@ -335,7 +376,7 @@ let cmd =
               "the command to execute is required. opam-search -- rg -g '*.ml', for \
                instance"
         | Some argv ->
-            run ~packages ~src (fun ~name dir ->
+            run ~packages ~src ~cache_uncompressed:true (fun ~name dir ->
                 let first_stage =
                   run_process ~env:[ ("PACKAGE", Some name) ] Detailed ~cwd:dir argv
                 in
