@@ -15,5 +15,5 @@ This is a bit similar to opam-grep, but:
 Concretely, a use might look like this:
 
 ```
-opam-search -x 1 -- grep -R --include '*.ml' -F '(*)'
+opam-search -x 1 -- grep -r --include '*.ml' -F '(*)'
 ```
