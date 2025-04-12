@@ -678,6 +678,12 @@ rule token = parse
         lexbuf.lex_curr_p <- { curpos with pos_cnum = curpos.pos_cnum - 1 };
         STAR
       }
+  | "#" (newline | blank) {
+     let at_beginning_of_line pos = (pos.pos_cnum = pos.pos_bol) in
+     let hash () = (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad; HASH) in
+     if not (at_beginning_of_line lexbuf.lex_start_p)
+     then hash ()
+     else try directive lexbuf with Failure _ -> hash () }
   | "#"
       { let at_beginning_of_line pos = (pos.pos_cnum = pos.pos_bol) in
         if not (at_beginning_of_line lexbuf.lex_start_p)
