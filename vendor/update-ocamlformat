@@ -1,0 +1,46 @@
+#!/bin/bash
+set -e -u -o pipefail
+cd "$(dirname "$0")"
+REV=aa948beb16cdb42f1c98f4bfc748a851f55b8296
+TMP=/tmp/ocamlformat-$REV
+if ! [ -d "$TMP" ]; then
+    git clone https://github.com/ocaml-ppx/ocamlformat --no-checkout "$TMP"
+    (cd "$TMP"; git checkout -q $REV)
+fi
+rsync -m -r --delete --delete-excluded "$TMP"/ ocamlformat/ --include '*/' \
+      --exclude '**/odoc-parser/**' \
+      --exclude '**/ocamlformat[-_]*/**' \
+      --exclude '**/parser-extended/**' \
+      --include '/vendor/**' \
+      --include '/LICENSE' \
+      --include '/.ocamlformat' \
+      --include '/.ocamlformat-ignore' \
+      --exclude '*'
+find ocamlformat/ -name dune \
+    | xargs -r sed -E -i \
+            -e 's/[(](public_name|package)[^)]*[)]//' \
+            -e 's/ ocamlformat-lib/ ocamlformat_lib/'
+sed -i \
+    -e 's/^open Lexing/let bad : (Lexing.position * Lexing.position) list ref = ref []\n\0/' \
+    -e 's/comment_list := \[\];/\0\n    bad := [];/' \
+     ocamlformat/vendor/parser-standard/lexer.mll
+depends="$(
+cat "$TMP"/dune-project \
+    | grep -E -A 1000 'name +ocamlformat-lib' \
+    | grep -E -A 1000 '[(]depends' \
+    | tail -n +2 \
+    | grep -E -B 1000 '^[^ ]' -m 1 \
+    | head -n -1 \
+    | grep -vx '' \
+    | sed 's/(= :with-test false)//' \
+    | sed 's/:with-test/(= 1 0)/' \
+    | tac \
+    | sed -E -e '0,/[)]/ s/[)]//g' \
+    | tac
+)"
+new_dune_project="$(
+    grep -B 1000 '; MARKER' ../dune-project;
+    echo "$depends" | sed 's/./ \0/'
+    grep -A 1000 '; ENDMARKER' ../dune-project;
+)"
+echo "$new_dune_project" > ../dune-project
