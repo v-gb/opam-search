@@ -18,3 +18,10 @@ Concretely, a use might look like this:
 ```
 opam-search -x 1 -- grep -r --include '*.ml' -F '(*)'
 ```
+
+A second executable, syntax-grep, is provided. It can be used as argument for
+opam-search.  It does nothing useful by default, but the way to use it is to modify
+vendor/ocamlformat/vendor/parser-standard/lexer.mll to detect the situations you want
+(see other branches in the repo for examples). An example of use is finding what would
+break if `#` started a line comment (without the actual lexer, you'd find "#" in string
+literals, or comments, or method calls, etc).
