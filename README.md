@@ -10,8 +10,9 @@ This is a bit similar to opam-grep, but:
   opam-search may be 5x faster sequentially at fetching sources, and both fetching and
   the user command run in parallel, whereas opam-grep does everything sequentially.
   I've run the ocaml lexer on every ocaml in every package compatible with ocaml 5.2
-  (3200 packages) in 50s on a normal laptop with no caching, and 5s with caching of
-  the source files. And <1s for a cheaper search like a recursive grep.
+  (3200 packages) in a couple of minutes on a normal laptop with no caching, and
+  15s with caching of the source files. And 1.5s for a cheaper search like a recursive
+  grep.
 
 Concretely, a use might look like this:
 

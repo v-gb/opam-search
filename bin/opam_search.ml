@@ -230,7 +230,8 @@ let run ~cache_uncompressed ~packages ~src f =
     let q = Queue.create () in
     let flush () =
       (match (!name, !current_checksum, !dev_repo) with
-      | Some name, Some md5, Some dev_repo -> Queue.enqueue q (name, md5, dev_repo)
+      | Some name, Some checksum, Some dev_repo ->
+          Queue.enqueue q (name, checksum, dev_repo)
       | _ -> ());
       name := None;
       current_checksum := None;
@@ -256,17 +257,22 @@ let run ~cache_uncompressed ~packages ~src f =
         then dev_repo := Some value
         else if String.( = ) key "url.checksum"
         then
-          match String.chop_prefix value ~prefix:"md5=" with
-          | None -> ()
-          | Some md5 -> current_checksum := Some md5);
+          match String.lsplit2 value ~on:'=' with
+          | Some algo_digest when Option.is_none !current_checksum ->
+              current_checksum := Some algo_digest
+          | _ -> ());
     flush ();
     Queue.to_list q
   in
-  if debug then print_s [%sexp (package_infos : (string * string * string) list)];
+  if debug
+  then print_s [%sexp (package_infos : (string * (string * string) * string) list)];
   match src with
   | `Opam_cache ->
       let package_infos =
-        let seen = Hash_set.create (module String) in
+        let module String_pair = struct
+          type t = string * string [@@deriving compare, sexp_of, hash]
+        end in
+        let seen = Hash_set.create (module String_pair) in
         package_infos
         |> List.filter_map ~f:(fun (name, md5, _) ->
                match Hash_set.strict_add seen md5 with
@@ -284,11 +290,11 @@ let run ~cache_uncompressed ~packages ~src f =
         | exception e -> lazy (print_string (string_of_exn name e))
         | lazy_ -> lazy (try force lazy_ with e -> print_string (string_of_exn name e))
       in
-      concurrently package_infos (fun (md5, name) ->
+      concurrently package_infos (fun ((algo, digest), name) ->
           catching_exn name (fun () ->
               with_tmpdir (fun tmpdir ->
-                  let hash_suffix = String.prefix md5 2 ^ "/" ^ md5 in
-                  let url = "https://opam.ocaml.org/cache/md5/" ^ hash_suffix in
+                  let hash_suffix = String.prefix digest 2 ^ "/" ^ digest in
+                  let url = "https://opam.ocaml.org/cache/" ^ algo ^ "/" ^ hash_suffix in
                   let cache = Xdg.cache_dir xdg ^/ "opam-search" ^/ hash_suffix in
                   match
                     curl_untar
