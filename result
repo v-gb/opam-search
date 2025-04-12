@@ -1,0 +1,3450 @@
+0install:parsed=241 would_break=0
+ANSITerminal:parsed=8 would_break=0
+CamelCase:parsed=6 would_break=0
+FPauth-core:parsed=31 would_break=0
+FrontC:parsed=13 would_break=0
+GuaCaml:parsed=145 would_break=0
+ISO3166:parsed=4 would_break=0
+ISO8601:parsed=7 would_break=0
+MlFront_Cache:codept/lib/solver.ml:    Pp.fp ppf "%a"
+MlFront_Cache:codept/lib/solver.ml:      Pp.(list ~sep:([31;1ms"[39;22m\n@;") @@ pp_cat block resolver map ) (Map.bindings m)
+MlFront_Cache:---
+MlFront_Cache:codept/lib/module.ml:    Pp.fp ppf {|Namespaced.make ~nms:[%a] "%a"|}
+MlFront_Cache:codept/lib/module.ml:      Pp.(list ~sep:([31;1ms"[39;22m;@ ") @@ estring) nd.namespace
+MlFront_Cache:codept/lib/module.ml:      Unitname.pp_as_modname nd.name
+MlFront_Cache:---
+MlFront_Cache:codept/lib/pp.ml:
+MlFront_Cache:codept/lib/pp.ml:let list0 ?(pre=[31;1ms"[39;22m") ?(post=[31;1ms"[39;22m") ?(sep=[31;1ms"[39;22m; @,") pp ppf l =
+MlFront_Cache:codept/lib/pp.ml:  fp ppf "%t%a%t" pre (list ~sep pp) l post
+MlFront_Cache:---
+MlFront_Cache:codept/lib/pp.ml:
+MlFront_Cache:codept/lib/pp.ml:let list  ?(pre=[31;1ms"[39;22m") ?(post=[31;1ms"[39;22m") ?(sep=[31;1ms"[39;22m; @,") pp ppf l =
+MlFront_Cache:codept/lib/pp.ml:  if l = [] then () else
+MlFront_Cache:---
+MlFront_Cache:codept/lib/paths.ml:    let compare (x:t) (y:t) = compare x y
+MlFront_Cache:codept/lib/paths.ml:    let pp = Pp.(list ~sep:([31;1ms"[39;22m.") ) Name.pp
+MlFront_Cache:codept/lib/paths.ml:  end
+MlFront_Cache:parsed=345 would_break=4
+OCADml:parsed=65 would_break=0
+OCanren-ppx:parsed=88 would_break=0
+OSCADml:parsed=47 would_break=0
+SZXX:parsed=16 would_break=0
+Snowflake:parsed=16 would_break=0
+SourceCode_ASCII:parsed=5 would_break=0
+aacplus:parsed=4 would_break=0
+abella:parsed=43 would_break=0
+absolute:parsed=59 would_break=0
+abstract_algebra:parsed=1 would_break=0
+accessor:parsed=36 would_break=0
+accessor_async:parsed=6 would_break=0
+accessor_base:parsed=89 would_break=0
+accessor_core:parsed=68 would_break=0
+acgtk:parsed=142 would_break=0
+aches:parsed=58 would_break=0
+acp4:parsed=7 would_break=0
+acpc:parsed=15 would_break=0
+activitypub:parsed=45 would_break=0
+adelfa:parsed=50 would_break=0
+adobe_font_metrics:parsed=3 would_break=0
+afl:parsed=0 would_break=0
+afl-persistent:parsed=5 would_break=0
+ago:parsed=1 would_break=0
+agrid:parsed=3 would_break=0
+ahrocksdb:parsed=17 would_break=0
+aifad:parsed=48 would_break=0
+alba:parsed=200 would_break=0
+albatross:parsed=37 would_break=0
+alcotest:parsed=96 would_break=0
+alg_structs:parsed=29 would_break=0
+algaeff:parsed=29 would_break=0
+allegro5:parsed=2 would_break=0
+alonzo:parsed=2 would_break=0
+alsa:parsed=7 would_break=0
+alt-ergo:parsed=204 would_break=0
+altgr-ergo:parsed=195 would_break=0
+ambient-context:parsed=17 would_break=0
+amqp-client:parsed=54 would_break=0
+anders:parsed=0 would_break=0
+angstrom:parsed=25 would_break=0
+ansi:parsed=13 would_break=0
+ansi-parse:parsed=7 would_break=0
+ansicolor:parsed=2 would_break=0
+ansifmt:parsed=20 would_break=0
+antic:parsed=9 would_break=0
+anycache:parsed=15 would_break=0
+ao:parsed=4 would_break=0
+apron:parsed=19 would_break=0
+apronext:parsed=23 would_break=0
+archetype:parsed=48 would_break=0
+archi:parsed=9 would_break=0
+areas-and-adversaries:parsed=6 would_break=0
+arg-complete:parsed=5 would_break=0
+argon2:parsed=8 would_break=0
+argsh:parsed=7 would_break=0
+arp:parsed=9 would_break=0
+arp-mirage:parsed=9 would_break=0
+arrakis:parsed=50 would_break=0
+arrayjit:parsed=65 would_break=0
+art:parsed=38 would_break=0
+asai:parsed=58 would_break=0
+asak:parsed=20 would_break=0
+ascii85:parsed=0 would_break=0
+asetmap:parsed=4 would_break=0
+asn1-combinators:parsed=16 would_break=0
+assimp:parsed=2 would_break=0
+ast_generic:parsed=1092 would_break=0
+astring:parsed=19 would_break=0
+async:parsed=133 would_break=0
+async-uri:parsed=2 would_break=0
+async_durable:parsed=9 would_break=0
+async_extra:parsed=6 would_break=0
+async_find:parsed=2 would_break=0
+async_inotify:parsed=4 would_break=0
+async_interactive:parsed=2 would_break=0
+async_js:parsed=31 would_break=0
+async_kernel:parsed=139 would_break=0
+async_log:parsed=58 would_break=0
+async_rpc_kernel:parsed=86 would_break=0
+async_rpc_websocket:parsed=13 would_break=0
+async_sendfile:parsed=4 would_break=0
+async_shell:parsed=2 would_break=0
+async_smtp:parsed=157 would_break=0
+async_ssl:parsed=30 would_break=0
+async_udp:parsed=5 would_break=0
+async_unix:parsed=95 would_break=0
+async_websocket:parsed=11 would_break=0
+atable:parsed=2 would_break=0
+atacama:parsed=14 would_break=0
+atd:parsed=216 would_break=0
+autofonce:parsed=47 would_break=0
+avro:parsed=21 would_break=0
+awa:parsed=23 would_break=0
+awa-lwt:parsed=26 would_break=0
+aws:parsed=1894 would_break=0
+aws-config:parsed=4 would_break=0
+aws-s3:parsed=34 would_break=0
+azblob:parsed=4 would_break=0
+azure-cosmos-db:parsed=15 would_break=0
+b0:parsed=149 would_break=0
+babel:parsed=26 would_break=0
+baby:parsed=38 would_break=0
+backoff:parsed=8 would_break=0
+bag:parsed=3 would_break=0
+baguette_sharp:parsed=17 would_break=0
+bam:parsed=39 would_break=0
+bap-emacs-dot:parsed=0 would_break=0
+bap-emacs-mode:parsed=0 would_break=0
+bap-signatures:parsed=0 would_break=0
+bare_encoding:parsed=16 would_break=0
+bark:parsed=3 would_break=0
+base:parsed=447 would_break=0
+base32:parsed=2 would_break=0
+base58:parsed=4 would_break=0
+base64:parsed=11 would_break=0
+base_bigstring:parsed=5 would_break=0
+base_quickcheck:parsed=72 would_break=0
+base_trie:parsed=17 would_break=0
+bastet:parsed=58 would_break=0
+bastet_async:parsed=2 would_break=0
+bastet_lwt:parsed=2 would_break=0
+batch_jaro_winkler:parsed=4 would_break=0
+batsat:parsed=11 would_break=0
+batteries:testsuite/test_print.ml:  Gc.full_major ();
+batteries:testsuite/test_print.ml:  let printer_hello k () = k (fun ch -> fprintf ch [31;1mp"[39;22mHello, world!") in
+batteries:testsuite/test_print.ml:  foreach (1 -- number_of_runs) (fun _ ->
+batteries:testsuite/test_print.ml:    fprintf stdnull [31;1mp"[39;22m{%hello}%!" ()
+batteries:testsuite/test_print.ml:  );
+batteries:---
+batteries:testsuite/test_toplevel.ml:  let source    = Print.sprintf
+batteries:testsuite/test_toplevel.ml:                    [31;1mp"[39;22mFile.with_file_out %S (fun out -> Print.fprintf out p\"%%sc\" ro\"read-only string\");;\n"
+batteries:testsuite/test_toplevel.ml:                    temp_name in
+batteries:---
+batteries:examples/snippets/unicode2.ml:
+batteries:examples/snippets/unicode2.ml:let rope1 = Rope.of_ustring ([31;1mu"[39;22mSimple ASCII string")
+batteries:examples/snippets/unicode2.ml:and rope2 = [31;1mr"[39;22mComplex: á é í ó ú"
+batteries:---
+batteries:examples/snippets/ropes_vs_strings.ml:let test_ropes num =
+batteries:examples/snippets/ropes_vs_strings.ml:  let x = ref ([31;1mr"[39;22m")
+batteries:examples/snippets/ropes_vs_strings.ml:  and s = [31;1mr"[39;22ma"
+batteries:examples/snippets/ropes_vs_strings.ml:  in for i = 1 to num do
+batteries:---
+batteries:examples/snippets/test_printf.ml:  (* Simple test *)
+batteries:examples/snippets/test_printf.ml:  printf [31;1mp"[39;22mx = (%d, %s)\n" 1 "a";
+batteries:---
+batteries:examples/snippets/test_printf.ml:  (* With flags: *)
+batteries:examples/snippets/test_printf.ml:  printf [31;1mp"[39;22mx = %04x\n" 42;
+batteries:---
+batteries:examples/snippets/test_printf.ml:  (* Test with labelled directives: *)
+batteries:examples/snippets/test_printf.ml:  printf [31;1mp"[39;22mHello %(name:s), i am ocaml version %(version:s)\n%!"
+batteries:examples/snippets/test_printf.ml:    ~name:(try Sys.getenv "USER" with _ -> "toto")
+batteries:---
+batteries:examples/snippets/test_printf.ml:  (* Printing an object: *)
+batteries:examples/snippets/test_printf.ml:  printf [31;1mp"[39;22mo = %obj\n"
+batteries:examples/snippets/test_printf.ml:    (object(self)
+batteries:examples/snippets/test_printf.ml:       method print oc = fprintf oc [31;1mp"[39;22m<object:id = %u>" (Oo.id self)
+batteries:examples/snippets/test_printf.ml:     end);
+batteries:---
+batteries:examples/snippets/test_printf.ml:  (* Printing a list: *)
+batteries:examples/snippets/test_printf.ml:  printf [31;1mp"[39;22ml = %{int option list}\n" [Some 1; None; Some 2];
+batteries:---
+batteries:examples/snippets/test_printf.ml:  (* A custom directive, printing pair of integers: *)
+batteries:examples/snippets/test_printf.ml:  let printer_foo k (x, y) = k (fun oc -> fprintf oc [31;1mp"[39;22m(%d, %d)" x y) in
+batteries:examples/snippets/test_printf.ml:
+batteries:examples/snippets/test_printf.ml:  printf [31;1mp"[39;22mpair = %foo\n" (42, 1024);
+batteries:---
+batteries:examples/snippets/test_printf.ml:  (* A custom directive, taking multiple arguments: *)
+batteries:examples/snippets/test_printf.ml:  let printer_test k x y z = k (fun oc -> fprintf oc [31;1mp"[39;22m(%d, %d, %d)" x y z) in
+batteries:examples/snippets/test_printf.ml:
+batteries:examples/snippets/test_printf.ml:  printf [31;1mp"[39;22mx = %test\n" 1 2 3;
+batteries:---
+batteries:examples/snippets/test_printf.ml:  (* Labelled directives with multiple argument: *)
+batteries:examples/snippets/test_printf.ml:  printf [31;1mp"[39;22mx = %(x,y,z:test)\n" ~x:1 ~y:2 ~z:2;
+batteries:examples/snippets/test_printf.ml:  printf [31;1mp"[39;22mx = %(x,_,z:test)\n" ~x:1 2 ~z:2
+batteries:---
+batteries:examples/tools/conv.ml:  flush_all ()
+batteries:examples/tools/conv.ml:with Not_found      -> Print.eprintf [31;1mp"[39;22mSorry, unknown encoding.\n%!"
+batteries:examples/tools/conv.ml:  |  Malformed_code -> Print.eprintf [31;1mp"[39;22mError: This text is not encoded with encoding %S\n" (argv.(1))
+batteries:examples/tools/conv.ml:  |  e              -> Print.eprintf [31;1mp"[39;22mError:\n%s\n%!" (Printexc.to_string e)
+batteries:parsed=303 would_break=6
+bddrand:parsed=120 would_break=0
+bech32:parsed=3 would_break=0
+bechamel:parsed=45 would_break=0
+beluga:parsed=325 would_break=0
+benchmark:parsed=14 would_break=0
+bencode:parsed=10 would_break=0
+bentov:parsed=5 would_break=0
+bestline:parsed=3 would_break=0
+bheap:parsed=3 would_break=0
+bibtex2html:parsed=28 would_break=0
+bidirectional_map:parsed=20 would_break=0
+bigarray-compat:parsed=2 would_break=0
+bigarray-overlap:parsed=6 would_break=0
+bigdecimal:parsed=3 would_break=0
+bignum:parsed=14 would_break=0
+bigstring:parsed=6 would_break=0
+bigstringaf:parsed=5 would_break=0
+bimage:parsed=45 would_break=0
+bimage-gtk:parsed=31 would_break=0
+bimage-lwt:parsed=47 would_break=0
+bin_prot:parsed=53 would_break=0
+bin_tree:parsed=3 would_break=0
+binaryen:parsed=40 would_break=0
+binaryen-bin:parsed=0 would_break=0
+bindlib:parsed=22 would_break=0
+biniou:parsed=17 would_break=0
+binning:parsed=2 would_break=0
+binsec:parsed=350 would_break=0
+bio_io:parsed=43 would_break=0
+biotk:parsed=116 would_break=0
+bisect_ppx:parsed=50 would_break=0
+bitcoin:parsed=11 would_break=0
+bitgenerators:parsed=18 would_break=0
+bitlib:parsed=4 would_break=0
+bitmasks:parsed=5 would_break=0
+bitpack_serializer:parsed=9 would_break=0
+bitstring:parsed=22 would_break=0
+bitv:parsed=7 would_break=0
+bitwuzla:parsed=12 would_break=0
+bitwuzla-bin:parsed=12 would_break=0
+bitwuzla-cxx:parsed=23 would_break=0
+bjack:parsed=3 would_break=0
+blake3:test/test.ml:let small_test () =
+blake3:test/test.ml:  let h = Blake3.hash hash_size @@ [31;1mb"[39;22mHello\n" in
+blake3:test/test.ml:  let expected =
+blake3:parsed=4 would_break=1
+bloomf:parsed=5 would_break=0
+bls12-381:parsed=12776 would_break=0
+bls12-381-gen:parsed=53 would_break=0
+bls12-381-hash:parsed=15 would_break=0
+bls12-381-signature:parsed=8 would_break=0
+bls12-381-unix:parsed=50 would_break=0
+blurhash:parsed=3 would_break=0
+bn128:parsed=8 would_break=0
+bnfgen:parsed=7 would_break=0
+bogue:parsed=56 would_break=0
+bogue-tutorials:parsed=7 would_break=0
+boltzgen:parsed=31 would_break=0
+bonsai:parsed=969 would_break=0
+bos:parsed=29 would_break=0
+boulangerie:parsed=6 would_break=0
+box:parsed=1 would_break=0
+bpf:parsed=4 would_break=0
+brisk-reconciler:parsed=17 would_break=0
+broken:parsed=5 would_break=0
+brr:parsed=58 would_break=0
+brr-lwd:parsed=35 would_break=0
+bsdowl:parsed=27 would_break=0
+bst:parsed=5 would_break=0
+buffer-pool:parsed=4 would_break=0
+build_path_prefix_map:parsed=4 would_break=0
+builder:parsed=6 would_break=0
+builder-web:parsed=50 would_break=0
+bwd:parsed=12 would_break=0
+bwrap:parsed=4 would_break=0
+bytebuffer:parsed=12 would_break=0
+bytesrw:parsed=37 would_break=0
+bytestring:parsed=159 would_break=0
+bz2:parsed=3 would_break=0
+ca-certs:parsed=3 would_break=0
+ca-certs-nss:parsed=4 would_break=0
+cachet:parsed=7 would_break=0
+cactus:parsed=80 would_break=0
+cairn:parsed=7 would_break=0
+cairo2:parsed=51 would_break=0
+caisar:parsed=77 would_break=0
+caisar-ir:parsed=58 would_break=0
+calculon:parsed=37 would_break=0
+caldav:parsed=31 would_break=0
+calendar:parsed=35 would_break=0
+calendars:parsed=3 would_break=0
+calli:parsed=40 would_break=0
+callipyge:parsed=8 would_break=0
+camelot:parsed=33 would_break=0
+camels:parsed=10 would_break=0
+camelsnakekebab:parsed=3 would_break=0
+caml-mode:parsed=0 would_break=0
+camldiets:parsed=2 would_break=0
+camlgpc:parsed=3 would_break=0
+camlidl:parsed=61 would_break=0
+camlimages:parsed=142 would_break=0
+camlix:parsed=7 would_break=0
+camlkit:parsed=8073 would_break=0
+camlon:parsed=27 would_break=0
+camlp-streams:parsed=8 would_break=0
+camlp4:parsed=252 would_break=0
+camlp5:parsed=516 would_break=0
+camlp5-buildscripts:parsed=17 would_break=0
+camlpdf:parsed=91 would_break=0
+camlprime:parsed=9 would_break=0
+camlrack:parsed=21 would_break=0
+camlzip:parsed=9 would_break=0
+camomile:parsed=116 would_break=0
+camyll:parsed=12 would_break=0
+canary:parsed=2 would_break=0
+caper:parsed=57 would_break=0
+capitalization:parsed=2 would_break=0
+capnp:parsed=55 would_break=0
+capnp-rpc:parsed=128 would_break=0
+capnp-rpc-lwt:parsed=134 would_break=0
+capnp-rpc-mirage:parsed=136 would_break=0
+caqti:parsed=177 would_break=0
+caqti-dynload:parsed=117 would_break=0
+caqti-tls:parsed=137 would_break=0
+carbon:parsed=13 would_break=0
+carray:parsed=5 would_break=0
+carton:parsed=42 would_break=0
+carton-git:parsed=32 would_break=0
+castore:parsed=6 would_break=0
+catala-format:parsed=3 would_break=0
+catapult:parsed=44 would_break=0
+cb-check:parsed=0 would_break=0
+cbor:parsed=3 would_break=0
+cborl:parsed=4 would_break=0
+ccbg:parsed=1 would_break=0
+cdb:parsed=3 would_break=0
+cdrom:parsed=3 would_break=0
+ceph:parsed=7 would_break=0
+certify:parsed=5 would_break=0
+cf:parsed=9 would_break=0
+cfg:parsed=8 would_break=0
+cfml:parsed=115 would_break=0
+cgroups:parsed=19 would_break=0
+chacha:parsed=5 would_break=0
+chalk:parsed=3 would_break=0
+chamelon:parsed=26 would_break=0
+charInfo_width:parsed=9 would_break=0
+charrua:parsed=19 would_break=0
+charrua-client-lwt:parsed=19 would_break=0
+charset:parsed=9 would_break=0
+chartjs:parsed=14 would_break=0
+chase:parsed=57 would_break=0
+checked_oint:parsed=3 would_break=0
+checkseum:parsed=14 would_break=0
+choice:parsed=5 would_break=0
+chrome-trace:parsed=2459 would_break=0
+cid:parsed=5 would_break=0
+cinaps:parsed=12 would_break=0
+clap:parsed=3 would_break=0
+clarity-lang:parsed=17 would_break=0
+class_group_vdf:parsed=14 would_break=0
+climate:parsed=53 would_break=0
+cll:parsed=5 would_break=0
+cloudi:parsed=21 would_break=0
+clz:parsed=8 would_break=0
+cmarker:parsed=3 would_break=0
+cmarkit:parsed=38 would_break=0
+cmdlang:parsed=77 would_break=0
+cmdliner:parsed=48 would_break=0
+cmdliner-stdlib:parsed=2 would_break=0
+cmitomli:parsed=1 would_break=0
+cmon:parsed=3 would_break=0
+coap:parsed=10 would_break=0
+cobs:parsed=2 would_break=0
+coccinelle:parsed=1624 would_break=0
+codept:core/modes.ml:let info _ _ ppf _param {Unit.ml; mli} =
+codept:core/modes.ml:  let print =  Pp.(list ~sep:([31;1ms"[39;22m @,") @@ Unit.pp ) ppf in
+codept:core/modes.ml:  print ml; print mli
+codept:---
+codept:core/modes.ml:  Pp.fp ppf "%a: %a\n" pp_pkg (Common.make_abs abs_path u.src)
+codept:core/modes.ml:    Pp.( list ~sep:([31;1ms"[39;22m ") pp_dep )
+codept:core/modes.ml:    elts
+codept:---
+codept:core/modes.ml:  let print units =
+codept:core/modes.ml:    Pp.(list ~sep:([31;1ms"[39;22m") @@ pp_module param.makefile ?filter sort_p)
+codept:core/modes.ml:      ppf
+codept:---
+codept:core/modes.ml:  Pp.fp ppf "%a"
+codept:core/modes.ml:    Pp.( list ~sep:([31;1ms"[39;22m\n") Namespaced.pp )
+codept:core/modes.ml:    (List.map (fun d -> d.Deps.path) elts)
+codept:---
+codept:core/modes.ml:  let print units = Pp.fp ppf "%a"
+codept:core/modes.ml:      Pp.(list ~sep:([31;1ms"[39;22m") @@ pp_only_deps sort_p ?filter)
+codept:core/modes.ml:      (sort_u units) in
+codept:---
+codept:core/modes.ml:  Pp.fp ppf "Cycle detected: %a@."
+codept:core/modes.ml:    (Pp.list ~sep:Pp.([31;1ms"[39;22m ") ~post:Pp.([31;1ms"[39;22m\n") Pkg.pp)
+codept:core/modes.ml:    (List.map fst path)
+codept:---
+codept:core/modes.ml:    Pp.fp ppf "%a"
+codept:core/modes.ml:     (Pp.list ~sep:Pp.([31;1ms"[39;22m ") ~post:Pp.([31;1ms"[39;22m\n") Pkg.pp)
+codept:core/modes.ml:    (List.map fst sorted)
+codept:---
+codept:tests/run.ml:  && ( Version.( v < v_4_04) ||
+codept:tests/run.ml:       Std.deps_test_single [[31;1md"[39;22mpattern_open.ml", u["A'";"E1"; "E2"; "E3";"E4"]] )
+codept:---
+codept:tests/run.ml:  && ( Version.( v < v_4_08) ||
+codept:tests/run.ml:       Std.deps_test_single [[31;1md"[39;22moption_monad.ml", u["Ext";"Ext3";"Ext4"]]
+codept:tests/run.ml:     )
+codept:---
+codept:tests/run.ml:  && ( Version.(v < v_4_13) ||
+codept:tests/run.ml:       Std.deps_test_single [[31;1md"[39;22mwith_module_type.ml", []]
+codept:tests/run.ml:     )
+codept:---
+codept:tests/run.ml:     (or far too much ) to do here *)
+codept:tests/run.ml:  && Std.deps_test_single  [ [31;1md"[39;22mriddle.ml", u["M5"] ]
+codept:tests/run.ml:  &&
+codept:---
+codept:tests/run.ml:  ( chdir "../pair";
+codept:tests/run.ml:  both ["A"] [[31;1md"[39;22ma.ml", l["b.ml"];  [31;1md"[39;22mb.ml", u["Extern"] ]
+codept:tests/run.ml:  )
+codept:---
+codept:tests/run.ml:      (Some ["C"],
+codept:tests/run.ml:       [ [31;1md"[39;22ma.mli", [];
+codept:tests/run.ml:         [31;1md"[39;22mb.mli", l["a.mli"];
+codept:tests/run.ml:         [31;1md"[39;22mc.ml", l["a.mli"; "b.mli"]
+codept:tests/run.ml:       ]
+codept:---
+codept:lib/solver.ml:    Pp.fp ppf "%a"
+codept:lib/solver.ml:      Pp.(list ~sep:([31;1ms"[39;22m\n@;") @@ pp_cat block resolver map ) (Map.bindings m)
+codept:---
+codept:lib/module.ml:    Pp.fp ppf {|Namespaced.make ~nms:[%a] "%a"|}
+codept:lib/module.ml:      Pp.(list ~sep:([31;1ms"[39;22m;@ ") @@ estring) nd.namespace
+codept:lib/module.ml:      Unitname.pp_as_modname nd.name
+codept:---
+codept:lib/pp.ml:
+codept:lib/pp.ml:let list0 ?(pre=[31;1ms"[39;22m") ?(post=[31;1ms"[39;22m") ?(sep=[31;1ms"[39;22m; @,") pp ppf l =
+codept:lib/pp.ml:  fp ppf "%t%a%t" pre (list ~sep pp) l post
+codept:---
+codept:lib/pp.ml:
+codept:lib/pp.ml:let list  ?(pre=[31;1ms"[39;22m") ?(post=[31;1ms"[39;22m") ?(sep=[31;1ms"[39;22m; @,") pp ppf l =
+codept:lib/pp.ml:  if l = [] then () else
+codept:---
+codept:lib/paths.ml:    let compare (x:t) (y:t) = compare x y
+codept:lib/paths.ml:    let pp = Pp.(list ~sep:([31;1ms"[39;22m.") ) Name.pp
+codept:lib/paths.ml:  end
+codept:parsed=339 would_break=6
+cohttp:parsed=169 would_break=0
+cohttp_async_websocket:parsed=7 would_break=0
+cohttp_static_handler:parsed=4 would_break=0
+coin:parsed=5 would_break=0
+colibrics:parsed=250 would_break=0
+colombe:parsed=37 would_break=0
+color:parsed=4 would_break=0
+color-brewery:parsed=8 would_break=0
+colors:parsed=4 would_break=0
+combic:parsed=1 would_break=0
+combinaml:parsed=3 would_break=0
+combinat:parsed=15 would_break=0
+comby-semantic:parsed=177 would_break=0
+command_rpc:parsed=41 would_break=0
+commons:parsed=830 would_break=0
+conan:parsed=51 would_break=0
+conduit:parsed=56 would_break=0
+conex:parsed=47 would_break=0
+conex-nocrypto:parsed=47 would_break=0
+confero:parsed=16 would_break=0
+config:parsed=26 would_break=0
+configuration:parsed=6 would_break=0
+conformist:parsed=5 would_break=0
+conjury:parsed=8 would_break=0
+containers:parsed=244 would_break=0
+containers-thread:parsed=258 would_break=0
+content_security_policy:parsed=3 would_break=0
+cookie:parsed=21 would_break=0
+cookies:parsed=4 would_break=0
+coq-core:ide/rocqide/rocqide_ui.ml:                             (fun x -> Buffer.add_string b ("<menuitem action='"^menu^" "^(no_under x)^"' />\n")) l) in
+coq-core:ide/rocqide/rocqide_ui.ml:                  let () = Buffer.add_string [31;1mb"[39;22m</menu>\n" in
+coq-core:ide/rocqide/rocqide_ui.ml:                  b in
+coq-core:parsed=1266 would_break=1
+coq-lsp:parsed=583 would_break=0
+coq-serapi:parsed=240 would_break=0
+coq-shell:parsed=0 would_break=0
+coq-waterproof:parsed=23 would_break=0
+coqide:ide/coqide/coqide_ui.ml:                             (fun x -> Buffer.add_string b ("<menuitem action='"^menu^" "^(no_under x)^"' />\n")) l) in
+coqide:ide/coqide/coqide_ui.ml:                  let () = Buffer.add_string [31;1mb"[39;22m</menu>\n" in
+coqide:ide/coqide/coqide_ui.ml:                  b in
+coqide:parsed=1239 would_break=1
+cordova:parsed=0 would_break=0
+cordova-plugin-activity-indicator:parsed=1 would_break=0
+cordova-plugin-background-mode:parsed=1 would_break=0
+cordova-plugin-barcode-scanner:parsed=1 would_break=0
+cordova-plugin-battery-status:parsed=1 would_break=0
+cordova-plugin-camera:parsed=1 would_break=0
+cordova-plugin-clipboard:parsed=1 would_break=0
+cordova-plugin-device:parsed=1 would_break=0
+cordova-plugin-device-orientation:parsed=1 would_break=0
+cordova-plugin-dialogs:parsed=1 would_break=0
+cordova-plugin-email-composer:parsed=1 would_break=0
+cordova-plugin-fcm:parsed=0 would_break=0
+cordova-plugin-file:parsed=1 would_break=0
+cordova-plugin-file-opener:parsed=1 would_break=0
+cordova-plugin-file-transfer:parsed=1 would_break=0
+cordova-plugin-geolocation:parsed=1 would_break=0
+cordova-plugin-image-picker:parsed=1 would_break=0
+cordova-plugin-inappbrowser:parsed=1 would_break=0
+cordova-plugin-insomnia:parsed=1 would_break=0
+cordova-plugin-keyboard:parsed=1 would_break=0
+cordova-plugin-loading-spinner:parsed=1 would_break=0
+cordova-plugin-local-notifications:parsed=1 would_break=0
+cordova-plugin-media:parsed=1 would_break=0
+cordova-plugin-media-capture:parsed=1 would_break=0
+cordova-plugin-network-information:parsed=1 would_break=0
+cordova-plugin-progress:parsed=1 would_break=0
+cordova-plugin-push-notifications:parsed=0 would_break=0
+cordova-plugin-qrscanner:parsed=1 would_break=0
+cordova-plugin-screen-orientation:parsed=1 would_break=0
+cordova-plugin-sim-card:parsed=1 would_break=0
+cordova-plugin-sms:parsed=1 would_break=0
+cordova-plugin-social-sharing:parsed=1 would_break=0
+cordova-plugin-statusbar:parsed=1 would_break=0
+cordova-plugin-toast:parsed=1 would_break=0
+cordova-plugin-touch-id:parsed=1 would_break=0
+cordova-plugin-vibration:parsed=1 would_break=0
+cordova-plugin-videoplayer:parsed=1 would_break=0
+core:parsed=533 would_break=0
+core_bench:parsed=94 would_break=0
+core_extended:parsed=53 would_break=0
+core_kernel:parsed=184 would_break=0
+core_profiler:parsed=48 would_break=0
+core_unix:parsed=236 would_break=0
+corosync:parsed=18 would_break=0
+cosovo:parsed=5 would_break=0
+cow:parsed=16 would_break=0
+cpdf:parsed=101 would_break=0
+cpm:parsed=7 would_break=0
+cppffigen:parsed=5 would_break=0
+cppo:parsed=13 would_break=0
+cps_toolbox:parsed=23 would_break=0
+cpu:parsed=1 would_break=0
+cpuid:parsed=3 would_break=0
+crc:parsed=3 would_break=0
+crlibm:parsed=5 would_break=0
+crontab:parsed=6 would_break=0
+crowbar:parsed=10 would_break=0
+crunch:parsed=10 would_break=0
+cry:parsed=3 would_break=0
+crypt:parsed=3 would_break=0
+cryptokit:parsed=10 would_break=0
+cryptoverif:parsed=143 would_break=0
+csdp:parsed=0 would_break=0
+csexp:parsed=5 would_break=0
+css:parsed=13 would_break=0
+cstruct:parsed=44 would_break=0
+csv:parsed=13 would_break=0
+csvfields:parsed=18 would_break=0
+ctypes:parsed=223 would_break=0
+ctypes-build:parsed=4 would_break=0
+ctypes_stubs_js:parsed=4 would_break=0
+cubicle:parsed=115 would_break=0
+cucumber:parsed=23 would_break=0
+cudajit:parsed=9 would_break=0
+cudf:parsed=20 would_break=0
+cue_sheet_maker:parsed=3 would_break=0
+cumulus:parsed=4 would_break=0
+curly:parsed=6 would_break=0
+current:parsed=154 would_break=0
+current-albatross-deployer:parsed=26 would_break=0
+current-web-pipelines:parsed=10 would_break=0
+current_ansi:parsed=160 would_break=0
+current_incr:parsed=11 would_break=0
+current_ocluster:parsed=67 would_break=0
+curses:parsed=5 would_break=0
+curve-sampling:parsed=14 would_break=0
+cvc5:parsed=15 would_break=0
+daft:parsed=7 would_break=0
+dap:parsed=8 would_break=0
+data-encoding:parsed=109 would_break=0
+datalog:parsed=15 would_break=0
+dates_calc:parsed=4 would_break=0
+daypack-lib:parsed=72 would_break=0
+dbase4:parsed=11 would_break=0
+dbf:parsed=2 would_break=0
+dblp:parsed=4 would_break=0
+dbm:parsed=3 would_break=0
+debian-formats:parsed=8 would_break=0
+decimal:parsed=8 would_break=0
+decoders:parsed=67 would_break=0
+decompress:parsed=23 would_break=0
+dedent:parsed=6 would_break=0
+dedukti:parsed=79 would_break=0
+delimcc_of_fxhandler:parsed=3 would_break=0
+delimited_parsing:parsed=11 would_break=0
+depyt:parsed=3 would_break=0
+devkit:parsed=96 would_break=0
+diet:parsed=5 would_break=0
+diff:parsed=8 would_break=0
+diffable:parsed=16 would_break=0
+diffast:parsed=305 would_break=0
+diffast-etc:parsed=305 would_break=0
+digestif:parsed=32 would_break=0
+directories:parsed=11 would_break=0
+dirsp-exchange:parsed=33 would_break=0
+diskuvbox:parsed=5 would_break=0
+dispatch:parsed=5 would_break=0
+dkim:parsed=16 would_break=0
+dkml-c-probe:parsed=13 would_break=0
+dkml-compiler-env:parsed=0 would_break=0
+dkml-component-staging-ocamlrun:parsed=5 would_break=0
+dkml-component-xx-console:parsed=0 would_break=0
+dkml-dune-dsl:parsed=23 would_break=0
+dkml-install:parsed=84 would_break=0
+dkml-option-vcpkg:parsed=1 would_break=0
+dkml-runtime-common:parsed=0 would_break=0
+dkml-workflows:parsed=10 would_break=0
+dlm:parsed=10 would_break=0
+dmap:parsed=2 would_break=0
+dns:parsed=64 would_break=0
+docfd:parsed=43 would_break=0
+docker_hub:parsed=2 would_break=0
+dockerfile:parsed=16 would_break=0
+docout:parsed=3 would_break=0
+docteur:parsed=16 would_break=0
+doculib:parsed=31 would_break=0
+doi2bib:parsed=4 would_break=0
+dokeysto:parsed=21 would_break=0
+dokeysto_lz4:parsed=21 would_break=0
+dolmen:parsed=195 would_break=0
+dolog:parsed=4 would_break=0
+domain-local-await:parsed=5 would_break=0
+domain-local-timeout:parsed=8 would_break=0
+domain-name:parsed=3 would_break=0
+domain_shims:parsed=20 would_break=0
+domainslib:parsed=33 would_break=0
+dose3:parsed=135 would_break=0
+dot-merlin-reader:parsed=1367 would_break=0
+dotenv:parsed=3 would_break=0
+down:parsed=17 would_break=0
+dream:parsed=44 would_break=0
+dream-accept:parsed=6 would_break=0
+dream-cli:parsed=10 would_break=0
+dream-encoding:parsed=6 would_break=0
+dream-html:parsed=13 would_break=0
+dream-htmx:parsed=3 would_break=0
+dream-livereload:parsed=4 would_break=0
+dream-pure:parsed=167 would_break=0
+dream-serve:parsed=3 would_break=0
+dream_middleware_ext:parsed=16 would_break=0
+drom_toml:parsed=112 would_break=0
+dscheck:parsed=15 would_break=0
+dssi:parsed=4 would_break=0
+dtoa:parsed=6 would_break=0
+dtools:parsed=6 would_break=0
+dual:parsed=3 would_break=0
+duff:parsed=4 would_break=0
+dune:parsed=2508 would_break=0
+dune-cargo-build:parsed=27 would_break=0
+dune-compiledb:parsed=1 would_break=0
+dune-deps:parsed=15 would_break=0
+dune-release:parsed=98 would_break=0
+dune-secondary:parsed=1391 would_break=0
+duppy:parsed=4 would_break=0
+duration:parsed=3 would_break=0
+dynamic_gc:parsed=3 would_break=0
+earley:parsed=90 would_break=0
+earlybird:parsed=66 would_break=0
+easy-format:parsed=6 would_break=0
+easy_logging:parsed=12 would_break=0
+ecaml:parsed=422 would_break=0
+edn:parsed=10 would_break=0
+efl:parsed=230 would_break=0
+ego:test/test_prop.ml:  (* comm_and *)    [%s ("?a" && "?b")] @-> [%s ("?b" && "?a")];
+ego:test/test_prop.ml:  (* lem *)         [%s ("?a" || (not "?a"))] @->    [%[31;1ms"[39;22mtrue"];
+ego:test/test_prop.ml:  (* or_true *)     [%s ("?a" || "true")] @-> [%s "true"];
+ego:test/test_prop.ml:  (* and_true *)    [%s ("?a" && "true")] @-> [%[31;1ms"[39;22m?a"];
+ego:test/test_prop.ml:  (* contrapositive *) [%s ("?a" => "?b")] @->    [%s ((not "?b") => (not "?a"))];
+ego:---
+ego:test/test_math.ml:    
+ego:test/test_math.ml:    rewrite [%s (d "?x" "?c")] [%[31;1ms"[39;22m0."] ~if_:(is_sym "x" && is_const_or_distinct_var "c" "x");
+ego:test/test_math.ml:    (* d constant *)
+ego:parsed=24 would_break=2
+eigen:parsed=19 would_break=0
+eio:parsed=210 would_break=0
+eio-ssl:parsed=2 would_break=0
+eio-trace:parsed=29 would_break=0
+either:parsed=4 would_break=0
+elasticsearch-cli:parsed=4 would_break=0
+elina:parsed=2 would_break=0
+eliom:parsed=182 would_break=0
+elm_core:parsed=33 would_break=0
+elpi:parsed=73 would_break=0
+email_message:parsed=87 would_break=0
+embedded_ocaml_templates:parsed=35 would_break=0
+emile:parsed=4 would_break=0
+emoji:parsed=5 would_break=0
+encoding:parsed=49 would_break=0
+encore:parsed=9 would_break=0
+enumerators:parsed=7 would_break=0
+env_config:parsed=18 would_break=0
+epictetus:parsed=16 would_break=0
+eprover:parsed=0 would_break=0
+eqaf:parsed=29 would_break=0
+equinoxe:parsed=23 would_break=0
+erlang:parsed=132 would_break=0
+errpy:parsed=8 would_break=0
+erssical:parsed=21 would_break=0
+esperanto-cosmopolitan:parsed=5 would_break=0
+ethernet:parsed=4 would_break=0
+euler:parsed=19 would_break=0
+exenum:parsed=21 would_break=0
+exn-source:parsed=3 would_break=0
+expect:parsed=9 would_break=0
+expect_test_helpers_async:parsed=24 would_break=0
+expect_test_helpers_core:parsed=11 would_break=0
+extism:parsed=16 would_break=0
+extlib:parsed=58 would_break=0
+extprot:parsed=43 would_break=0
+extunix:parsed=9 would_break=0
+ez-conf-lib:parsed=0 would_break=0
+ez_api:parsed=136 would_break=0
+ez_cmdliner:parsed=11 would_break=0
+ez_dune_describe:parsed=8 would_break=0
+ez_file:parsed=27 would_break=0
+ez_hash:parsed=4 would_break=0
+ez_opam_file:parsed=6 would_break=0
+ez_pgocaml:parsed=4 would_break=0
+ez_search:parsed=15 would_break=0
+ez_subst:parsed=8 would_break=0
+ezcurl:parsed=6 would_break=0
+ezgzip:parsed=4 would_break=0
+ezjs_ace:parsed=4 would_break=0
+ezjs_blockies:parsed=1 would_break=0
+ezjs_cleave:parsed=1 would_break=0
+ezjs_crypto:parsed=1 would_break=0
+ezjs_cytoscape:parsed=1 would_break=0
+ezjs_d3pie:parsed=3 would_break=0
+ezjs_extension:parsed=51 would_break=0
+ezjs_fetch:parsed=4 would_break=0
+ezjs_idb:parsed=3 would_break=0
+ezjs_jquery:parsed=2 would_break=0
+ezjs_min:parsed=8 would_break=0
+ezjs_odometer:parsed=1 would_break=0
+ezjs_push:parsed=3 would_break=0
+ezjs_qrcode:parsed=1 would_break=0
+ezjs_recaptcha:parsed=1 would_break=0
+ezjsonm:parsed=7 would_break=0
+ezjsonm-encoding:parsed=4 would_break=0
+ezresto:parsed=32 would_break=0
+ezsqlite:parsed=4 would_break=0
+ezxmlm:parsed=2 would_break=0
+faad:parsed=4 would_break=0
+fadbadml:parsed=42 would_break=0
+faraday:parsed=10 would_break=0
+farfadet:parsed=4 would_break=0
+farith:parsed=58 would_break=0
+farmhash:parsed=2 would_break=0
+fasmifra:parsed=5 would_break=0
+fat-filesystem:parsed=21 would_break=0
+fd-send-recv:parsed=5 would_break=0
+fdkaac:parsed=5 would_break=0
+feat:parsed=29 would_break=0
+feather:parsed=6 would_break=0
+ff:parsed=7 would_break=0
+ffmpeg:parsed=52 would_break=0
+fftw3:parsed=13 would_break=0
+fiat-p256:parsed=24 would_break=0
+fiber:parsed=20 would_break=0
+fieldslib:parsed=1 would_break=0
+file-rewriter:parsed=8 would_break=0
+file_path:parsed=76 would_break=0
+fileutils:parsed=34 would_break=0
+fit:parsed=4 would_break=0
+fix:parsed=64 would_break=0
+flac:parsed=43 would_break=0
+flatunionfind:parsed=3 would_break=0
+flex-array:parsed=3 would_break=0
+flexdll:parsed=4 would_break=0
+fmlib:parsed=114 would_break=0
+fmt:parsed=12 would_break=0
+fontforge-of-ocaml:parsed=9 would_break=0
+forester:parsed=78 would_break=0
+fpath:parsed=9 would_break=0
+fpath-base:parsed=20 would_break=0
+frama-c:parsed=1791 would_break=0
+frama-c-lannotate:parsed=36 would_break=0
+frama-c-luncov:parsed=33 would_break=0
+frama-c-metacsl:parsed=19 would_break=0
+frama-clang:parsed=27 would_break=0
+fred:parsed=57 would_break=0
+freetds:parsed=9 would_break=0
+frei0r:parsed=4 would_break=0
+fsevents:parsed=11 would_break=0
+fstar:contrib/CoreCrypto/ml/Tests.ml:    point = {
+fstar:contrib/CoreCrypto/ml/Tests.ml:      ecx = [31;1mx"[39;22m6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296";
+fstar:contrib/CoreCrypto/ml/Tests.ml:      ecy = [31;1mx"[39;22m4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5"
+fstar:contrib/CoreCrypto/ml/Tests.ml:    }
+fstar:---
+fstar:contrib/CoreCrypto/ml/Tests.ml:    point = {
+fstar:contrib/CoreCrypto/ml/Tests.ml:      ecx = [31;1mx"[39;22maa87ca22be8b05378eb1c71ef320ad746e1d3b628ba79b9859f741e082542a385502f25dbf55296c3a545e3872760ab7";
+fstar:contrib/CoreCrypto/ml/Tests.ml:      ecy = [31;1mx"[39;22m3617de4a96262c6f5d9e98bf9292dc29f8f41dbd289a147ce9da3113b5f0b8c00a60b1ce1d7e819d7a431d7c90ea0e5f"
+fstar:contrib/CoreCrypto/ml/Tests.ml:    }
+fstar:---
+fstar:contrib/CoreCrypto/ml/Tests.ml:    point = {
+fstar:contrib/CoreCrypto/ml/Tests.ml:      ecx = [31;1mx"[39;22m00c6858e06b70404e9cd9e3ecb662395b4429c648139053fb521f828af606b4d3dbaa14b5e77efe75928fe1dc127a2ffa8de3348b3c1856a429bf97e7e31c2e5bd66";
+fstar:contrib/CoreCrypto/ml/Tests.ml:      ecy = [31;1mx"[39;22m011839296a789a3bc0045c8a5fb42c7d1bd998f54449579b446817afbd17273e662c97ee72995ef42640c550b9013fad0761353c7086a272c24088be94769fd16650"
+fstar:contrib/CoreCrypto/ml/Tests.ml:    }
+fstar:parsed=464 would_break=1
+fswatch:parsed=7 would_break=0
+fswatch_async:parsed=7 would_break=0
+fswatch_lwt:parsed=5 would_break=0
+fun-postgresql:parsed=7 would_break=0
+functoria:parsed=176 would_break=0
+funfields:parsed=3 would_break=0
+fuseau:parsed=54 would_break=0
+fuzzy_compare:parsed=4 would_break=0
+fuzzy_match:parsed=6 would_break=0
+fzf:parsed=66 would_break=0
+gadelac:parsed=99 would_break=0
+gapi-ocaml:parsed=236 would_break=0
+gappa:parsed=0 would_break=0
+gavl:parsed=3 would_break=0
+gccjit:parsed=8 would_break=0
+gd:parsed=4 would_break=0
+gdbprofiler:parsed=12 would_break=0
+gedcom:parsed=2 would_break=0
+gel:parsed=2 would_break=0
+gemini:parsed=20 would_break=0
+gen:parsed=16 would_break=0
+gen_js_api:parsed=67 would_break=0
+genspio:parsed=19 would_break=0
+genspir:parsed=3 would_break=0
+geojson:parsed=15 would_break=0
+geoml:parsed=39 would_break=0
+get_line:parsed=1 would_break=0
+getopt:parsed=3 would_break=0
+gettext:parsed=51 would_break=0
+gg:parsed=10 would_break=0
+git:parsed=132 would_break=0
+git-kv:parsed=4 would_break=0
+git-split:parsed=23 would_break=0
+github:parsed=52 would_break=0
+github-hooks:parsed=5 would_break=0
+gitlab:parsed=29 would_break=0
+gitlab_pipeline_notifier:parsed=6 would_break=0
+glfw-ocaml:parsed=4 would_break=0
+glical:parsed=5 would_break=0
+globlon:parsed=5 would_break=0
+glpk:parsed=3 would_break=0
+gluon:parsed=16 would_break=0
+gluten:parsed=22 would_break=0
+gmap:parsed=3 would_break=0
+gmp:parsed=2 would_break=0
+gmp-ecm:parsed=0 would_break=0
+gmp-xen:parsed=0 would_break=0
+gnuplot:parsed=10 would_break=0
+goblint:parsed=355 would_break=0
+goblint-cil:parsed=108 would_break=0
+google-drive-ocamlfuse:parsed=37 would_break=0
+gospel:parsed=228 would_break=0
+gotd:parsed=3 would_break=0
+gperftools:parsed=2 would_break=0
+gpiod:parsed=4 would_break=0
+gpr:parsed=21 would_break=0
+gpt:parsed=4 would_break=0
+gptar:parsed=3 would_break=0
+gpx:parsed=2 would_break=0
+gr:parsed=8 would_break=0
+grace:parsed=25 would_break=0
+gradescope_submit:parsed=9 would_break=0
+grain_dypgen:parsed=42 would_break=0
+graphics:parsed=9 would_break=0
+graphicspdf:parsed=0 would_break=0
+graphql:parsed=38 would_break=0
+graphql_jsoo_client:parsed=9 would_break=0
+graphql_ppx:parsed=0 would_break=0
+graphv:parsed=78 would_break=0
+grenier:parsed=73 would_break=0
+grid:parsed=3 would_break=0
+grpc:parsed=45 would_break=0
+gsl:parsed=132 would_break=0
+gstreamer:parsed=11 would_break=0
+guardian:parsed=26 would_break=0
+guile:parsed=9 would_break=0
+gxl-light:parsed=3 would_break=0
+h1:parsed=33 would_break=0
+h2:parsed=77 would_break=0
+hachis:parsed=6 would_break=0
+hacl-star:parsed=204 would_break=0
+hacl_func:parsed=3 would_break=0
+hacl_x25519:parsed=11 would_break=0
+happy-eyeballs:parsed=10 would_break=0
+hardcaml:parsed=352 would_break=0
+hardcaml-lua:parsed=72 would_break=0
+hardcaml_axi:parsed=47 would_break=0
+hardcaml_c:parsed=17 would_break=0
+hardcaml_circuits:parsed=137 would_break=0
+hardcaml_event_driven_sim:parsed=40 would_break=0
+hardcaml_fixed_point:parsed=18 would_break=0
+hardcaml_handshake:parsed=3 would_break=0
+hardcaml_of_verilog:parsed=50 would_break=0
+hardcaml_step_testbench:parsed=48 would_break=0
+hardcaml_verify:parsed=54 would_break=0
+hardcaml_verilator:parsed=19 would_break=0
+hardcaml_waveterm:parsed=89 would_break=0
+hardcaml_xilinx:parsed=71 would_break=0
+hardcaml_xilinx_components:parsed=15 would_break=0
+hardcaml_xilinx_reports:parsed=18 would_break=0
+hashcons:parsed=5 would_break=0
+hashset:parsed=0 would_break=0
+hc:parsed=3 would_break=0
+hdr_histogram:parsed=5 would_break=0
+headache:parsed=6 would_break=0
+header-check:parsed=3 would_break=0
+hector:parsed=13 would_break=0
+herdtools7:litmus/dumpRun.ml:      O.o "}" ;
+herdtools7:litmus/dumpRun.ml:      O.[31;1mo"[39;22m" ;
+herdtools7:litmus/dumpRun.ml:      O.[31;1mo"[39;22m/* Run all tests */" ;
+herdtools7:litmus/dumpRun.ml:      let runbody () =
+herdtools7:---
+herdtools7:litmus/dumpRun.ml:      end ;
+herdtools7:litmus/dumpRun.ml:      O.[31;1mo"[39;22m" ;
+herdtools7:litmus/dumpRun.ml:      if xcode then begin
+herdtools7:---
+herdtools7:litmus/dumpRun.ml:      end else  begin
+herdtools7:litmus/dumpRun.ml:        O.[31;1mo"[39;22mint main(int argc,char **argv) {" ;
+herdtools7:litmus/dumpRun.ml:        if is_kvm then O.oi "litmus_init();" ;
+herdtools7:---
+herdtools7:litmus/dumpRun.ml:        O.oi "return 0;" ;
+herdtools7:litmus/dumpRun.ml:        O.[31;1mo"[39;22m}"
+herdtools7:litmus/dumpRun.ml:      end ;
+herdtools7:---
+herdtools7:litmus/skel.ml:        O.o "} param_t;" ;
+herdtools7:litmus/skel.ml:        O.[31;1mo"[39;22m" ;
+herdtools7:litmus/skel.ml:        if do_sync_macro then begin
+herdtools7:---
+herdtools7:litmus/preSi.ml:                   O.oi "return;" ;
+herdtools7:litmus/preSi.ml:                   O.[31;1mo"[39;22m}"
+herdtools7:litmus/preSi.ml:                 end else begin
+herdtools7:parsed=867 would_break=3
+heroicons-reason-react:parsed=1 would_break=0
+hevea:parsed=118 would_break=0
+hex:parsed=3 would_break=0
+hex_encode:parsed=4 would_break=0
+hexstring:parsed=4 would_break=0
+hg_lib:parsed=10 would_break=0
+hidapi:parsed=7 would_break=0
+higher:parsed=9 would_break=0
+higher_kinded:parsed=9 would_break=0
+highlexer:parsed=5 would_break=0
+higlo:parsed=12 would_break=0
+hilite:parsed=11 would_break=0
+hiredis:parsed=9 would_break=0
+hkdf:parsed=3 would_break=0
+hl_yaml:parsed=13 would_break=0
+hll:parsed=1 would_break=0
+hmap:parsed=4 would_break=0
+hol2dk:parsed=12 would_break=0
+hol_light:parsed=134 would_break=0
+hol_light_module:parsed=0 would_break=0
+hooke:parsed=3 would_break=0
+hsluv:parsed=8 would_break=0
+html_of_jsx:parsed=13 would_break=0
+htmlfromtexbooks:parsed=6 would_break=0
+htmlit:parsed=5 would_break=0
+hts_shrink:parsed=20 would_break=0
+http-cookie:parsed=3 would_break=0
+http-date:parsed=2 would_break=0
+http-lwt-client:parsed=5 would_break=0
+http-mirage-client:parsed=3 would_break=0
+http-multipart-formdata:parsed=4 would_break=0
+http_async:parsed=29 would_break=0
+httpaf:parsed=42 would_break=0
+httpaf_caged:parsed=7 would_break=0
+httpcats:parsed=14 would_break=0
+httph:parsed=3 would_break=0
+httpun:parsed=70 would_break=0
+httpun-ws:parsed=37 would_break=0
+huffman:parsed=1 would_break=0
+hvsock:parsed=35 would_break=0
+hxd:parsed=19 would_break=0
+hyper:parsed=25 would_break=0
+i3ipc:parsed=3 would_break=0
+icalendar:parsed=6 would_break=0
+idd:parsed=14 would_break=0
+imagelib:parsed=20 would_break=0
+imguiml:parsed=18 would_break=0
+incr_dom:parsed=108 would_break=0
+incr_dom_interactive:parsed=3 would_break=0
+incr_dom_partial_render:parsed=16 would_break=0
+incr_dom_sexp_form:parsed=3 would_break=0
+incr_map:parsed=89 would_break=0
+incr_select:parsed=7 would_break=0
+incremental:parsed=96 would_break=0
+indentation_buffer:parsed=2 would_break=0
+index:parsed=63 would_break=0
+inferno:parsed=58 would_break=0
+influxdb:parsed=8 would_break=0
+inotify:parsed=9 would_break=0
+inquire:parsed=28 would_break=0
+inquirer_oc:parsed=11 would_break=0
+inspect:parsed=8 would_break=0
+int_repr:parsed=2 would_break=0
+integers:parsed=11 would_break=0
+integers_stubs_js:parsed=1 would_break=0
+integration1d:parsed=3 would_break=0
+interface-prime:parsed=4 would_break=0
+interval:parsed=31 would_break=0
+interval-map:parsed=7 would_break=0
+inuit:parsed=16 would_break=0
+io-page:parsed=5 would_break=0
+io-page-unix:parsed=6 would_break=0
+iomux:parsed=6 would_break=0
+iostream:parsed=21 would_break=0
+ip2location:parsed=3 would_break=0
+ip2locationio:parsed=3 would_break=0
+ip2proxy:parsed=3 would_break=0
+ip2whois:parsed=3 would_break=0
+ipaddr:parsed=21 would_break=0
+irc-client:src/core/irc_client.ml:  let send_raw ~connection ~data =
+irc-client:src/core/irc_client.ml:    Log.debug (fun k->[31;1mk"[39;22msend: %s" data);
+irc-client:src/core/irc_client.ml:    let formatted_data = Bytes.unsafe_of_string (Printf.sprintf "%s\r\n" data) in
+irc-client:---
+irc-client:src/core/irc_client.ml:  let send_auth_sasl ~connection ~user ~password =
+irc-client:src/core/irc_client.ml:    Log.debug (fun k->[31;1mk"[39;22mlogin using SASL with user=%S" user);
+irc-client:src/core/irc_client.ml:    send_raw ~connection ~data:"CAP REQ :sasl" >>= fun () ->
+irc-client:---
+irc-client:src/core/irc_client.ml:          | Read line ->
+irc-client:src/core/irc_client.ml:            Log.debug (fun k->[31;1mk"[39;22mread: %s" line);
+irc-client:src/core/irc_client.ml:            begin match M.parse line with
+irc-client:---
+irc-client:src/core/irc_client.ml:                nick_try.tries <- nick_try.tries + 1;
+irc-client:src/core/irc_client.ml:                Log.err (fun k->[31;1mk"[39;22mNick name already in use, trying %s" nick_try.nick);
+irc-client:src/core/irc_client.ml:                send_nick ~connection ~nick:nick_try.nick >>= aux
+irc-client:---
+irc-client:src/core/irc_client.ml:    aux () >|= fun () ->
+irc-client:src/core/irc_client.ml:    Log.info (fun k->[31;1mk"[39;22mfinished waiting for welcome msg")
+irc-client:---
+irc-client:src/core/irc_client.ml:          state.last_active_ping <- now;
+irc-client:src/core/irc_client.ml:          Log.debug (fun k->[31;1mk"[39;22msend ping to server...");
+irc-client:src/core/irc_client.ml:          (* try to send a ping, but ignore errors *)
+irc-client:---
+irc-client:src/core/irc_client.ml:        state.finished <- true;
+irc-client:src/core/irc_client.ml:        Log.info (fun k->[31;1mk"[39;22mclient timeout");
+irc-client:src/core/irc_client.ml:        Io.return ()
+irc-client:---
+irc-client:src/core/irc_client.ml:        state.finished <- true;
+irc-client:src/core/irc_client.ml:        Log.info (fun k->[31;1mk"[39;22mconnection closed");
+irc-client:src/core/irc_client.ml:        Io.return ()
+irc-client:---
+irc-client:src/core/irc_client.ml:        (* update "last_seen" field *)
+irc-client:src/core/irc_client.ml:        Log.debug (fun k->[31;1mk"[39;22mread: %s" line);
+irc-client:src/core/irc_client.ml:        let now = Io.time() in
+irc-client:---
+irc-client:src/core/irc_client.ml:            (* Handle pings without calling the callback. *)
+irc-client:src/core/irc_client.ml:            Log.debug (fun k->[31;1mk"[39;22mreply pong to server");
+irc-client:src/core/irc_client.ml:            send_pong ~connection ~message1 ~message2
+irc-client:---
+irc-client:src/core/irc_client.ml:           connect () >>= function
+irc-client:src/core/irc_client.ml:           | None -> Log.info (fun k->[31;1mk"[39;22mcould not connect"); return true
+irc-client:src/core/irc_client.ml:           | Some connection ->
+irc-client:---
+irc-client:src/core/irc_client.ml:             listen ?keepalive ~connection ~callback () >>= fun () ->
+irc-client:src/core/irc_client.ml:             Log.info (fun k->[31;1mk"[39;22mconnection terminated.");
+irc-client:src/core/irc_client.ml:             return reconnect)
+irc-client:---
+irc-client:src/core/irc_client.ml:          | Exit ->
+irc-client:src/core/irc_client.ml:            Log.info (fun k->[31;1mk"[39;22mstopping the connection loop");
+irc-client:src/core/irc_client.ml:            return false
+irc-client:---
+irc-client:src/core/irc_client.ml:          | e ->
+irc-client:src/core/irc_client.ml:            Log.err (fun k->[31;1mk"[39;22mreconnect_loop: exception %s" (Printexc.to_string e));
+irc-client:src/core/irc_client.ml:            return true)
+irc-client:---
+irc-client:src/core/irc_client.ml:      if loop then (
+irc-client:src/core/irc_client.ml:        Log.info (fun k->[31;1mk"[39;22mtry to reconnect...");
+irc-client:src/core/irc_client.ml:        aux()
+irc-client:parsed=24 would_break=1
+iri:parsed=7 would_break=0
+irmin:parsed=539 would_break=0
+irmin-http:parsed=500 would_break=0
+irmin-layers:parsed=311 would_break=0
+irmin-mem:parsed=247 would_break=0
+irmin-tezos-utils:parsed=483 would_break=0
+irmin-watcher:parsed=15 would_break=0
+iso639:parsed=10 would_break=0
+iter:parsed=14 would_break=0
+itv-tree:parsed=3 would_break=0
+jane-street-headers:parsed=0 would_break=0
+jane_rope:parsed=6 would_break=0
+janestreet_cpuid:parsed=7 would_break=0
+janestreet_csv:parsed=97 would_break=0
+janestreet_lru_cache:parsed=6 would_break=0
+jasmin:parsed=454 would_break=0
+javalib:parsed=56 would_break=0
+jekyll-format:parsed=9 would_break=0
+jemalloc:parsed=2 would_break=0
+jext:parsed=13 would_break=0
+jhupllib:parsed=0 would_break=0
+jingoo:parsed=20 would_break=0
+jose:parsed=22 would_break=0
+js_of_ocaml:parsed=830 would_break=0
+js_of_ocaml-ocamlbuild:parsed=4 would_break=0
+js_of_ocaml_patches:parsed=2 would_break=0
+jsonaf:parsed=17 would_break=0
+jsonm:parsed=8 would_break=0
+jsonoo:parsed=5 would_break=0
+jsonrpc:parsed=346 would_break=0
+jsonschema2atd:parsed=17 would_break=0
+jsont:parsed=26 would_break=0
+jsoo_broadcastchannel:parsed=5 would_break=0
+jsoo_storage:parsed=4 would_break=0
+jst-config:parsed=1 would_break=0
+junit:parsed=10 would_break=0
+jupyter-kernel:parsed=16 would_break=0
+jwto:parsed=3 would_break=0
+kcas:parsed=78 would_break=0
+kdf:parsed=9 would_break=0
+kdl:parsed=18 would_break=0
+ke:parsed=13 would_break=0
+key-parsers:parsed=18 would_break=0
+kicadsch:parsed=24 would_break=0
+kind2:parsed=323 would_break=0
+kinetic-client:parsed=10 would_break=0
+kittyimg:parsed=3 would_break=0
+kkmarkdown:parsed=47 would_break=0
+kmt:parsed=21 would_break=0
+knights_tour:parsed=29 would_break=0
+kqueue:parsed=9 would_break=0
+krb:parsed=142 would_break=0
+kuznechik:parsed=8 would_break=0
+lablgl:parsed=114 would_break=0
+lablgtk:parsed=282 would_break=0
+lablgtk3:parsed=289 would_break=0
+lablgtk3-extras:parsed=21 would_break=0
+labltk:parsed=192 would_break=0
+lacaml:parsed=64 would_break=0
+ladspa:parsed=6 would_break=0
+lambda:parsed=11 would_break=0
+lambda-term:parsed=77 would_break=0
+lambda_streams:parsed=19 would_break=0
+lambdapi:parsed=109 would_break=0
+lambdasoup:parsed=7 would_break=0
+lame:parsed=4 would_break=0
+landmarks:parsed=27 would_break=0
+lastfm:parsed=8 would_break=0
+lazy-trie:parsed=2 would_break=0
+lbfgs:parsed=9 would_break=0
+lbvs_consent:parsed=42 would_break=0
+ldp:parsed=48 would_break=0
+leaflet:parsed=20 would_break=0
+leaves:parsed=37 would_break=0
+ledgerwallet:parsed=22 would_break=0
+ledit:parsed=7 would_break=0
+legacy_diffable:parsed=18 would_break=0
+lem:src/typed_ast.ml:let no_lskips = None
+lem:src/typed_ast.ml:let space = Some([Ast.Ws([31;1mr"[39;22m ")])
+lem:---
+lem:src/typed_ast.ml:    | Some(l) ->
+lem:src/typed_ast.ml:        Some(List.filter (function | Ast.Com _ -> true | _ -> false) l @[Ast.Ws([31;1mr"[39;22m ")])
+lem:---
+lem:src/typed_ast.ml:  let (pnames,n) = Path.to_name_list c in
+lem:src/typed_ast.ml:    Name.from_rope (Ulib.Text.concat ([31;1mr"[39;22m_") 
+lem:src/typed_ast.ml:                     ([31;1mr"[39;22mdict" ::
+lem:src/typed_ast.ml:                       (* TODO KG & SO Should the tv distinguish ty vs nv *)
+lem:---
+lem:src/initial_env.ml:let tds = 
+lem:src/initial_env.ml:  [(Path.listpath, mk_tc_type [Ty(Tyvar.from_rope ([31;1mr"[39;22ma"))] None);
+lem:src/initial_env.ml:   (Path.setpath, mk_tc_type [Ty(Tyvar.from_rope ([31;1mr"[39;22ma"))] None);
+lem:src/initial_env.ml:   (Path.vectorpath, mk_tc_type [Ty(Tyvar.from_rope ([31;1mr"[39;22mb"));Nv(Nvar.from_rope ([31;1mr"[39;22ma"))] None);
+lem:src/initial_env.ml:   (Path.natpath, mk_tc_type [] None);
+lem:---
+lem:src/initial_env.ml:    p_env = Nfmap.from_list 
+lem:src/initial_env.ml:              [(Name.from_rope ([31;1mr"[39;22mbool"), (Path.boolpath, Ast.Unknown));
+lem:src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mbit"), (Path.bitpath, Ast.Unknown));
+lem:src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mvector"), (Path.vectorpath, Ast.Unknown));
+lem:src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mset"), (Path.setpath, Ast.Unknown));
+lem:src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mlist"), (Path.listpath, Ast.Unknown));
+lem:src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mstring"), (Path.stringpath, Ast.Unknown));
+lem:src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mchar"), (Path.charpath, Ast.Unknown));
+lem:src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mnumeral"), (Path.numeralpath, Ast.Unknown));
+lem:src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22munit"), (Path.unitpath, Ast.Unknown));
+lem:src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mnat"), (Path.natpath, Ast.Unknown))] }
+lem:---
+lem:src/def_trans.ml:let r = Ulib.Text.of_latin1
+lem:src/def_trans.ml:let space = Some [Ast.Ws ([31;1mr"[39;22m ")]
+lem:src/def_trans.ml:let new_line = Some [Ast.Ws ([31;1mr"[39;22m\n")]
+lem:---
+lem:src/def_trans.ml:          if cd.class_is_inline || class_all_methods_inlined_for_target l env targ id.inst_class then Some(env,[]) else begin
+lem:src/def_trans.ml:            let new_line_dict = Some [Ast.Ws ([31;1mr"[39;22m\n\n  ")] in
+lem:---
+lem:src/typecheck.ml:              check_exp l_e 
+lem:src/typecheck.ml:                (Ast.Expr_l(Ast.Infix(e1,Ast.SymX_l((sk,[31;1mr"[39;22m::"), l),e2), l))
+lem:src/typecheck.ml:            in 
+lem:---
+lem:src/typecheck.ml:    | Typ_wild _ -> err ()
+lem:src/typecheck.ml:    | Typ_var(_,tv) -> (tvs_to_set [(Ty(tv),src_t.locn)], [31;1mr"[39;22mvar")
+lem:src/typecheck.ml:    | Typ_fn(t1,_,t2) ->
+lem:src/typecheck.ml:        (tvs_to_set [to_tnvar t1; to_tnvar t2], [31;1mr"[39;22mfun")
+lem:src/typecheck.ml:    | Typ_tup(ts) ->
+lem:---
+lem:src/typecheck.ml:          match n.nterm with
+lem:src/typecheck.ml:            | Nexp_var(_,n) -> (tvs_to_set [(Nv(n),src_t.locn)], [31;1mr"[39;22mnvar")
+lem:src/typecheck.ml:            | Nexp_const(_,i) -> (tvs_to_set [], [31;1mr"[39;22mconst")
+lem:src/typecheck.ml:            | _ -> err ()
+lem:---
+lem:src/typecheck.ml:
+lem:src/typecheck.ml:          let build_field_name_name n = Name.rename (fun x -> Ulib.Text.(^^^) x ([31;1mr"[39;22m_method")) n in
+lem:src/typecheck.ml:          let build_field_name c = build_field_name_name (const_descr_ref_to_ascii_name ctxt'.ctxt_c_env c) in
+lem:---
+lem:src/typecheck.ml:
+lem:src/typecheck.ml:          let dict_type_name = (Name.lskip_rename (fun x -> Ulib.Text.(^^^) x ([31;1mr"[39;22m_class")) cn) in
+lem:src/typecheck.ml:         
+lem:---
+lem:src/typecheck.ml:            Name.from_rope
+lem:src/typecheck.ml:              (Ulib.Text.concat ([31;1mr"[39;22m_")
+lem:src/typecheck.ml:                 [[31;1mr"[39;22mInstance";
+lem:src/typecheck.ml:                  Name.to_rope (Path.to_name p);
+lem:---
+lem:src/backend.ml:    | Ast.Ws(r) -> r
+lem:src/backend.ml:    | Ast.Nl -> [31;1mr"[39;22m\n"
+lem:---
+lem:src/backend.ml:  let typ_constr_sep = kwd "of"
+lem:src/backend.ml:  let typ_var = [31;1mr"[39;22m'"
+lem:src/backend.ml:  let typ_class_constraint_prefix_end = kwd "=>"
+lem:---
+lem:src/backend.ml:  let nexp_end = emp
+lem:src/backend.ml:  let nexp_var = [31;1mr"[39;22m''"
+lem:src/backend.ml:  let nexp_plus = kwd "+"
+lem:---
+lem:src/backend.ml:  let const_empty s = kwd "{" ^ ws s ^ kwd "}"
+lem:src/backend.ml:  let string_quote = [31;1mr"[39;22m\""
+lem:src/backend.ml:  let string_escape s s_org = Util.option_default (String.escaped s) s_org
+lem:---
+lem:src/backend.ml:
+lem:src/backend.ml:  let lex_skip = function _ -> [31;1mr"[39;22mDUMMY"
+lem:---
+lem:src/backend.ml:  let typ_constr_sep = bkwd "of"
+lem:src/backend.ml:  let typ_var = [31;1mr"[39;22m"
+lem:src/backend.ml:  let typ_class_constraint_prefix_end = kwd "\\Rightarrow"
+lem:---
+lem:src/backend.ml:  let nexp_end = emp
+lem:src/backend.ml:  let nexp_var = [31;1mr"[39;22m''"
+lem:src/backend.ml:  let nexp_plus = kwd "+"
+lem:---
+lem:src/backend.ml:  let const_false = bkwd "false"
+lem:src/backend.ml:  let string_quote = [31;1mr"[39;22m\""
+lem:src/backend.ml:  let string_escape = Identity.string_escape
+lem:---
+lem:src/backend.ml:  let nexp_end = kwd "*)"
+lem:src/backend.ml:  let nexp_var = [31;1mr"[39;22m"
+lem:src/backend.ml:  let typ_with_sort _ _ = err "Type with sort not supported in OCaml backend"
+lem:---
+lem:src/backend.ml:
+lem:src/backend.ml:let back_tick = List.hd (Ulib.Text.explode ([31;1mr"[39;22m`"))
+lem:src/backend.ml:let quotation_mark = List.hd (Ulib.Text.explode ([31;1mr"[39;22m\""))
+lem:src/backend.ml:let backslash = List.hd (Ulib.Text.explode ([31;1mr"[39;22m\\"))
+lem:---
+lem:src/backend.ml:    | Ast.Com(r') ->
+lem:src/backend.ml:        let wrap_cartouche x = Ulib.Text.concat ([31;1mr"[39;22m") [[31;1mr"[39;22m\\<open>"; x; [31;1mr"[39;22m\\<close>"] in
+lem:src/backend.ml:        let comment = [31;1mr"[39;22m\\<comment> " in
+lem:src/backend.ml:        let rec ml_comment_to_rope = function
+lem:---
+lem:src/backend.ml:        | Ast.Chars(r) -> r
+lem:src/backend.ml:        | Ast.Comment(coms) -> wrap_cartouche (Ulib.Text.concat ([31;1mr"[39;22m") (List.map ml_comment_to_rope coms))
+lem:src/backend.ml:        in
+lem:---
+lem:src/backend.ml:    | Ast.Ws(r) -> r
+lem:src/backend.ml:    | Ast.Nl -> [31;1mr"[39;22m\n"
+lem:---
+lem:src/backend.ml:  let typ_constr_sep = emp
+lem:src/backend.ml:  let typ_var = [31;1mr"[39;22m'"
+lem:src/backend.ml:  let typ_class_constraint_prefix_end = kwd "=>"
+lem:---
+lem:src/backend.ml:  let const_false = kwd "False"
+lem:src/backend.ml:  let string_quote = [31;1mr"[39;22m"
+lem:src/backend.ml:  let string_escape s _ = string_escape_isa s
+lem:---
+lem:src/backend.ml:    | Ast.Ws(r) -> r
+lem:src/backend.ml:    | Ast.Nl -> [31;1mr"[39;22m\n"
+lem:---
+lem:src/backend.ml:  let typ_constr_sep = kwd "of"
+lem:src/backend.ml:  let typ_var = [31;1mr"[39;22m'"
+lem:src/backend.ml:  let typ_class_constraint_prefix_end = kwd "=>"
+lem:---
+lem:src/backend.ml:  let nexp_end = kwd "*)"
+lem:src/backend.ml:  let nexp_var = [31;1mr"[39;22m'" (* Currently turning into standard type variable, shouldn't appear in source *)
+lem:src/backend.ml:  let nexp_plus = emp
+lem:---
+lem:src/backend.ml:  let const_empty s = kwd "{" ^ ws s ^ kwd "}"
+lem:src/backend.ml:  let string_quote = [31;1mr"[39;22m\""
+lem:src/backend.ml:  let string_escape s _ = string_escape_hol s
+lem:---
+lem:src/backend.ml:            | (sk, m) :: sk_ms' -> begin
+lem:src/backend.ml:                let (oi', _) = oi_alter_init_lskips (fun _ -> (Some [Ast.Ws ([31;1mr"[39;22m\n")], None)) oi in
+lem:src/backend.ml:          	       open_import_to_output oi ^
+lem:---
+lem:src/backend.ml:and make_lemdefn latex_name latex_label typeset_name pre_comment full core post_comment =
+lem:src/backend.ml:  ([31;1mr"[39;22m\\newcommand{" ^^^^ latex_name ^^^^ [31;1mr"[39;22m}[1][default]{%\n" ^^^^
+lem:src/backend.ml:  [31;1mr"[39;22m\\lemdefn\n" ^^^^
+lem:src/backend.ml:  [31;1mr"[39;22m{#1}\n" ^^^^
+lem:src/backend.ml:  [31;1mr"[39;22m{" ^^^^ latex_label ^^^^ [31;1mr"[39;22m}\n" ^^^^
+lem:src/backend.ml:  [31;1mr"[39;22m{" ^^^^ typeset_name ^^^^ [31;1mr"[39;22m}\n" ^^^^
+lem:src/backend.ml:  [31;1mr"[39;22m{" ^^^^ pre_comment ^^^^ [31;1mr"[39;22m}\n" ^^^^
+lem:src/backend.ml:  [31;1mr"[39;22m{" ^^^^ full ^^^^ [31;1mr"[39;22m}\n" ^^^^
+lem:src/backend.ml:  [31;1mr"[39;22m{" ^^^^ core ^^^^ [31;1mr"[39;22m}\n" ^^^^
+lem:src/backend.ml:  [31;1mr"[39;22m{" ^^^^ post_comment ^^^^ [31;1mr"[39;22m}%\n" ^^^^
+lem:src/backend.ml:  [31;1mr"[39;22m}\n",
+lem:src/backend.ml:  latex_name ^^^^ [31;1mr"[39;22m\n")
+lem:---
+lem:src/backend.ml:      (to_rope_tex (defs ds) ^^^^
+lem:src/backend.ml:      (match to_rope_option_tex ((* add empty stuff before last comment to prevent stripping of empty lines *) kwd "" ^ ws end_lex_skips) with None -> [31;1mr"[39;22m" | Some rr ->
+lem:src/backend.ml:        [31;1mr"[39;22m\\lemdef{%\n" ^^^^
+lem:src/backend.ml:        rr  ^^^^
+lem:src/backend.ml:        [31;1mr"[39;22m%\n}\n"
+lem:src/backend.ml:      ))
+lem:---
+lem:src/backend.ml:  = function
+lem:src/backend.ml:    |  [] -> ([31;1mr"[39;22m",[31;1mr"[39;22m")
+lem:src/backend.ml:    |  (r1,r2)::rrs  -> let (r1',r2') = batrope_pair_concat rrs in (r1^^^^r1', r2^^^^r2')
+lem:---
+lem:src/patterns.ml:let r = Ulib.Text.of_latin1
+lem:src/patterns.ml:let space = Some [Ast.Ws ([31;1mr"[39;22m ")]
+lem:src/patterns.ml:let new_line = Some [Ast.Ws ([31;1mr"[39;22m\n")]
+lem:---
+lem:src/patterns.ml:            let free = C.exp_to_free e in
+lem:src/patterns.ml:            let v = Name.fresh ([31;1mr"[39;22mx") (fun n -> not (Nfmap.in_dom n free)) in
+lem:src/patterns.ml:            let (from_t,to_t) =
+lem:---
+lem:src/backend_common.ml:    match t with
+lem:src/backend_common.ml:      | Ast.Component_type s -> ws s ^ id a ([31;1mr"[39;22mtype")
+lem:src/backend_common.ml:      | Ast.Component_field s -> ws s ^ id a ([31;1mr"[39;22mfield")
+lem:src/backend_common.ml:      | Ast.Component_module s -> ws s ^ id a ([31;1mr"[39;22mmodule")
+lem:src/backend_common.ml:      | Ast.Component_function s -> ws s ^ id a ([31;1mr"[39;22mfunction")
+lem:---
+lem:src/path.ml:let flat = function
+lem:src/path.ml:  | [] -> [31;1mr"[39;22m"
+lem:src/path.ml:  | r2 -> Ulib.Text.concat ([31;1mr"[39;22m") r2
+lem:---
+lem:src/path.ml:      Name.from_rope 
+lem:src/path.ml:        (Ulib.Text.concat ([31;1mr"[39;22m_") (List.map Name.to_rope ns @ [Name.to_rope n]))
+lem:---
+lem:src/convert_relations.ml:let newline = Some [Ast.Nl]
+lem:src/convert_relations.ml:let space = Some [Ast.Ws([31;1mr"[39;22m ")]
+lem:---
+lem:src/convert_relations.ml:  let n =
+lem:src/convert_relations.ml:    Name.fresh ([31;1mr"[39;22mpat") (fun n -> not (Nset.mem n !avoid)) in
+lem:src/convert_relations.ml:  let v = Name.add_lskip n in
+lem:---
+lem:src/convert_relations.ml:         let n =
+lem:src/convert_relations.ml:           Name.fresh ([31;1mr"[39;22mpat") (fun n -> not (Nset.mem n !avoid)) in
+lem:src/convert_relations.ml:         avoid := Nset.add n !avoid;
+lem:---
+lem:src/convert_relations.ml:    let namegen = make_namegen (Nfmap.domain (exp_to_free res)) in
+lem:src/convert_relations.ml:    let var = Name.add_lskip (namegen ([31;1mr"[39;22mx")) in
+lem:src/convert_relations.ml:    let body =
+lem:---
+lem:src/coq_backend_utils.ml:let sep x s = ws s ^ x
+lem:src/coq_backend_utils.ml:let path_sep = [31;1mr"[39;22m."
+lem:src/coq_backend_utils.ml:
+lem:src/coq_backend_utils.ml:let tyvar (_, tv, _) = id Type_var (Ulib.Text.(^^^) ([31;1mr"[39;22m") tv)
+lem:src/coq_backend_utils.ml:let concat_str s = concat (from_string s)
+lem:---
+lem:src/target.ml:    match t with
+lem:src/target.ml:      | Ast.Target_hol(s) -> ws s ^ id a ([31;1mr"[39;22mhol")
+lem:src/target.ml:      | Ast.Target_ocaml(s) -> ws s ^ id a ([31;1mr"[39;22mocaml")
+lem:src/target.ml:      | Ast.Target_isa(s) -> ws s ^ id a ([31;1mr"[39;22misabelle")
+lem:src/target.ml:      | Ast.Target_coq(s) -> ws s ^ id a ([31;1mr"[39;22mcoq")
+lem:src/target.ml:      | Ast.Target_tex(s) -> ws s ^ id a ([31;1mr"[39;22mtex")
+lem:src/target.ml:      | Ast.Target_html(s) -> ws s ^ id a ([31;1mr"[39;22mhtml")
+lem:src/target.ml:      | Ast.Target_lem(s) -> ws s ^ id a ([31;1mr"[39;22mlem")
+lem:---
+lem:src/target.ml:let non_ident_target_to_mname = function
+lem:src/target.ml:  | Target_hol -> Name.from_rope ([31;1mr"[39;22mHol")
+lem:src/target.ml:  | Target_ocaml -> Name.from_rope ([31;1mr"[39;22mOcaml")
+lem:src/target.ml:  | Target_isa -> Name.from_rope ([31;1mr"[39;22mIsabelle")
+lem:src/target.ml:  | Target_coq -> Name.from_rope ([31;1mr"[39;22mCoq")
+lem:src/target.ml:  | Target_tex -> Name.from_rope ([31;1mr"[39;22mTex")
+lem:src/target.ml:  | Target_html -> Name.from_rope ([31;1mr"[39;22mHtml")
+lem:src/target.ml:  | Target_lem -> Name.from_rope ([31;1mr"[39;22mLem")
+lem:---
+lem:src/typed_ast_syntax.ml:let r = Ulib.Text.of_latin1
+lem:src/typed_ast_syntax.ml:let space = Some [Ast.Ws ([31;1mr"[39;22m ")]
+lem:src/typed_ast_syntax.ml:let new_line = Some [Ast.Ws ([31;1mr"[39;22m\n")]
+lem:---
+lem:src/typed_ast_syntax.ml:  let loc = Ast.Trans (true, "mk_case_exp", Some l) in
+lem:src/typed_ast_syntax.ml:  let case_space = Some [Ast.Ws ([31;1mr"[39;22m\n  ")] in
+lem:src/typed_ast_syntax.ml:  let rows_sep_list = Seplist.from_list (List.map (fun (p,e) -> ((pat_append_lskips space p, space, fst (alter_init_lskips space_init_ws e), loc), case_space)) rows) in
+lem:---
+lem:src/output.ml:let texspace = Texspace
+lem:src/output.ml:let space = ws (Some [Ast.Ws ([31;1mr"[39;22m ")])
+lem:src/output.ml:let new_line = ws (Some [Ast.Nl])
+lem:---
+lem:src/output.ml:let pp_raw_id_annot = function
+lem:src/output.ml:  | Term_const _       -> [31;1mr"[39;22mTerm_const"       
+lem:src/output.ml:  | Term_field         -> [31;1mr"[39;22mTerm_field"       
+lem:src/output.ml:  | Term_method        -> [31;1mr"[39;22mTerm_method"      
+lem:src/output.ml:  | Term_var           -> [31;1mr"[39;22mTerm_var"         
+lem:src/output.ml:  | Term_var_toplevel  -> [31;1mr"[39;22mTerm_var_toplevel"
+lem:src/output.ml:  | Term_spec          -> [31;1mr"[39;22mTerm_spec"        
+lem:src/output.ml:  | Type_ctor _        -> [31;1mr"[39;22mType_ctor"        
+lem:src/output.ml:  | Type_var           -> [31;1mr"[39;22mType_var"         
+lem:src/output.ml:  | Module_name        -> [31;1mr"[39;22mModule_name"      
+lem:src/output.ml:  | Class_name         -> [31;1mr"[39;22mClass_name"       
+lem:src/output.ml:  | Target             -> [31;1mr"[39;22mTarget"           
+lem:src/output.ml:  | Component          -> [31;1mr"[39;22mComponent"           
+lem:src/output.ml:  | Nexpr_var          -> [31;1mr"[39;22mNexpr_var"
+lem:---
+lem:src/output.ml:let pp_raw_bool = function
+lem:src/output.ml:  | true  -> [31;1mr"[39;22mtrue"
+lem:src/output.ml:  | false -> [31;1mr"[39;22mfalse"
+lem:src/output.ml:
+lem:src/output.ml:let wrap_paren_star x = [31;1mr"[39;22m(*" ^^ x ^^ [31;1mr"[39;22m*)"
+lem:---
+lem:src/output.ml:  | Ast.Chars(r) -> r
+lem:src/output.ml:  | Ast.Comment(coms) -> wrap_paren_star (Ulib.Text.concat ([31;1mr"[39;22m") (List.map ml_comment_to_rope coms))
+lem:---
+lem:src/output.ml:  | Ast.Chars(r) -> r
+lem:src/output.ml:  | Ast.Comment(coms) -> Ulib.Text.concat ([31;1mr"[39;22m") (List.map ml_comment_to_rope coms)
+lem:---
+lem:src/output.ml:  match t with
+lem:src/output.ml:  | Empty -> [31;1mr"[39;22mEmpty"
+lem:src/output.ml:  | Kwd(s) -> [31;1mr"[39;22mKwd(" ^^ Ulib.Text.of_latin1 s ^^[31;1mr"[39;22m)"
+lem:src/output.ml:  | Ident(a,rr) -> [31;1mr"[39;22mIdent(" ^^ pp_raw_id_annot a ^^ [31;1mr"[39;22m," ^^ rr ^^ [31;1mr"[39;22m)"
+lem:src/output.ml:  | Num(i) -> [31;1mr"[39;22mNum(" ^^  Ulib.Text.of_latin1 (Z.to_string i) ^^ [31;1mr"[39;22m)"
+lem:src/output.ml:  | Inter(Ast.Com(rr)) -> [31;1mr"[39;22mInter(Ast.Com(" ^^ ml_comment_to_rope rr ^^ [31;1mr"[39;22m)"
+lem:src/output.ml:  | Inter(Ast.Ws(rr)) -> [31;1mr"[39;22mInter(Ast.Ws(" ^^ rr ^^ [31;1mr"[39;22m)"
+lem:src/output.ml:  | Inter(Ast.Nl) -> [31;1mr"[39;22mInter(Ast.Nl)"
+lem:src/output.ml:  | Str(s) -> [31;1mr"[39;22mStr(" ^^ s ^^ [31;1mr"[39;22m)"
+lem:src/output.ml:  | Err(s) -> [31;1mr"[39;22mStr(" ^^ Ulib.Text.of_latin1 s ^^ [31;1mr"[39;22m)"
+lem:src/output.ml:  | Meta(s) -> [31;1mr"[39;22mStr(" ^^ Ulib.Text.of_latin1 s ^^ [31;1mr"[39;22m)"
+lem:src/output.ml:  | Texspace -> [31;1mr"[39;22mTexspace"
+lem:src/output.ml:  | Ensure_newline -> [31;1mr"[39;22mEnsure_newline"
+lem:src/output.ml:  | Cons(t1,t2) -> [31;1mr"[39;22mCons(" ^^ pp_raw_t t1 ^^ [31;1mr"[39;22m," ^^ pp_raw_t t2 ^^ [31;1mr"[39;22m)"
+lem:src/output.ml:  | Block(b,d,t) -> [31;1mr"[39;22mBlock(" ^^ pp_raw_bool b ^^ [31;1mr"[39;22m," ^^ pp_raw_t t ^^ [31;1mr"[39;22m)"
+lem:src/output.ml:  | Break_hint _ -> [31;1mr"[39;22mBreakhint"
+lem:src/output.ml:  | Internalspace -> [31;1mr"[39;22mInternalspace"
+lem:src/output.ml:  | Core t -> [31;1mr"[39;22mCore(" ^^ pp_raw_t t ^^ [31;1mr"[39;22m)"
+lem:src/output.ml: 
+lem:---
+lem:src/output.ml:  match t with
+lem:src/output.ml:    | Empty -> [31;1mr"[39;22m"
+lem:src/output.ml:    | Kwd(s) -> Ulib.Text.of_latin1 s
+lem:---
+lem:src/output.ml:         | Ast.Com(r) -> lex_skips_to_rope i
+lem:src/output.ml:         | (Ast.Nl | Ast.Ws _)  -> if preserve_ws then lex_skips_to_rope i else [31;1mr"[39;22m"
+lem:src/output.ml:      end
+lem:---
+lem:src/output.ml:    | Meta(s) -> Ulib.Text.of_latin1 s
+lem:src/output.ml:    | Texspace -> [31;1mr"[39;22m"
+lem:src/output.ml:    | Internalspace -> [31;1mr"[39;22m "
+lem:src/output.ml:    | Break_hint _ -> [31;1mr"[39;22m"
+lem:src/output.ml:    | Ensure_newline -> [31;1mr"[39;22m"
+lem:src/output.ml:    | _ -> raise (Reporting_basic.err_unreachable Ast.Unknown "structured output in to_rope_single")
+lem:---
+lem:src/output.ml:  let rec to_rope_help (p : int) (t : t) : (Ulib.Text.t list * Ulib.Text.t * (int * t * t)) = match t with
+lem:src/output.ml:    | Ensure_newline -> let res = [31;1mr"[39;22m" in ((if p = 0 then [] else [lex_skips_to_rope Ast.Nl]), res, (0, t, t))
+lem:src/output.ml:    | Block (b, bty, t) -> if b then to_rope_help_block p (Block (b, bty, t)) else to_rope_help p t
+lem:---
+lem:src/output.ml:        let (rL2,r2, (p2, t3', t4')) = to_rope_help p1 t2 in
+lem:src/output.ml:        let sp = if ns need_space t2' t3' then [31;1mr"[39;22m " else [31;1mr"[39;22m" in
+lem:---
+lem:src/output.ml:        let is_nl = (match t with Inter(Ast.Nl) -> true | _ -> false) in
+lem:src/output.ml:        if is_nl then ([res], [31;1mr"[39;22m", (0, t, t)) else 
+lem:src/output.ml:                      ([], res, (p + Ulib.Text.length res, t, t))
+lem:---
+lem:src/output.ml:  let (rL,r',_) = to_rope_help 0 t in
+lem:src/output.ml:    Ulib.Text.concat ([31;1mr"[39;22m") (rL @ [r']) 
+lem:---
+lem:src/output.ml:
+lem:src/output.ml:let tex_command_prefix = [31;1mr"[39;22mLEM"  (* for LaTeX commands in generated .tex and -inc.tex files *)
+lem:src/output.ml:let tex_label_prefix   = [31;1mr"[39;22mlem:" (* for LaTeX labels in generated .tex and -inc.tex files *)
+lem:src/output.ml:let tex_sty_prefix     = [31;1mr"[39;22mlem"  (* for LaTeX commands in the lem.sty file *)
+lem:---
+lem:src/output.ml:       (fun c -> 
+lem:src/output.ml:       if c=Ulib.UChar.of_char '_'  then [31;1mr"[39;22mT"     else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '#'  then [31;1mr"[39;22mH"     else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '\'' then [31;1mr"[39;22mP"     else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '0'  then [31;1mr"[39;22mZero"  else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '1'  then [31;1mr"[39;22mOne"   else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '2'  then [31;1mr"[39;22mTwo"   else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '3'  then [31;1mr"[39;22mThree" else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '4'  then [31;1mr"[39;22mFour"  else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '5'  then [31;1mr"[39;22mFive"  else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '6'  then [31;1mr"[39;22mSix"   else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '7'  then [31;1mr"[39;22mSeven" else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '8'  then [31;1mr"[39;22mEight" else
+lem:src/output.ml:       if c=Ulib.UChar.of_char '9'  then [31;1mr"[39;22mNine"  else
+lem:src/output.ml:       Ulib.Text.of_uchar c)
+lem:---
+lem:src/output.ml:
+lem:src/output.ml:let tex_command_name rr = [31;1mr"[39;22m\\" ^^ tex_command_prefix ^^ tex_command_escape rr 
+lem:src/output.ml:let tex_command_label rr =  tex_label_prefix ^^ tex_command_escape rr 
+lem:---
+lem:src/output.ml:       (fun c ->  
+lem:src/output.ml:         if (with_space && c=Ulib.UChar.of_char ' ')  then [31;1mr"[39;22m\\ " else 
+lem:src/output.ml:         if (with_space && c=Ulib.UChar.of_char '\n')  then [31;1mr"[39;22m\\\\\\hspace*{0em}%\n" else 
+lem:src/output.ml:(*
+lem:---
+lem:src/output.ml:*)
+lem:src/output.ml:         if c=Ulib.UChar.of_char '_'  then [31;1mr"[39;22m\\_" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '%'  then [31;1mr"[39;22m\\texttt{\\char`\\%}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '$'  then [31;1mr"[39;22m\\$" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '#'  then [31;1mr"[39;22m\\#" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '?'  then [31;1mr"[39;22m\\texttt{\\char`\\?}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '^'  then [31;1mr"[39;22m\\texttt{\\char`\\^}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '{'  then [31;1mr"[39;22m\\{" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '}'  then [31;1mr"[39;22m\\}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '='  then [31;1mr"[39;22m\\texttt{\\char`\\=}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '<'  then [31;1mr"[39;22m\\texttt{\\char`\\<}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '>'  then [31;1mr"[39;22m\\texttt{\\char`\\>}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '&'  then [31;1mr"[39;22m\\&" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '~'  then [31;1mr"[39;22m\\texttt{\\char`\\~}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '\\' then [31;1mr"[39;22m\\texttt{\\char`\\\\}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '/' then [31;1mr"[39;22m\\texttt{\\char`\\/}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '|'  then [31;1mr"[39;22m\\texttt{\\char`\\|}" else 
+lem:src/output.ml:         if c=Ulib.UChar.of_char '\'' then [31;1mr"[39;22m\\texttt{\\char`\\'}" else 
+lem:---
+lem:src/output.ml:  let res no_escape command_name =
+lem:src/output.ml:     ([31;1mr"[39;22m\\" ^^ tex_sty_prefix ^^ r command_name, (if no_escape then r1 else tex_escape r1)) in
+lem:src/output.ml:  match a with
+lem:---
+lem:src/output.ml:  | Type_var           -> begin 
+lem:src/output.ml:      let res_special_tyvar x = ([31;1mr"[39;22m\\" ^^ tex_sty_prefix ^^ r "TypeVar" ^^ r x, r "") in
+lem:src/output.ml:      if (r1 = [31;1mr"[39;22ma") then res_special_tyvar "A" else
+lem:src/output.ml:      if (r1 = [31;1mr"[39;22mb") then res_special_tyvar "B" else
+lem:src/output.ml:      if (r1 = [31;1mr"[39;22mc") then res_special_tyvar "C" else
+lem:src/output.ml:      if (r1 = [31;1mr"[39;22md") then res_special_tyvar "D" else
+lem:src/output.ml:      res false "TypeVar"          
+lem:---
+lem:src/output.ml:  let (tex_wrapper, r1') = tex_id_wrap a r1 in
+lem:src/output.ml:  tex_wrapper ^^ [31;1mr"[39;22m{" ^^ r1' ^^ [31;1mr"[39;22m}" ^^ r2
+lem:---
+lem:src/output.ml:  match t with
+lem:src/output.ml:  | Empty -> [31;1mr"[39;22m"
+lem:src/output.ml:  | Kwd(s) ->  Ulib.Text.of_latin1 s
+lem:---
+lem:src/output.ml:      let x = ml_comment_to_rope' rr in
+lem:src/output.ml:      let texprefix = [31;1mr"[39;22mtex " in
+lem:src/output.ml:      let suppressprefix = [31;1mr"[39;22m--- " in
+lem:src/output.ml:      if Ulib.Text.starts_with x texprefix then
+lem:---
+lem:src/output.ml:      else if Ulib.Text.starts_with x suppressprefix then
+lem:src/output.ml:        [31;1mr"[39;22m" 
+lem:src/output.ml:      else
+lem:src/output.ml:        [31;1mr"[39;22m\\lemcomm{" ^^ tex_escape_with_space (wrap_paren_star x)  ^^ [31;1mr"[39;22m}" 
+lem:src/output.ml:  | Inter(Ast.Ws(rr)) -> if Ulib.Text.length rr > 0 then [31;1mr"[39;22m\\ " ^^ rr else rr
+lem:src/output.ml:  | Inter(Ast.Nl) -> raise (Failure "Nl in to_rope_tex")
+lem:src/output.ml:  | Str(s) ->  [31;1mr"[39;22m\\text{\\textit{" ^^ ([31;1mr"[39;22m``") ^^ (tex_escape s) ^^ ([31;1mr"[39;22m''") ^^ [31;1mr"[39;22m}}"
+lem:src/output.ml:  | Err(s) -> raise (Backend(s))
+lem:---
+lem:src/output.ml:  | Meta(s) -> Ulib.Text.of_latin1 s
+lem:src/output.ml:  | Texspace -> [31;1mr"[39;22m"   
+lem:src/output.ml:  | Break_hint _ -> [31;1mr"[39;22m"   
+lem:src/output.ml:  | Ensure_newline -> [31;1mr"[39;22m"   
+lem:src/output.ml:  | Internalspace -> [31;1mr"[39;22m"   
+lem:src/output.ml:  | Cons(t1,t2) -> raise (Failure "Cons in to_rope_tex") 
+lem:---
+lem:src/output.ml:            Some ( make_indent indent_acc ^^ 
+lem:src/output.ml:                   Ulib.Text.concat ([31;1mr"[39;22m") 
+lem:src/output.ml:                     (List.map to_rope_tex_single 
+lem:---
+lem:src/output.ml:                        (strip_initial_and_final_texspace ts))) in
+lem:src/output.ml:      f ([31;1mr"[39;22m") ts 
+lem:---
+lem:src/output.ml:    let dummy_space tso = match tso with 
+lem:src/output.ml:      | None -> [31;1mr"[39;22m\\ "  (* to workaround latex tabbing sensitivity *)
+lem:src/output.ml:      | Some r -> r in 
+lem:---
+lem:src/output.ml:    List.map
+lem:src/output.ml:      (function | None -> [31;1mr"[39;22m" | Some r -> r) 
+lem:src/output.ml:      (List.map to_rope_tex_option_line tss) in
+lem:---
+lem:src/output.ml:    match rs with
+lem:src/output.ml:    | [] -> [31;1mr"[39;22m"
+lem:src/output.ml:    | [rr] -> rr
+lem:src/output.ml:    | rr :: rs' -> rr ^^ [31;1mr"[39;22m\\\\{}\n" ^^ f rs' in
+lem:src/output.ml:  
+lem:---
+lem:src/output.ml:  
+lem:src/output.ml:  (if debug then Printf.printf "\n\nto_rope_tex output:\n%s" (Ulib.Text.to_string (match ro with None -> [31;1mr"[39;22mNone" | Some rr -> [31;1mr"[39;22mSome(" ^^ rr ^^ [31;1mr"[39;22m)")));
+lem:src/output.ml:  
+lem:---
+lem:src/output.ml:  match to_rope_option_tex t with
+lem:src/output.ml:    | None -> [31;1mr"[39;22m"
+lem:src/output.ml:    | Some rr -> rr
+lem:---
+lem:src/trans.ml:          List.map (fun n -> Name.add_pre_lskip space (Name.add_lskip n))
+lem:src/trans.ml:            (Name.fresh_num_list 2 ([31;1mr"[39;22mx") (fun n -> not (Nfmap.in_dom n avoid)))
+lem:src/trans.ml:        with
+lem:---
+lem:src/trans.ml:  let (n1,n2) = Path.to_name_list m.descr in
+lem:src/trans.ml:  let (descr, _) = names_get_const E.env (n1@[n2]) (Name.from_rope ([31;1mr"[39;22mbind")) in
+lem:src/trans.ml:    C.mk_const l { id_path = bind_id l m.id_path; id_locn = l; descr = descr; instantiation = i } None
+lem:---
+lem:src/coq_backend.ml:    | Ast.Ws r -> r
+lem:src/coq_backend.ml:    | Ast.Nl -> [31;1mr"[39;22m\n"
+lem:src/coq_backend.ml:;;
+lem:---
+lem:src/coq_backend.ml:    | Typ_var (_, v) ->
+lem:src/coq_backend.ml:        id Type_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Tyvar.to_rope v)
+lem:src/coq_backend.ml:    | Typ_wild skips -> from_string "_"
+lem:---
+lem:src/coq_backend.ml:        | Nexp_var (skips, nvar) ->
+lem:src/coq_backend.ml:          let nvar = id Nexpr_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Nvar.to_rope nvar) in
+lem:src/coq_backend.ml:            Output.flat [
+lem:---
+lem:src/coq_backend.ml:            Output.flat [
+lem:src/coq_backend.ml:              ws skips; id Type_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Tyvar.to_rope v)
+lem:src/coq_backend.ml:            ]
+lem:---
+lem:src/coq_backend.ml:      	| Typ_wild skips -> ws skips ^ from_string "_"
+lem:src/coq_backend.ml:      	| Typ_var (skips, v) -> id Type_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Tyvar.to_rope v)
+lem:src/coq_backend.ml:      	| Typ_fn (t1, skips, t2) -> typ t1 ^ ws skips ^ kwd "->" ^ typ t2
+lem:---
+lem:src/coq_backend.ml:        | Typ_wild skips -> ws skips ^ from_string "_"
+lem:src/coq_backend.ml:        | Typ_var (skips, v) -> id Type_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Tyvar.to_rope v)
+lem:src/coq_backend.ml:        | Typ_fn (t1, skips, t2) ->
+lem:---
+lem:src/coq_backend.ml:      let coq_defs_extra = defs_extra false false ds in
+lem:src/coq_backend.ml:    	  ((to_rope ([31;1mr"[39;22m\"") lex_skip need_space @@ coq_defs ^ ws end_lex_skips),
+lem:src/coq_backend.ml:          to_rope ([31;1mr"[39;22m\"") lex_skip need_space @@ coq_defs_extra ^ ws end_lex_skips)
+lem:src/coq_backend.ml:    ;;
+lem:---
+lem:src/process_file.ml:     let module_name = Name.to_string (Backend_common.get_module_name env (Target.Target_no_ident (Target.Target_tex)) mod_path mod_name) in
+lem:src/process_file.ml:     let sect_header = [31;1mr"[39;22m\\clearpage\n\n\\section{" ^^^^ Output.tex_escape (Ulib.Text.of_string module_name) ^^^^ [31;1mr"[39;22m}\n" in
+lem:src/process_file.ml:     (r_main ^^^^ sect_header ^^^^ r_main', 
+lem:---
+lem:src/process_file.ml:      r_usage ^^^^ sect_header ^^^^ r_usage')
+lem:src/process_file.ml:    end) ([31;1mr"[39;22m", [31;1mr"[39;22m", [31;1mr"[39;22m") mods' in
+lem:parsed=122 would_break=16
+lens:parsed=7 would_break=0
+letsencrypt:parsed=21 would_break=0
+letters:parsed=6 would_break=0
+libabsolute:parsed=59 would_break=0
+libbinaryen:parsed=3 would_break=0
+libbpf:parsed=15 would_break=0
+libc:parsed=9 would_break=0
+libdash:parsed=6 would_break=0
+libevent:parsed=6 would_break=0
+liblinear:parsed=0 would_break=0
+libnlopt:parsed=0 would_break=0
+libsail:parsed=174 would_break=0
+libsvm_tools:parsed=0 would_break=0
+libwasmer:parsed=0 would_break=0
+lilac:parsed=3 would_break=0
+lilv:parsed=5 would_break=0
+line-up-words:parsed=4 would_break=0
+line_oriented:parsed=3 would_break=0
+linenoise:parsed=3 would_break=0
+links:parsed=302 would_break=0
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast.ml:let no_lskips = None
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast.ml:let space = Some([Ast.Ws([31;1mr"[39;22m ")])
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast.ml:    | Some(l) ->
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast.ml:        Some(List.filter (function | Ast.Com _ -> true | _ -> false) l @[Ast.Ws([31;1mr"[39;22m ")])
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast.ml:  let (pnames,n) = Path.to_name_list c in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast.ml:    Name.from_rope (Ulib.Text.concat ([31;1mr"[39;22m_") 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast.ml:                     ([31;1mr"[39;22mdict" ::
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast.ml:                       (* TODO KG & SO Should the tv distinguish ty vs nv *)
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:let tds = 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:  [(Path.listpath, mk_tc_type [Ty(Tyvar.from_rope ([31;1mr"[39;22ma"))] None);
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:   (Path.setpath, mk_tc_type [Ty(Tyvar.from_rope ([31;1mr"[39;22ma"))] None);
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:   (Path.vectorpath, mk_tc_type [Ty(Tyvar.from_rope ([31;1mr"[39;22mb"));Nv(Nvar.from_rope ([31;1mr"[39;22ma"))] None);
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:   (Path.natpath, mk_tc_type [] None);
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:    p_env = Nfmap.from_list 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:              [(Name.from_rope ([31;1mr"[39;22mbool"), (Path.boolpath, Ast.Unknown));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mbit"), (Path.bitpath, Ast.Unknown));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mvector"), (Path.vectorpath, Ast.Unknown));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mset"), (Path.setpath, Ast.Unknown));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mlist"), (Path.listpath, Ast.Unknown));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mstring"), (Path.stringpath, Ast.Unknown));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mchar"), (Path.charpath, Ast.Unknown));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mnumeral"), (Path.numeralpath, Ast.Unknown));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22munit"), (Path.unitpath, Ast.Unknown));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/initial_env.ml:               (Name.from_rope ([31;1mr"[39;22mnat"), (Path.natpath, Ast.Unknown))] }
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/def_trans.ml:let r = Ulib.Text.of_latin1
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/def_trans.ml:let space = Some [Ast.Ws ([31;1mr"[39;22m ")]
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/def_trans.ml:let new_line = Some [Ast.Ws ([31;1mr"[39;22m\n")]
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/def_trans.ml:          if cd.class_is_inline || class_all_methods_inlined_for_target l env targ id.inst_class then Some(env,[]) else begin
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/def_trans.ml:            let new_line_dict = Some [Ast.Ws ([31;1mr"[39;22m\n\n  ")] in
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:              check_exp l_e 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:                (Ast.Expr_l(Ast.Infix(e1,Ast.SymX_l((sk,[31;1mr"[39;22m::"), l),e2), l))
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:            in 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:    | Typ_wild _ -> err ()
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:    | Typ_var(_,tv) -> (tvs_to_set [(Ty(tv),src_t.locn)], [31;1mr"[39;22mvar")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:    | Typ_fn(t1,_,t2) ->
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:        (tvs_to_set [to_tnvar t1; to_tnvar t2], [31;1mr"[39;22mfun")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:    | Typ_tup(ts) ->
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:          match n.nterm with
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:            | Nexp_var(_,n) -> (tvs_to_set [(Nv(n),src_t.locn)], [31;1mr"[39;22mnvar")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:            | Nexp_const(_,i) -> (tvs_to_set [], [31;1mr"[39;22mconst")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:            | _ -> err ()
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:          let build_field_name_name n = Name.rename (fun x -> Ulib.Text.(^^^) x ([31;1mr"[39;22m_method")) n in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:          let build_field_name c = build_field_name_name (const_descr_ref_to_ascii_name ctxt'.ctxt_c_env c) in
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:          let dict_type_name = (Name.lskip_rename (fun x -> Ulib.Text.(^^^) x ([31;1mr"[39;22m_class")) cn) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:         
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:            Name.from_rope
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:              (Ulib.Text.concat ([31;1mr"[39;22m_")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:                 [[31;1mr"[39;22mInstance";
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typecheck.ml:                  Name.to_rope (Path.to_name p);
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:    | Ast.Ws(r) -> r
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:    | Ast.Nl -> [31;1mr"[39;22m\n"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_constr_sep = kwd "of"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_var = [31;1mr"[39;22m'"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_class_constraint_prefix_end = kwd "=>"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_end = emp
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_var = [31;1mr"[39;22m''"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_plus = kwd "+"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let const_empty s = kwd "{" ^ ws s ^ kwd "}"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let string_quote = [31;1mr"[39;22m\""
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let string_escape s s_org = Util.option_default (String.escaped s) s_org
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let lex_skip = function _ -> [31;1mr"[39;22mDUMMY"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_constr_sep = bkwd "of"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_var = [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_class_constraint_prefix_end = kwd "\\Rightarrow"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_end = emp
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_var = [31;1mr"[39;22m''"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_plus = kwd "+"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let const_false = bkwd "false"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let string_quote = [31;1mr"[39;22m\""
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let string_escape = Identity.string_escape
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_end = kwd "*)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_var = [31;1mr"[39;22m"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:let back_tick = List.hd (Ulib.Text.explode ([31;1mr"[39;22m`"))
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:let quotation_mark = List.hd (Ulib.Text.explode ([31;1mr"[39;22m\""))
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:let backslash = List.hd (Ulib.Text.explode ([31;1mr"[39;22m\\"))
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:    | Ast.Ws(r) -> r
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:    | Ast.Nl -> [31;1mr"[39;22m\n"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_constr_sep = emp
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_var = [31;1mr"[39;22m'"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_class_constraint_prefix_end = kwd "=>"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let const_false = kwd "False"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let string_quote = [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let string_escape s _ = string_escape_isa s
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:    | Ast.Ws(r) -> r
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:    | Ast.Nl -> [31;1mr"[39;22m\n"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_constr_sep = kwd "of"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_var = [31;1mr"[39;22m'"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let typ_class_constraint_prefix_end = kwd "=>"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_end = kwd "*)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_var = [31;1mr"[39;22m'" (* Currently turning into standard type variable, shouldn't appear in source *)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let nexp_plus = emp
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let const_empty s = kwd "{" ^ ws s ^ kwd "}"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let string_quote = [31;1mr"[39;22m\""
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  let string_escape s _ = string_escape_hol s
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:            | (sk, m) :: sk_ms' -> begin
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:                let (oi', _) = oi_alter_init_lskips (fun _ -> (Some [Ast.Ws ([31;1mr"[39;22m\n")], None)) oi in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:          	       open_import_to_output oi ^
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:and make_lemdefn latex_name latex_label typeset_name pre_comment full core post_comment = 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  ([31;1mr"[39;22m\\newcommand{" ^^^^ latex_name ^^^^ [31;1mr"[39;22m}[1][default]{%\n" ^^^^
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  [31;1mr"[39;22m\\lemdefn\n" ^^^^ 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  [31;1mr"[39;22m{#1}\n" ^^^^
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  [31;1mr"[39;22m{" ^^^^ latex_label ^^^^ [31;1mr"[39;22m}\n" ^^^^
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  [31;1mr"[39;22m{" ^^^^ typeset_name ^^^^ [31;1mr"[39;22m}\n" ^^^^ 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  [31;1mr"[39;22m{" ^^^^ pre_comment ^^^^ [31;1mr"[39;22m}\n" ^^^^
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  [31;1mr"[39;22m{" ^^^^ full ^^^^ [31;1mr"[39;22m}\n" ^^^^ 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  [31;1mr"[39;22m{" ^^^^ core ^^^^ [31;1mr"[39;22m}\n" ^^^^
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  [31;1mr"[39;22m{" ^^^^ post_comment ^^^^ [31;1mr"[39;22m}%\n" ^^^^
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  [31;1mr"[39;22m}\n",
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  latex_name ^^^^ [31;1mr"[39;22m\n")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml: 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:      (to_rope_tex (defs ds) ^^^^
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:      (match to_rope_option_tex ((* add empty stuff before last comment to prevent stripping of empty lines *) kwd "" ^ ws end_lex_skips) with None -> [31;1mr"[39;22m" | Some rr -> 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:        [31;1mr"[39;22m\\lemdef{%\n" ^^^^
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:        rr  ^^^^
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:        [31;1mr"[39;22m%\n}\n"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:      ))
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:  = function
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:    |  [] -> ([31;1mr"[39;22m",[31;1mr"[39;22m")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend.ml:    |  (r1,r2)::rrs  -> let (r1',r2') = batrope_pair_concat rrs in (r1^^^^r1', r2^^^^r2') 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/patterns.ml:let r = Ulib.Text.of_latin1
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/patterns.ml:let space = Some [Ast.Ws ([31;1mr"[39;22m ")]
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/patterns.ml:let new_line = Some [Ast.Ws ([31;1mr"[39;22m\n")]
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/patterns.ml:            let free = C.exp_to_free e in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/patterns.ml:            let v = Name.fresh ([31;1mr"[39;22mx") (fun n -> not (Nfmap.in_dom n free)) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/patterns.ml:            let (from_t,to_t) =
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend_common.ml:    match t with
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend_common.ml:      | Ast.Component_type s -> ws s ^ id a ([31;1mr"[39;22mtype")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend_common.ml:      | Ast.Component_field s -> ws s ^ id a ([31;1mr"[39;22mfield")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend_common.ml:      | Ast.Component_module s -> ws s ^ id a ([31;1mr"[39;22mmodule")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/backend_common.ml:      | Ast.Component_function s -> ws s ^ id a ([31;1mr"[39;22mfunction")
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/path.ml:let flat = function
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/path.ml:  | [] -> [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/path.ml:  | r2 -> Ulib.Text.concat ([31;1mr"[39;22m") r2
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/path.ml:      Name.from_rope 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/path.ml:        (Ulib.Text.concat ([31;1mr"[39;22m_") (List.map Name.to_rope ns @ [Name.to_rope n]))
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:let newline = Some [Ast.Nl]
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:let space = Some [Ast.Ws([31;1mr"[39;22m ")]
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:  let n =
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:    Name.fresh ([31;1mr"[39;22mpat") (fun n -> not (Nset.mem n !avoid)) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:  let v = Name.add_lskip n in
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:         let n =
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:           Name.fresh ([31;1mr"[39;22mpat") (fun n -> not (Nset.mem n !avoid)) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:         avoid := Nset.add n !avoid;
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:    let namegen = make_namegen (Nfmap.domain (exp_to_free res)) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:    let var = Name.add_lskip (namegen ([31;1mr"[39;22mx")) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/convert_relations.ml:    let body =
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend_utils.ml:let sep x s = ws s ^ x
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend_utils.ml:let path_sep = [31;1mr"[39;22m."
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend_utils.ml:
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend_utils.ml:let tyvar (_, tv, _) = id Type_var (Ulib.Text.(^^^) ([31;1mr"[39;22m") tv)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend_utils.ml:let concat_str s = concat (from_string s)
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:    match t with
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:      | Ast.Target_hol(s) -> ws s ^ id a ([31;1mr"[39;22mhol")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:      | Ast.Target_ocaml(s) -> ws s ^ id a ([31;1mr"[39;22mocaml")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:      | Ast.Target_isa(s) -> ws s ^ id a ([31;1mr"[39;22misabelle")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:      | Ast.Target_coq(s) -> ws s ^ id a ([31;1mr"[39;22mcoq")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:      | Ast.Target_tex(s) -> ws s ^ id a ([31;1mr"[39;22mtex")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:      | Ast.Target_html(s) -> ws s ^ id a ([31;1mr"[39;22mhtml")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:      | Ast.Target_lem(s) -> ws s ^ id a ([31;1mr"[39;22mlem")
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:let non_ident_target_to_mname = function
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:  | Target_hol -> Name.from_rope ([31;1mr"[39;22mHol")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:  | Target_ocaml -> Name.from_rope ([31;1mr"[39;22mOcaml")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:  | Target_isa -> Name.from_rope ([31;1mr"[39;22mIsabelle")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:  | Target_coq -> Name.from_rope ([31;1mr"[39;22mCoq")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:  | Target_tex -> Name.from_rope ([31;1mr"[39;22mTex")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:  | Target_html -> Name.from_rope ([31;1mr"[39;22mHtml")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/target.ml:  | Target_lem -> Name.from_rope ([31;1mr"[39;22mLem")
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast_syntax.ml:let r = Ulib.Text.of_latin1
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast_syntax.ml:let space = Some [Ast.Ws ([31;1mr"[39;22m ")]
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast_syntax.ml:let new_line = Some [Ast.Ws ([31;1mr"[39;22m\n")]
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast_syntax.ml:  let loc = Ast.Trans (true, "mk_case_exp", Some l) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast_syntax.ml:  let case_space = Some [Ast.Ws ([31;1mr"[39;22m\n  ")] in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/typed_ast_syntax.ml:  let rows_sep_list = Seplist.from_list (List.map (fun (p,e) -> ((pat_append_lskips space p, space, fst (alter_init_lskips space_init_ws e), loc), case_space)) rows) in
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let texspace = Texspace
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let space = ws (Some [Ast.Ws ([31;1mr"[39;22m ")])
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let new_line = ws (Some [Ast.Nl])
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let pp_raw_id_annot = function
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Term_const _       -> [31;1mr"[39;22mTerm_const"       
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Term_field         -> [31;1mr"[39;22mTerm_field"       
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Term_method        -> [31;1mr"[39;22mTerm_method"      
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Term_var           -> [31;1mr"[39;22mTerm_var"         
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Term_var_toplevel  -> [31;1mr"[39;22mTerm_var_toplevel"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Term_spec          -> [31;1mr"[39;22mTerm_spec"        
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Type_ctor _        -> [31;1mr"[39;22mType_ctor"        
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Type_var           -> [31;1mr"[39;22mType_var"         
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Module_name        -> [31;1mr"[39;22mModule_name"      
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Class_name         -> [31;1mr"[39;22mClass_name"       
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Target             -> [31;1mr"[39;22mTarget"           
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Component          -> [31;1mr"[39;22mComponent"           
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Nexpr_var          -> [31;1mr"[39;22mNexpr_var"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let pp_raw_bool = function
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | true  -> [31;1mr"[39;22mtrue"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | false -> [31;1mr"[39;22mfalse"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let wrap_paren_star x = [31;1mr"[39;22m(*" ^^ x ^^ [31;1mr"[39;22m*)"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Ast.Chars(r) -> r
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Ast.Comment(coms) -> wrap_paren_star (Ulib.Text.concat ([31;1mr"[39;22m") (List.map ml_comment_to_rope coms))
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Ast.Chars(r) -> r
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Ast.Comment(coms) -> Ulib.Text.concat ([31;1mr"[39;22m") (List.map ml_comment_to_rope coms)
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  match t with
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Empty -> [31;1mr"[39;22mEmpty"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Kwd(s) -> [31;1mr"[39;22mKwd(" ^^ Ulib.Text.of_latin1 s ^^[31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Ident(a,rr) -> [31;1mr"[39;22mIdent(" ^^ pp_raw_id_annot a ^^ [31;1mr"[39;22m," ^^ rr ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Num(i) -> [31;1mr"[39;22mNum(" ^^  Ulib.Text.of_latin1 (string_of_int i) ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Inter(Ast.Com(rr)) -> [31;1mr"[39;22mInter(Ast.Com(" ^^ ml_comment_to_rope rr ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Inter(Ast.Ws(rr)) -> [31;1mr"[39;22mInter(Ast.Ws(" ^^ rr ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Inter(Ast.Nl) -> [31;1mr"[39;22mInter(Ast.Nl)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Str(s) -> [31;1mr"[39;22mStr(" ^^ s ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Err(s) -> [31;1mr"[39;22mStr(" ^^ Ulib.Text.of_latin1 s ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Meta(s) -> [31;1mr"[39;22mStr(" ^^ Ulib.Text.of_latin1 s ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Texspace -> [31;1mr"[39;22mTexspace"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Ensure_newline -> [31;1mr"[39;22mEnsure_newline"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Cons(t1,t2) -> [31;1mr"[39;22mCons(" ^^ pp_raw_t t1 ^^ [31;1mr"[39;22m," ^^ pp_raw_t t2 ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Block(b,d,t) -> [31;1mr"[39;22mBlock(" ^^ pp_raw_bool b ^^ [31;1mr"[39;22m," ^^ pp_raw_t t ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Break_hint _ -> [31;1mr"[39;22mBreakhint"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Internalspace -> [31;1mr"[39;22mInternalspace"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Core t -> [31;1mr"[39;22mCore(" ^^ pp_raw_t t ^^ [31;1mr"[39;22m)"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml: 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  match t with
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Empty -> [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Kwd(s) -> Ulib.Text.of_latin1 s
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         | Ast.Com(r) -> lex_skips_to_rope i
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         | (Ast.Nl | Ast.Ws _)  -> if preserve_ws then lex_skips_to_rope i else [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      end
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Meta(s) -> Ulib.Text.of_latin1 s
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Texspace -> [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Internalspace -> [31;1mr"[39;22m "
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Break_hint _ -> [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Ensure_newline -> [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | _ -> raise (Reporting_basic.err_unreachable Ast.Unknown "structured output in to_rope_single")
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  let rec to_rope_help (p : int) (t : t) : (Ulib.Text.t list * Ulib.Text.t * (int * t * t)) = match t with
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Ensure_newline -> let res = [31;1mr"[39;22m" in ((if p = 0 then [] else [lex_skips_to_rope Ast.Nl]), res, (0, t, t))
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Block (b, bty, t) -> if b then to_rope_help_block p (Block (b, bty, t)) else to_rope_help p t
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:        let (rL2,r2, (p2, t3', t4')) = to_rope_help p1 t2 in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:        let sp = if ns need_space t2' t3' then [31;1mr"[39;22m " else [31;1mr"[39;22m" in
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:        let is_nl = (match t with Inter(Ast.Nl) -> true | _ -> false) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:        if is_nl then ([res], [31;1mr"[39;22m", (0, t, t)) else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:                      ([], res, (p + Ulib.Text.length res, t, t))
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  let (rL,r',_) = to_rope_help 0 t in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    Ulib.Text.concat ([31;1mr"[39;22m") (rL @ [r']) 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let tex_command_prefix = [31;1mr"[39;22mLEM"  (* for LaTeX commands in generated .tex and -inc.tex files *)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let tex_label_prefix   = [31;1mr"[39;22mlem:" (* for LaTeX labels in generated .tex and -inc.tex files *)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let tex_sty_prefix     = [31;1mr"[39;22mlem"  (* for LaTeX commands in the lem.sty file *)
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       (fun c -> 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '_'  then [31;1mr"[39;22mT"     else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '#'  then [31;1mr"[39;22mH"     else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '\'' then [31;1mr"[39;22mP"     else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '0'  then [31;1mr"[39;22mZero"  else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '1'  then [31;1mr"[39;22mOne"   else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '2'  then [31;1mr"[39;22mTwo"   else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '3'  then [31;1mr"[39;22mThree" else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '4'  then [31;1mr"[39;22mFour"  else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '5'  then [31;1mr"[39;22mFive"  else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '6'  then [31;1mr"[39;22mSix"   else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '7'  then [31;1mr"[39;22mSeven" else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '8'  then [31;1mr"[39;22mEight" else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       if c=Ulib.UChar.of_char '9'  then [31;1mr"[39;22mNine"  else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       Ulib.Text.of_uchar c)
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let tex_command_name rr = [31;1mr"[39;22m\\" ^^ tex_command_prefix ^^ tex_command_escape rr 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:let tex_command_label rr =  tex_label_prefix ^^ tex_command_escape rr 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:       (fun c ->  
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if (with_space && c=Ulib.UChar.of_char ' ')  then [31;1mr"[39;22m\\ " else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if (with_space && c=Ulib.UChar.of_char '\n')  then [31;1mr"[39;22m\\\\\\hspace*{0em}%\n" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:(*
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:*)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '_'  then [31;1mr"[39;22m\\_" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '%'  then [31;1mr"[39;22m\\texttt{\\char`\\%}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '$'  then [31;1mr"[39;22m\\$" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '#'  then [31;1mr"[39;22m\\#" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '?'  then [31;1mr"[39;22m\\texttt{\\char`\\?}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '^'  then [31;1mr"[39;22m\\texttt{\\char`\\^}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '{'  then [31;1mr"[39;22m\\{" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '}'  then [31;1mr"[39;22m\\}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '='  then [31;1mr"[39;22m\\texttt{\\char`\\=}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '<'  then [31;1mr"[39;22m\\texttt{\\char`\\<}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '>'  then [31;1mr"[39;22m\\texttt{\\char`\\>}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '&'  then [31;1mr"[39;22m\\&" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '~'  then [31;1mr"[39;22m\\texttt{\\char`\\~}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '\\' then [31;1mr"[39;22m\\texttt{\\char`\\\\}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '/' then [31;1mr"[39;22m\\texttt{\\char`\\/}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '|'  then [31;1mr"[39;22m\\texttt{\\char`\\|}" else 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:         if c=Ulib.UChar.of_char '\'' then [31;1mr"[39;22m\\texttt{\\char`\\'}" else 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  let res no_escape command_name =
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:     ([31;1mr"[39;22m\\" ^^ tex_sty_prefix ^^ r command_name, (if no_escape then r1 else tex_escape r1)) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  match a with
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Type_var           -> begin 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      let res_special_tyvar x = ([31;1mr"[39;22m\\" ^^ tex_sty_prefix ^^ r "TypeVar" ^^ r x, r "") in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      if (r1 = [31;1mr"[39;22ma") then res_special_tyvar "A" else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      if (r1 = [31;1mr"[39;22mb") then res_special_tyvar "B" else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      if (r1 = [31;1mr"[39;22mc") then res_special_tyvar "C" else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      if (r1 = [31;1mr"[39;22md") then res_special_tyvar "D" else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      res false "TypeVar"          
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  let (tex_wrapper, r1') = tex_id_wrap a r1 in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  tex_wrapper ^^ [31;1mr"[39;22m{" ^^ r1' ^^ [31;1mr"[39;22m}" ^^ r2
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  match t with
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Empty -> [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Kwd(s) ->  Ulib.Text.of_latin1 s
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      let x = ml_comment_to_rope' rr in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      let texprefix = [31;1mr"[39;22mtex " in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      let suppressprefix = [31;1mr"[39;22m--- " in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      if Ulib.Text.starts_with x texprefix then
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      else if Ulib.Text.starts_with x suppressprefix then
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:        [31;1mr"[39;22m" 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      else
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:        [31;1mr"[39;22m\\lemcomm{" ^^ tex_escape_with_space (wrap_paren_star x)  ^^ [31;1mr"[39;22m}" 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Inter(Ast.Ws(rr)) -> if Ulib.Text.length rr > 0 then [31;1mr"[39;22m\\ " ^^ rr else rr
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Inter(Ast.Nl) -> raise (Failure "Nl in to_rope_tex")
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Str(s) ->  [31;1mr"[39;22m\\text{\\textit{" ^^ ([31;1mr"[39;22m``") ^^ (tex_escape s) ^^ ([31;1mr"[39;22m''") ^^ [31;1mr"[39;22m}}"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Err(s) -> raise (Backend(s))
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Meta(s) -> Ulib.Text.of_latin1 s
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Texspace -> [31;1mr"[39;22m"   
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Break_hint _ -> [31;1mr"[39;22m"   
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Ensure_newline -> [31;1mr"[39;22m"   
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Internalspace -> [31;1mr"[39;22m"   
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  | Cons(t1,t2) -> raise (Failure "Cons in to_rope_tex") 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:            Some ( make_indent indent_acc ^^ 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:                   Ulib.Text.concat ([31;1mr"[39;22m") 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:                     (List.map to_rope_tex_single 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:                        (strip_initial_and_final_texspace ts))) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      f ([31;1mr"[39;22m") ts 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    let dummy_space tso = match tso with 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      | None -> [31;1mr"[39;22m\\ "  (* to workaround latex tabbing sensitivity *)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      | Some r -> r in 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    List.map
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      (function | None -> [31;1mr"[39;22m" | Some r -> r) 
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:      (List.map to_rope_tex_option_line tss) in
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    match rs with
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | [] -> [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | [rr] -> rr
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | rr :: rs' -> rr ^^ [31;1mr"[39;22m\\\\{}\n" ^^ f rs' in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  (if debug then Printf.printf "\n\nto_rope_tex output:\n%s" (Ulib.Text.to_string (match ro with None -> [31;1mr"[39;22mNone" | Some rr -> [31;1mr"[39;22mSome(" ^^ rr ^^ [31;1mr"[39;22m)")));
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:  match to_rope_option_tex t with
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | None -> [31;1mr"[39;22m"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/output.ml:    | Some rr -> rr
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/trans.ml:          List.map (fun n -> Name.add_pre_lskip space (Name.add_lskip n))
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/trans.ml:            (Name.fresh_num_list 2 ([31;1mr"[39;22mx") (fun n -> not (Nfmap.in_dom n avoid)))
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/trans.ml:        with
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/trans.ml:  let (n1,n2) = Path.to_name_list m.descr in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/trans.ml:  let (descr, _) = names_get_const E.env (n1@[n2]) (Name.from_rope ([31;1mr"[39;22mbind")) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/trans.ml:    C.mk_const l { id_path = bind_id l m.id_path; id_locn = l; descr = descr; instantiation = i } None
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:    | Ast.Ws r -> r
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:    | Ast.Nl -> [31;1mr"[39;22m\n"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:;;
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:    | Typ_var (_, v) ->
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:        id Type_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Tyvar.to_rope v)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:    | Typ_wild skips -> from_string "_"
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:        | Nexp_var (skips, nvar) ->
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:          let nvar = id Nexpr_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Nvar.to_rope nvar) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:            Output.flat [
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:            Output.flat [
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:              ws skips; id Type_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Tyvar.to_rope v)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:            ]
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:      	| Typ_wild skips -> ws skips ^ from_string "_"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:      	| Typ_var (skips, v) -> id Type_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Tyvar.to_rope v)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:      	| Typ_fn (t1, skips, t2) -> typ t1 ^ ws skips ^ kwd "->" ^ typ t2
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:        | Typ_wild skips -> ws skips ^ from_string "_"
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:        | Typ_var (skips, v) -> id Type_var @@ Ulib.Text.(^^^) ([31;1mr"[39;22m") (Tyvar.to_rope v)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:        | Typ_fn (t1, skips, t2) ->
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:      let coq_defs_extra = defs_extra false false ds in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:    	  ((to_rope ([31;1mr"[39;22m\"") lex_skip need_space @@ coq_defs ^ ws end_lex_skips),
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:          to_rope ([31;1mr"[39;22m\"") lex_skip need_space @@ coq_defs_extra ^ ws end_lex_skips)
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/coq_backend.ml:    ;;
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/process_file.ml:     let module_name = Name.to_string (Backend_common.get_module_name env (Target.Target_no_ident (Target.Target_tex)) mod_path mod_name) in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/process_file.ml:     let sect_header = [31;1mr"[39;22m\\clearpage\n\n\\section{" ^^^^ Output.tex_escape (Ulib.Text.of_string module_name) ^^^^ [31;1mr"[39;22m}\n" in
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/process_file.ml:     (r_main ^^^^ sect_header ^^^^ r_main', 
+linksem:---
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/process_file.ml:      r_usage ^^^^ sect_header ^^^^ r_usage')
+linksem:papers/oopsla-elf-linking-2016/artefact/linker/lem/src/process_file.ml:    end) ([31;1mr"[39;22m", [31;1mr"[39;22m", [31;1mr"[39;22m") mods' in
+linksem:parsed=167 would_break=16
+linol:parsed=13 would_break=0
+linwrap:parsed=5 would_break=0
+lipsum:parsed=0 would_break=0
+liquid_interpreter:parsed=33 would_break=0
+liquidsoap:parsed=539 would_break=0
+liquidsoap-core:parsed=538 would_break=0
+liquidsoap-daemon:parsed=0 would_break=0
+little_logger:parsed=5 would_break=0
+llama-cpp-ocaml:parsed=11 would_break=0
+llama_core:parsed=55 would_break=0
+llvm:parsed=38 would_break=0
+lmdb:parsed=10 would_break=0
+lo:parsed=5 would_break=0
+loc:parsed=22 would_break=0
+lockfree:parsed=47 would_break=0
+logger-p5:parsed=0 would_break=0
+logical:parsed=18 would_break=0
+logs:parsed=25 would_break=0
+logs-async:parsed=4 would_break=0
+logs-ppx:parsed=4 would_break=0
+logs-syslog:parsed=16 would_break=0
+loop:parsed=4 would_break=0
+lp:parsed=42 would_break=0
+lpd:parsed=6 would_break=0
+lpi:parsed=10 would_break=0
+lreplay:parsed=18 would_break=0
+lru:parsed=5 would_break=0
+lru-cache:parsed=3 would_break=0
+lru_cache:parsed=3 would_break=0
+lt-code:parsed=22 would_break=0
+lua-ml:parsed=26 would_break=0
+lua_parser:parsed=11 would_break=0
+lua_pattern:parsed=9 would_break=0
+lucid:parsed=2 would_break=0
+lun:parsed=8 would_break=0
+lustre-v6:parsed=151 would_break=0
+lutils:parsed=13 would_break=0
+luv:parsed=107 would_break=0
+luv_unix:parsed=105 would_break=0
+lwt:parsed=96 would_break=0
+lwt-canceler:parsed=5 would_break=0
+lwt-dllist:parsed=6 would_break=0
+lwt-exit:parsed=16 would_break=0
+lwt-parallel:parsed=3 would_break=0
+lwt-watcher:parsed=2 would_break=0
+lwt_domain:parsed=6 would_break=0
+lwt_eio:parsed=4 would_break=0
+lwt_glib:parsed=3 would_break=0
+lwt_log:parsed=7 would_break=0
+lwt_react:parsed=117 would_break=0
+lwt_retry:parsed=96 would_break=0
+lwt_ssl:parsed=2 would_break=0
+lz4:parsed=6 would_break=0
+lz4_chans:parsed=3 would_break=0
+lzo:parsed=4 would_break=0
+m_tree:parsed=6 would_break=0
+macaroons:parsed=5 would_break=0
+mad:parsed=7 would_break=0
+magic:parsed=4 would_break=0
+magic-mime:parsed=4 would_break=0
+make-random:parsed=27 would_break=0
+malfunction:parsed=17 would_break=0
+man_in_the_middle_debugger:parsed=3 would_break=0
+mariadb:parsed=22 would_break=0
+markdown:parsed=4 would_break=0
+markup:parsed=63 would_break=0
+markup-lwt:parsed=63 would_break=0
+mastodon-archive-viewer:parsed=4 would_break=0
+matplotlib:parsed=9 would_break=0
+mazeppa:parsed=60 would_break=0
+mbr-format:parsed=7 would_break=0
+mc2:src/lra/Mc2_lra.ml:      Log.debugf 10
+mc2:src/lra/Mc2_lra.ml:        (fun k->[31;1mk"[39;22m(@[<hv>lra.add_unit_constr@ :term %a@ :constr @[%a %a@] \
+mc2:src/lra/Mc2_lra.ml:                  @ :reason %a@ :expr %a@ :cur-state %a@])"
+mc2:---
+mc2:src/lra/Mc2_lra.ml:        Log.debugf 30
+mc2:src/lra/Mc2_lra.ml:          (fun k->[31;1mk"[39;22m(@[<hv>lra.decide@ %a := %a@ :state %a@])"
+mc2:src/lra/Mc2_lra.ml:              Term.debug t Q.pp_print n pp_state st);
+mc2:---
+mc2:src/core/Tseitin.ml:      | _ ->
+mc2:src/core/Tseitin.ml:        Log.debugf 1(fun k->[31;1mk"[39;22m(@[cnf.bad-formula@ %a@])" pp f);
+mc2:src/core/Tseitin.ml:        assert false
+mc2:---
+mc2:src/core/Proof.ml:      | P_raw_steps ((c::r) as l) ->
+mc2:src/core/Proof.ml:        Log.debugf 30 (fun k->[31;1mk"[39;22m(@[<hv>proof.expanding.raw@ %a@])"
+mc2:src/core/Proof.ml:            (Util.pp_list Clause.debug ) l);
+mc2:---
+mc2:src/core/Proof.ml:    let step = step n in
+mc2:src/core/Proof.ml:    Log.debugf 15 (fun k->[31;1mk"[39;22m(@[<hv>proof.check.step@ :concl %a@ :step %a@])"
+mc2:src/core/Proof.ml:        Clause.debug concl debug_step step);
+mc2:---
+mc2:src/core/Internal.ml:  ) else (
+mc2:src/core/Internal.ml:    Log.debugf 15 (fun k->[31;1mk"[39;22m(@[solver.add_term %a@])" Term.debug t);
+mc2:src/core/Internal.ml:    Term.field_set field_t_is_added t;
+mc2:---
+mc2:src/core/Internal.ml:      Log.debugf 30
+mc2:src/core/Internal.ml:        (fun k->[31;1mk"[39;22m(@[<hv>conflict_analyze.check_done:@ %a@ :n_to_analyze %d@ :reason %a@])"
+mc2:src/core/Internal.ml:            Term.debug t st.cs_n_to_analyze Reason.pp (Term.level t,reason));
+mc2:---
+mc2:src/core/Internal.ml:let add_conflict (env:t) (confl:clause): unit =
+mc2:src/core/Internal.ml:  Log.debugf info (fun k -> [31;1mk"[39;22m@{<Yellow>## add_conflict@}: %a" Clause.debug confl);
+mc2:src/core/Internal.ml:  env.next_decision <- None;
+mc2:---
+mc2:src/core/Internal.ml:let gc_clauses (env:t) ~down_to : unit =
+mc2:src/core/Internal.ml:  Log.debugf 2 (fun k->[31;1mk"[39;22m@{<Yellow>## gc_clauses@}");
+mc2:src/core/Internal.ml:  assert (Stack.is_empty env.clauses_to_add);
+mc2:---
+mc2:src/core/Internal.ml:  Log.debugf 4
+mc2:src/core/Internal.ml:    (fun k->[31;1mk"[39;22m(@[gc_clauses.remove_learnt@ :n_total %d@ :downto %d@])" n_clauses down_to);
+mc2:src/core/Internal.ml:  (* mark terms of the trail alive, as well as clauses that propagated them,
+mc2:---
+mc2:src/core/Internal.ml:      (* remove the clause *)
+mc2:src/core/Internal.ml:      Log.debugf 15 (fun k->[31;1mk"[39;22m(@[gc_clauses.remove_clause@ %a@ :activity %f@])"
+mc2:src/core/Internal.ml:                        Clause.debug c (Clause.activity c));
+mc2:---
+mc2:src/core/Internal.ml:let gc_terms (env:t) : unit =
+mc2:src/core/Internal.ml:  Log.debugf 2 (fun k->[31;1mk"[39;22m@{<Yellow>## gc_terms@}");
+mc2:src/core/Internal.ml:  env.n_gc_t <- env.n_gc_t + 1;
+mc2:---
+mc2:src/core/Internal.ml:        if H.is_empty env.term_heap then (
+mc2:src/core/Internal.ml:          Log.debugf 3 (fun k->[31;1mk"[39;22m@{<yellow>found SAT@}");
+mc2:src/core/Internal.ml:          raise Sat;
+mc2:---
+mc2:src/core/Internal.ml:  : unit =
+mc2:src/core/Internal.ml:  Log.debugf 2 (fun k->[31;1mk"[39;22m@{<Green>#### Solve@}");
+mc2:src/core/Internal.ml:  if is_unsat env then (
+mc2:---
+mc2:src/core/Internal.ml:  Log.debugf 30
+mc2:src/core/Internal.ml:    (fun k->[31;1mk"[39;22m(@[solver.push.status@ :prop_head %d/%d@ :trail (@[<hv>%a@])@])"
+mc2:src/core/Internal.ml:        env.bcp_head env.th_head (Vec.pp ~sep:"" Term.debug) env.trail);
+mc2:---
+mc2:src/core/Internal.ml:      Log.debugf info
+mc2:src/core/Internal.ml:        (fun k->[31;1mk"[39;22m(@[<hv>solver.create_new_user_level@ :cur-level %d@])" (decision_level env));
+mc2:src/core/Internal.ml:      Vec.push env.user_levels (Vec.size env.clauses_temp);
+mc2:---
+mc2:src/smtlib/Typecheck.ml:        Log.debugf 30
+mc2:src/smtlib/Typecheck.ml:          (fun k->[31;1mk"[39;22m(@[smtlib.name_lra@ %a@ :as %a@])" RLE.pp e ID.pp id);
+mc2:src/smtlib/Typecheck.ml:        decl id [] (SReg.find_exn reg Mc2_lra.k_rat);
+mc2:---
+mc2:src/smtlib/Typecheck.ml:        Log.debugf 30
+mc2:src/smtlib/Typecheck.ml:          (fun k->[31;1mk"[39;22m(@[smtlib.name_term@ %a@ :as %a@])" PA.pp_term t ID.pp placeholder_id);
+mc2:src/smtlib/Typecheck.ml:        decl placeholder_id [] ty_b;
+mc2:---
+mc2:src/smtlib/Typecheck.ml:      Log.debugf 30
+mc2:src/smtlib/Typecheck.ml:        (fun k->[31;1mk"[39;22m(@[smtlib.name_atom@ %a@ :as %a@])" F.pp f ID.pp placeholder_id);
+mc2:src/smtlib/Typecheck.ml:      (* add [placeholder <=> Â¬a] *)
+mc2:---
+mc2:src/smtlib/Typecheck.ml:      Log.debugf 30
+mc2:src/smtlib/Typecheck.ml:        (fun k->[31;1mk"[39;22m(@[smtlib.name_subform@ %a@ :as %a@])" F.pp f ID.pp placeholder_id);
+mc2:src/smtlib/Typecheck.ml:      let placeholder = mk_const placeholder_id in
+mc2:parsed=78 would_break=5
+mccs:parsed=8 would_break=0
+md2mld:parsed=3 would_break=0
+mdx:parsed=112 would_break=0
+mec:parsed=146 would_break=0
+mehari:parsed=41 would_break=0
+mehari-eio-unix:parsed=41 would_break=0
+melange:parsed=1589 would_break=0
+melange-atdgen-codec-runtime:parsed=14 would_break=0
+melange-fest:parsed=3 would_break=0
+melange-fetch:parsed=5 would_break=0
+melange-jest:parsed=12 would_break=0
+melange-json:parsed=26 would_break=0
+melange-moment:parsed=0 would_break=0
+melange-numeral:parsed=0 would_break=0
+melange-radix-icons:parsed=0 would_break=0
+melange-recharts:parsed=0 would_break=0
+melange-testing-library:parsed=0 would_break=0
+melange-webapi:parsed=0 would_break=0
+mem_usage:parsed=3 would_break=0
+memcpy:parsed=6 would_break=0
+memgraph:parsed=20 would_break=0
+memo:parsed=2 would_break=0
+memtrace:parsed=25 would_break=0
+memtrace_viewer:parsed=136 would_break=0
+menhir:parsed=367 would_break=0
+menhir-secondary:parsed=367 would_break=0
+merge-fmt:parsed=20 would_break=0
+mergeable-vector:parsed=4 would_break=0
+merlin-extend:parsed=7 would_break=0
+merlin-of-pds:parsed=0 would_break=0
+mesh:parsed=25 would_break=0
+metadata:parsed=32 would_break=0
+metadb:parsed=10 would_break=0
+metapp:parsed=18 would_break=0
+metrics:parsed=14 would_break=0
+metrics-mirage:parsed=16 would_break=0
+mew:parsed=7 would_break=0
+mew_vi:parsed=9 would_break=0
+middleware:parsed=3 would_break=0
+mikmatch:parsed=22 would_break=0
+mimic:parsed=11 would_break=0
+mindstorm:parsed=39 would_break=0
+minicaml:parsed=25 would_break=0
+minicli:parsed=3 would_break=0
+minilight:parsed=11 would_break=0
+minima-theme:test/test.ml:  let username = "avsm" in
+minima-theme:test/test.ml:  let page_links = ["About", [31;1mu"[39;22m/about"] in
+minima-theme:test/test.ml:  let contact_email = "anil@recoil.org", (Some (u "mailto:anil@recoil.org")) in
+minima-theme:parsed=8 would_break=1
+minios-xen:parsed=0 would_break=0
+minisat:parsed=5 would_break=0
+minivpt:parsed=3 would_break=0
+miou:parsed=38 would_break=0
+mirage:parsed=161 would_break=0
+mirage-block:parsed=12 would_break=0
+mirage-block-ccm:parsed=6 would_break=0
+mirage-block-lwt:parsed=12 would_break=0
+mirage-block-partition:parsed=5 would_break=0
+mirage-block-ramdisk:parsed=3 would_break=0
+mirage-block-solo5:parsed=2 would_break=0
+mirage-block-unix:parsed=6 would_break=0
+mirage-block-xen:parsed=9 would_break=0
+mirage-bootvar:parsed=9 would_break=0
+mirage-bootvar-solo5:parsed=2 would_break=0
+mirage-bootvar-unix:parsed=2 would_break=0
+mirage-bootvar-xen:parsed=2 would_break=0
+mirage-channel:parsed=5 would_break=0
+mirage-channel-lwt:parsed=5 would_break=0
+mirage-clock:parsed=11 would_break=0
+mirage-clock-freestanding:parsed=11 would_break=0
+mirage-clock-lwt:parsed=12 would_break=0
+mirage-clock-xen:parsed=7 would_break=0
+mirage-console:parsed=11 would_break=0
+mirage-console-lwt:parsed=12 would_break=0
+mirage-console-solo5:parsed=2 would_break=0
+mirage-crypto:parsed=61 would_break=0
+mirage-crypto-rng-async:parsed=70 would_break=0
+mirage-device:parsed=2 would_break=0
+mirage-entropy:parsed=3 would_break=0
+mirage-flow:parsed=7 would_break=0
+mirage-flow-lwt:parsed=7 would_break=0
+mirage-fs:parsed=2 would_break=0
+mirage-fs-lwt:parsed=4 would_break=0
+mirage-fs-mem:parsed=3 would_break=0
+mirage-fs-unix:parsed=7 would_break=0
+mirage-kv:parsed=3 would_break=0
+mirage-kv-lwt:parsed=4 would_break=0
+mirage-kv-mem:parsed=3 would_break=0
+mirage-kv-unix:parsed=3 would_break=0
+mirage-logs:parsed=5 would_break=0
+mirage-mtime:parsed=6 would_break=0
+mirage-nat:parsed=14 would_break=0
+mirage-net:parsed=2 would_break=0
+mirage-net-lwt:parsed=3 would_break=0
+mirage-net-macosx:parsed=2 would_break=0
+mirage-net-solo5:parsed=2 would_break=0
+mirage-net-unix:parsed=3 would_break=0
+mirage-net-xen:parsed=22 would_break=0
+mirage-os-shim:parsed=5 would_break=0
+mirage-profile:parsed=9 would_break=0
+mirage-protocols:parsed=1 would_break=0
+mirage-protocols-lwt:parsed=3 would_break=0
+mirage-ptime:parsed=6 would_break=0
+mirage-qubes:parsed=14 would_break=0
+mirage-random:parsed=1 would_break=0
+mirage-random-stdlib:parsed=2 would_break=0
+mirage-random-test:parsed=2 would_break=0
+mirage-sleep:parsed=3 would_break=0
+mirage-solo5:parsed=8 would_break=0
+mirage-stack:parsed=1 would_break=0
+mirage-stack-lwt:parsed=2 would_break=0
+mirage-time:parsed=3 would_break=0
+mirage-time-lwt:parsed=4 would_break=0
+mirage-types:parsed=76 would_break=0
+mirage-unix:parsed=8 would_break=0
+mirage-vnetif:parsed=12 would_break=0
+mirage-xen:parsed=2 would_break=0
+mirage-xen-minios:parsed=0 would_break=0
+mirage-xen-posix:parsed=0 would_break=0
+misuja:parsed=2 would_break=0
+mjson:parsed=6 would_break=0
+mkaudio:parsed=16 would_break=0
+mkocaml:parsed=5 would_break=0
+mlbdd:parsed=3 would_break=0
+mlfenv:parsed=5 would_break=0
+mlgmpidl:parsed=8 would_break=0
+mlmpfr:parsed=18 would_break=0
+mlt_parser:parsed=5 would_break=0
+mlx:parsed=202 would_break=0
+mm:parsed=57 would_break=0
+mmap:parsed=5 would_break=0
+mmdb:parsed=14 would_break=0
+mmo:parsed=63 would_break=0
+mnd:parsed=3 would_break=0
+mock:parsed=5 would_break=0
+molenc:parsed=65 would_break=0
+monaco_jsoo:parsed=20 would_break=0
+monolith:parsed=201 would_break=0
+monomorphic:parsed=3 would_break=0
+moonpool:parsed=97 would_break=0
+mopsa:parsed=471 would_break=0
+morbig:parsed=41 would_break=0
+more-ocaml:parsed=2 would_break=0
+moss:parsed=4 would_break=0
+mparser:parsed=11 would_break=0
+mpg123:parsed=10 would_break=0
+mpi:parsed=5 would_break=0
+mpp:parsed=10 would_break=0
+mpris:parsed=10 would_break=0
+mqtt:parsed=11 would_break=0
+mrmime:parsed=64 would_break=0
+msat:src/core/Internal.ml:        | Some clause ->
+msat:src/core/Internal.ml:          Log.debugf debug (fun k->[31;1mk"[39;22m(@[sat.analyze-conflict.resolve@ %a@])"  Clause.debug clause);
+msat:src/core/Internal.ml:          if Clause.removable clause then (
+msat:parsed=33 would_break=1
+msgpck:parsed=5 would_break=0
+mtime:parsed=12 would_break=0
+mugen:parsed=20 would_break=0
+mula:parsed=15 would_break=0
+multibase:parsed=9 would_break=0
+multicodec:parsed=3 would_break=0
+multicont:parsed=13 would_break=0
+multicore-bench:parsed=34 would_break=0
+multicore-magic:parsed=18 would_break=0
+multihash:parsed=11 would_break=0
+multipart-form-data:parsed=3 would_break=0
+multipart_form:parsed=18 would_break=0
+murmur3:parsed=2 would_break=0
+mustache:parsed=10 would_break=0
+mutaml:parsed=21 would_break=0
+mutf8:parsed=4 would_break=0
+mwt:parsed=2 would_break=0
+mybuild:parsed=3 would_break=0
+mysql:parsed=5 would_break=0
+mysql8:parsed=3 would_break=0
+mysql_protocol:parsed=63 would_break=0
+n_ary:parsed=18 would_break=0
+naboris:parsed=1 would_break=0
+nacc:parsed=5 would_break=0
+namespaces:parsed=25 would_break=0
+nanoid:parsed=11 would_break=0
+nanosvg:parsed=6 would_break=0
+nanosvg_text:parsed=6 would_break=0
+nbd:parsed=22 would_break=0
+netchannel:parsed=22 would_break=0
+netlink:parsed=2 would_break=0
+netsnmp:parsed=57 would_break=0
+nice_parser:parsed=5 would_break=0
+ninja_utils:parsed=2 would_break=0
+niru:parsed=2 would_break=0
+nloge:parsed=7 would_break=0
+nlopt:parsed=4 would_break=0
+nlp:parsed=3 would_break=0
+nmea:parsed=7 would_break=0
+nocoiner:parsed=24 would_break=0
+nocrypto:parsed=32 would_break=0
+node_of_ocaml:parsed=4 would_break=0
+nomad:parsed=20 would_break=0
+non_empty_list:parsed=3 would_break=0
+not-ocamlfind:parsed=44 would_break=0
+note:parsed=17 would_break=0
+notty:parsed=36 would_break=0
+notty_async:parsed=4 would_break=0
+np:parsed=183 would_break=0
+npy:parsed=4 would_break=0
+num:parsed=25 would_break=0
+numeric_string:parsed=4 would_break=0
+nuscr:parsed=54 would_break=0
+obatcher:parsed=14 would_break=0
+obelisk:parsed=28 would_break=0
+obuild:parsed=94 would_break=0
+obuilder:parsed=61 would_break=0
+obus:parsed=149 would_break=0
+ocal:parsed=6 would_break=0
+ocaml-buddy:parsed=5 would_break=0
+ocaml-canvas:parsed=27 would_break=0
+ocaml-compiler-libs:parsed=4 would_break=0
+ocaml-embed-file:parsed=11 would_break=0
+ocaml-expat:parsed=3 would_break=0
+ocaml-inifiles:parsed=2 would_break=0
+ocaml-lua:parsed=12 would_break=0
+ocaml-makefile:parsed=7 would_break=0
+ocaml-manual:parsed=0 would_break=0
+ocaml-monadic:parsed=0 would_break=0
+ocaml-print-intf:parsed=1 would_break=0
+ocaml-probes:parsed=40 would_break=0
+ocaml-protoc:parsed=146 would_break=0
+ocaml-protoc-plugin:parsed=78 would_break=0
+ocaml-r:parsed=32 would_break=0
+ocaml-secondary-compiler:ocamldoc/odoc_html.ml:      List.iter
+ocaml-secondary-compiler:ocamldoc/odoc_html.ml:        (fun t -> bs b "<li>"; self#html_of_text b t; bs [31;1mb"[39;22m</li>\n")
+ocaml-secondary-compiler:ocamldoc/odoc_html.ml:        tl;
+ocaml-secondary-compiler:---
+ocaml-secondary-compiler:ocamldoc/odoc_html.ml:        self#print_header b (self#inner_title in_title);
+ocaml-secondary-compiler:ocamldoc/odoc_html.ml:        bs [31;1mb"[39;22m<body>\n";
+ocaml-secondary-compiler:ocamldoc/odoc_html.ml:        self#html_of_code ~with_pre b code;
+ocaml-secondary-compiler:parsed=2329 would_break=1
+ocaml-syntax-shims:parsed=6 would_break=0
+ocaml-systemd:parsed=4 would_break=0
+ocaml-top:parsed=16 would_break=0
+ocaml-version:parsed=4 would_break=0
+ocaml_intrinsics:parsed=45 would_break=0
+ocaml_intrinsics_kernel:parsed=27 would_break=0
+ocaml_openapi_generator:parsed=41 would_break=0
+ocamlbuild:parsed=185 would_break=0
+ocamlbuild-atdgen:parsed=3 would_break=0
+ocamlbuild-protoc:parsed=0 would_break=0
+ocamlcodoc:parsed=5 would_break=0
+ocamldiff:parsed=6 would_break=0
+ocamldot:parsed=11 would_break=0
+ocamlfind:parsed=39 would_break=0
+ocamlfind-secondary:parsed=38 would_break=0
+ocamlformat:parsed=415 would_break=0
+ocamlformat-mlx:parsed=416 would_break=0
+ocamlfuse:parsed=10 would_break=0
+ocamlgraph:parsed=166 would_break=0
+ocamlgraph_gtk:parsed=154 would_break=0
+ocamlify:parsed=2 would_break=0
+ocamline:parsed=5 would_break=0
+ocamlmig:parsed=175 would_break=0
+ocamlog:parsed=6 would_break=0
+ocamlregextkit:parsed=15 would_break=0
+ocamlscript:parsed=17 would_break=0
+ocamlsdl2:parsed=91 would_break=0
+ocamlsdl2-image:parsed=7 would_break=0
+ocamlsdl2-ttf:parsed=4 would_break=0
+ocamlwc:parsed=0 would_break=0
+ocamlyices:parsed=3 would_break=0
+ocannl_npy:parsed=51 would_break=0
+ocb:parsed=7 would_break=0
+ocb-stubblr:parsed=5 would_break=0
+ocf:parsed=6 would_break=0
+ockt:parsed=4 would_break=0
+oclock:parsed=4 would_break=0
+ocolor:parsed=22 would_break=0
+ocp-browser:parsed=24 would_break=0
+ocp-indent:parsed=131 would_break=0
+ocp-indent-nlfork:parsed=123 would_break=0
+ocp-ocamlres:parsed=11 would_break=0
+ocp-reloc:parsed=3 would_break=0
+ocp_reveal:parsed=8 would_break=0
+ocplib-endian:parsed=17 would_break=0
+ocplib-json-typed:parsed=12 would_break=0
+ocplib-simplex:parsed=23 would_break=0
+ocplib_stuff:parsed=16 would_break=0
+ocsigen-i18n:parsed=3 would_break=0
+ocsigen-ppx-rpc:parsed=1 would_break=0
+ocsigen-start:parsed=13 would_break=0
+ocsigen-toolkit:parsed=0 would_break=0
+ocsigenserver:parsed=67 would_break=0
+ocsipersist:parsed=19 would_break=0
+octavius:parsed=11 would_break=0
+ocurl:parsed=18 would_break=0
+odate:parsed=6 would_break=0
+odbc:parsed=16 would_break=0
+odds:parsed=6 would_break=0
+odep:parsed=24 would_break=0
+odepack:parsed=10 would_break=0
+odig:parsed=11 would_break=0
+odnnr:parsed=4 would_break=0
+odoc:parsed=560 would_break=0
+odoc-depgraph:parsed=5 would_break=0
+oepub:parsed=26 would_break=0
+of_json:parsed=13 would_break=0
+oframl:parsed=6 would_break=0
+ofx:parsed=0 would_break=0
+ohex:parsed=3 would_break=0
+oidc:parsed=39 would_break=0
+ojo:parsed=10 would_break=0
+ojs_base:parsed=39 would_break=0
+ollvm:parsed=10 would_break=0
+ollvm-tapir:parsed=11 would_break=0
+oma:parsed=6 would_break=0
+omake:parsed=226 would_break=0
+omd:parsed=20 would_break=0
+ometrics:parsed=23 would_break=0
+omigrate:parsed=19 would_break=0
+oml:parsed=79 would_break=0
+omlr:parsed=4 would_break=0
+omod:parsed=17 would_break=0
+omtl:parsed=7 would_break=0
+oneffs:parsed=2 would_break=0
+oniguruma:parsed=9 would_break=0
+opam-0install:parsed=22 would_break=0
+opam-0install-cudf:parsed=6 would_break=0
+opam-build:parsed=8 would_break=0
+opam-check-npm-deps:parsed=52 would_break=0
+opam-client:parsed=228 would_break=0
+opam-compiler:parsed=38 would_break=0
+opam-custom-install:parsed=1 would_break=0
+opam-depext:parsed=3 would_break=0
+opam-dune-lint:parsed=12 would_break=0
+opam-ed:parsed=1 would_break=0
+opam-file-format:parsed=13 would_break=0
+opam-graph:parsed=2 would_break=0
+opam-grep:parsed=5 would_break=0
+opam-monorepo:parsed=3526 would_break=0
+opam-publish:parsed=4 would_break=0
+opamconfig:parsed=0 would_break=0
+opasswd:parsed=7 would_break=0
+openQASM:parsed=2 would_break=0
+openapi:parsed=8 would_break=0
+openbsd:parsed=5 would_break=0
+opencc0:parsed=2 would_break=0
+opencc1:parsed=2 would_break=0
+opencc1_1:parsed=2 would_break=0
+openstellina:parsed=6 would_break=0
+opentelemetry:parsed=62 would_break=0
+operf-micro:parsed=82 would_break=0
+opine:parsed=7 would_break=0
+opium:parsed=101 would_break=0
+opium_kernel:parsed=31 would_break=0
+oplot:parsed=34 would_break=0
+oplsr:parsed=5 would_break=0
+opomodoro:parsed=7 would_break=0
+optal:parsed=17 would_break=0
+opti:parsed=18 would_break=0
+optimization1d:parsed=7 would_break=0
+optiml-transport:parsed=3 would_break=0
+optint:parsed=14 would_break=0
+oraft:parsed=32 would_break=0
+oranger:parsed=8 would_break=0
+orb:parsed=3 would_break=0
+order-i3-xfce:parsed=2 would_break=0
+ordinal:parsed=2 would_break=0
+ordinal_abbreviation:parsed=3 would_break=0
+orec:parsed=0 would_break=0
+orewa:parsed=6 would_break=0
+orf:parsed=10 would_break=0
+orgeat:parsed=17 would_break=0
+orocksdb:parsed=7 would_break=0
+orrandomForest:parsed=7 would_break=0
+orsetto:parsed=150 would_break=0
+orsvm_e1071:parsed=7 would_break=0
+ortac-core:parsed=186 would_break=0
+orxgboost:parsed=8 would_break=0
+osc:parsed=14 would_break=0
+osdp:parsed=45 would_break=0
+oseq:parsed=5 would_break=0
+oskel:parsed=29 would_break=0
+osnap:parsed=17 would_break=0
+otf:parsed=1 would_break=0
+otfm:parsed=5 would_break=0
+otoml:parsed=11 would_break=0
+otr:parsed=19 would_break=0
+ott:parsed=82 would_break=0
+ounit:parsed=56 would_break=0
+owee:parsed=35 would_break=0
+owi:parsed=138 would_break=0
+owl:parsed=374 would_break=0
+owl-ode:parsed=29 would_break=0
+owl-opt:parsed=35 would_break=0
+owl-plplot:parsed=10 would_break=0
+owork:parsed=10 would_break=0
+ozulip:parsed=10 would_break=0
+p4pp:parsed=5 would_break=0
+p5scm:parsed=62 would_break=0
+pa_ppx:parsed=109 would_break=0
+pa_ppx_hashcons:parsed=7 would_break=0
+pa_ppx_migrate:parsed=9 would_break=0
+pa_ppx_migrate_ocaml_parsetree:parsed=102 would_break=0
+pa_ppx_parsetree:parsed=730 would_break=0
+pa_ppx_q_ast:parsed=94 would_break=0
+pa_ppx_quotation2extension:parsed=2 would_break=0
+pa_ppx_regexp:parsed=7 would_break=0
+pa_ppx_static:parsed=3 would_break=0
+pa_ppx_string:parsed=3 would_break=0
+pa_ppx_unique:parsed=3 would_break=0
+packstream:parsed=3 would_break=0
+pacomb:parsed=63 would_break=0
+paf:parsed=24 would_break=0
+paf-le:parsed=28 would_break=0
+pam:parsed=12 would_break=0
+pancake:parsed=0 would_break=0
+pandoc:parsed=9 would_break=0
+par_incr:parsed=16 would_break=0
+parany:parsed=4 would_break=0
+pardi:parsed=12 would_break=0
+pari:parsed=10 would_break=0
+parmap:parsed=18 would_break=0
+parse-argv:parsed=3 would_break=0
+parsexp:parsed=97 would_break=0
+parsexp_io:parsed=4 would_break=0
+parsite:parsed=5 would_break=0
+parsley:parsed=4 would_break=0
+passage:parsed=17 would_break=0
+patch:parsed=9 would_break=0
+patdiff:parsed=101 would_break=0
+path_glob:parsed=8 would_break=0
+patience_diff:parsed=23 would_break=0
+patricia-tree:parsed=13 would_break=0
+pb:parsed=10 would_break=0
+pbkdf:parsed=3 would_break=0
+pcap-format:parsed=3 would_break=0
+pcre:parsed=10 would_break=0
+pcre2:parsed=11 would_break=0
+pds:parsed=8 would_break=0
+pds-reachability:parsed=0 would_break=0
+pecu:parsed=4 would_break=0
+petrol:parsed=13 would_break=0
+pf-qubes:parsed=3 would_break=0
+pg_query:parsed=5 would_break=0
+pgocaml:parsed=13 would_break=0
+pgx:parsed=48 would_break=0
+phantom-algebra:parsed=16 would_break=0
+phonetic:parsed=5 would_break=0
+phylogenetics:parsed=92 would_break=0
+piaf:parsed=75 would_break=0
+picasso:parsed=23 would_break=0
+picos:parsed=132 would_break=0
+piece_rope:parsed=31 would_break=0
+pkcs11:parsed=210 would_break=0
+pla:parsed=5 would_break=0
+plateau:parsed=3 would_break=0
+plato:parsed=27 would_break=0
+plist-xml:parsed=8 would_break=0
+plist-xml-lwt:parsed=8 would_break=0
+plotly:parsed=14 would_break=0
+plplot:parsed=5 would_break=0
+poll:parsed=21 would_break=0
+polling_state_rpc:parsed=7 would_break=0
+polly:parsed=4 would_break=0
+polyglot:parsed=5 would_break=0
+polynomial:parsed=8 would_break=0
+pomap:parsed=13 would_break=0
+popper:parsed=48 would_break=0
+portaudio:parsed=4 would_break=0
+portaudio_c_bindings:parsed=9 would_break=0
+portia:parsed=0 would_break=0
+portmidi:parsed=14 would_break=0
+posix-base:parsed=72 would_break=0
+posixat:parsed=8 would_break=0
+postgres_async:parsed=43 would_break=0
+postgresql:parsed=14 would_break=0
+pp:parsed=3 would_break=0
+pp-binary-ints:parsed=25 would_break=0
+pp_loc:parsed=8 would_break=0
+pplumbing:parsed=27 would_break=0
+pprint:parsed=14 would_break=0
+ppx_accessor:parsed=26 would_break=0
+ppx_assert:parsed=6 would_break=0
+ppx_base:parsed=1 would_break=0
+ppx_bench:parsed=8 would_break=0
+ppx_bin_prot:parsed=21 would_break=0
+ppx_blob:parsed=8 would_break=0
+ppx_catch:parsed=2 would_break=0
+ppx_cold:parsed=3 would_break=0
+ppx_compare:parsed=8 would_break=0
+ppx_compose:parsed=4 would_break=0
+ppx_const:parsed=3 would_break=0
+ppx_conv_func:parsed=2 would_break=0
+ppx_counters:parsed=1 would_break=0
+ppx_css:parsed=87 would_break=0
+ppx_csv_conv:parsed=4 would_break=0
+ppx_custom_printf:parsed=6 would_break=0
+ppx_default:parsed=5 would_break=0
+ppx_defer:parsed=4 would_break=0
+ppx_demo:parsed=3 would_break=0
+ppx_derive_at_runtime:parsed=22 would_break=0
+ppx_derivers:parsed=3 would_break=0
+ppx_deriving:parsed=28 would_break=0
+ppx_deriving_cad:parsed=6 would_break=0
+ppx_deriving_decoders:parsed=9 would_break=0
+ppx_deriving_encoding:parsed=3 would_break=0
+ppx_deriving_ezjsonm:parsed=19 would_break=0
+ppx_deriving_hardcaml:parsed=6 would_break=0
+ppx_deriving_hash:parsed=1 would_break=0
+ppx_deriving_jsonschema:parsed=6 would_break=0
+ppx_deriving_jsoo:parsed=9 would_break=0
+ppx_deriving_madcast:parsed=26 would_break=0
+ppx_deriving_protobuf:parsed=9 would_break=0
+ppx_deriving_qcheck:parsed=47 would_break=0
+ppx_deriving_rpc:parsed=64 would_break=0
+ppx_deriving_scad:parsed=4 would_break=0
+ppx_deriving_variant_string:parsed=9 would_break=0
+ppx_deriving_yojson:parsed=6 would_break=0
+ppx_diff:parsed=90 would_break=0
+ppx_disable_unused_warnings:parsed=4 would_break=0
+ppx_distr_guards:parsed=4 would_break=0
+ppx_dream_eml:parsed=2 would_break=0
+ppx_embed_file:parsed=4 would_break=0
+ppx_enumerate:parsed=4 would_break=0
+ppx_expect:parsed=112 would_break=0
+ppx_expect_nobase:parsed=81 would_break=0
+ppx_factory:parsed=30 would_break=0
+ppx_fields_conv:parsed=14 would_break=0
+ppx_fixed_literal:parsed=2 would_break=0
+ppx_fun:parsed=4 would_break=0
+ppx_gen_rec:parsed=4 would_break=0
+ppx_getenv:parsed=2 would_break=0
+ppx_globalize:parsed=2 would_break=0
+ppx_hardcaml:parsed=6 would_break=0
+ppx_hash:parsed=21 would_break=0
+ppx_here:parsed=6 would_break=0
+ppx_ignore_instrumentation:parsed=3 would_break=0
+ppx_import:parsed=25 would_break=0
+ppx_inline_alcotest:parsed=5 would_break=0
+ppx_inline_test:parsed=34 would_break=0
+ppx_inline_test_nobase:parsed=15 would_break=0
+ppx_interact:parsed=9 would_break=0
+ppx_jane:parsed=4 would_break=0
+ppx_js_style:parsed=2 would_break=0
+ppx_jsobject_conv:parsed=7 would_break=0
+ppx_jsonaf_conv:parsed=13 would_break=0
+ppx_let:parsed=13 would_break=0
+ppx_log:parsed=60 would_break=0
+ppx_make:parsed=22 would_break=0
+ppx_map:parsed=2 would_break=0
+ppx_matches:parsed=4 would_break=0
+ppx_mica:parsed=49 would_break=0
+ppx_minidebug:parsed=35 would_break=0
+ppx_module_timer:parsed=4 would_break=0
+ppx_monad:parsed=45 would_break=0
+ppx_monoid:parsed=2 would_break=0
+ppx_mysql:parsed=17 would_break=0
+ppx_optcomp:parsed=10 would_break=0
+ppx_optint:parsed=1 would_break=0
+ppx_optional:parsed=2 would_break=0
+ppx_parser:parsed=14 would_break=0
+ppx_partial:parsed=3 would_break=0
+ppx_pattern_bind:parsed=4 would_break=0
+ppx_pipebang:parsed=3 would_break=0
+ppx_protocol_conv:parsed=62 would_break=0
+ppx_pyformat:parsed=20 would_break=0
+ppx_python:parsed=8 would_break=0
+ppx_quick_test:parsed=26 would_break=0
+ppx_rapper:parsed=16 would_break=0
+ppx_regexp:parsed=10 would_break=0
+ppx_repr:parsed=104 would_break=0
+ppx_seq:parsed=3 would_break=0
+ppx_sexp_conv:parsed=70 would_break=0
+ppx_sexp_message:parsed=6 would_break=0
+ppx_sexp_value:parsed=6 would_break=0
+ppx_show:parsed=6 would_break=0
+ppx_stable:parsed=24 would_break=0
+ppx_stable_witness:parsed=6 would_break=0
+ppx_string:parsed=6 would_break=0
+ppx_string_conv:parsed=2 would_break=0
+ppx_string_interpolation:parsed=5 would_break=0
+ppx_subliner:parsed=28 would_break=0
+ppx_system:parsed=7 would_break=0
+ppx_test:parsed=12 would_break=0
+ppx_trace:parsed=53 would_break=0
+ppx_ts:parsed=17 would_break=0
+ppx_tydi:parsed=3 would_break=0
+ppx_typed_fields:parsed=49 would_break=0
+ppx_typerep_conv:parsed=2 would_break=0
+ppx_units:parsed=6 would_break=0
+ppx_update:parsed=3 would_break=0
+ppx_variants_conv:parsed=4 would_break=0
+ppx_viewpattern:parsed=14 would_break=0
+ppx_xml_conv:parsed=2 would_break=0
+ppx_yojson:parsed=39 would_break=0
+ppx_yojson_conv:parsed=11 would_break=0
+ppx_yojson_conv_lib:parsed=5 would_break=0
+ppxlib:parsed=248 would_break=0
+ppxlib-tools:parsed=252 would_break=0
+ppxlib_jane:parsed=15 would_break=0
+ppxx:parsed=7 would_break=0
+pratter:parsed=5 would_break=0
+prbnmcn-basic-structures:parsed=25 would_break=0
+prbnmcn-cgrph:parsed=7 would_break=0
+prbnmcn-clustering:parsed=12 would_break=0
+prbnmcn-dagger:parsed=42 would_break=0
+prbnmcn-gnuplot:parsed=4 would_break=0
+prbnmcn-linalg:parsed=10 would_break=0
+prbnmcn-mcts:parsed=8 would_break=0
+prbnmcn-proptest:parsed=4 would_break=0
+prbnmcn-stats:parsed=36 would_break=0
+prbnmcn-ucb1:parsed=3 would_break=0
+prc:parsed=4 would_break=0
+preface:parsed=522 would_break=0
+prelude:parsed=1 would_break=0
+pretty_expressive:parsed=8 would_break=0
+prettym:parsed=9 would_break=0
+primes:parsed=2 would_break=0
+pringo:parsed=6 would_break=0
+printbox:parsed=25 would_break=0
+proc-smaps:parsed=3 would_break=0
+process:parsed=10 would_break=0
+process_limits:parsed=827 would_break=0
+processor:parsed=20 would_break=0
+producer:parsed=3 would_break=0
+profiling:parsed=829 would_break=0
+profunctor:parsed=3 would_break=0
+progress:parsed=74 would_break=0
+prom:parsed=7 would_break=0
+prometheus:parsed=9 would_break=0
+prometheus-liquidsoap:parsed=524 would_break=0
+promise:parsed=0 would_break=0
+promise_jsoo:parsed=8 would_break=0
+prooftree:parsed=19 would_break=0
+protocell:parsed=32 would_break=0
+protocol-9p:parsed=35 would_break=0
+protocol_version_header:parsed=17 would_break=0
+proverif:parsed=98 would_break=0
+proverifdoc:parsed=0 would_break=0
+provider:parsed=54 would_break=0
+prr:parsed=9 would_break=0
+psmt2-frontend:parsed=14 would_break=0
+psq:parsed=5 would_break=0
+psyche:parsed=13 would_break=0
+ptime:parsed=20 would_break=0
+ptmap:parsed=3 would_break=0
+ptset:parsed=3 would_break=0
+pulseaudio:parsed=6 would_break=0
+pure-splitmix:parsed=3 would_break=0
+pvec:parsed=4 would_break=0
+pvem:parsed=3 would_break=0
+py:parsed=11 would_break=0
+pyml:parsed=0 would_break=0
+pyml_bindgen:parsed=63 would_break=0
+pyre-ast:parsed=10 would_break=0
+qbf:parsed=13 would_break=0
+qcheck-lin:parsed=119 would_break=0
+qcstm:parsed=10 would_break=0
+qinap:parsed=2 would_break=0
+qiskit:parsed=5 would_break=0
+qmp:parsed=9 would_break=0
+qrc:parsed=12 would_break=0
+qrencode:parsed=4 would_break=0
+qtest:parsed=8 would_break=0
+queenshead:parsed=9 would_break=0
+quests:parsed=18 would_break=0
+quick_print:parsed=2 would_break=0
+quickjs:parsed=6 would_break=0
+r2pipe:parsed=0 would_break=0
+radamsa:parsed=2 would_break=0
+radare2:parsed=2 would_break=0
+randii:parsed=20 would_break=0
+random:parsed=2 would_break=0
+randomconv:parsed=2 would_break=0
+randoml:parsed=4 would_break=0
+range:parsed=4 would_break=0
+rangeSet:parsed=8 would_break=0
+rankers:parsed=14 would_break=0
+rawlink:parsed=11 would_break=0
+raygui:parsed=13 would_break=0
+raylib:parsed=25 would_break=0
+rdbg:parsed=57 would_break=0
+rdf:parsed=169 would_break=0
+re:parsed=65 would_break=0
+re2:parsed=14 would_break=0
+re_parser:parsed=3 would_break=0
+rea:parsed=22 would_break=0
+react:parsed=11 would_break=0
+reactiveData:parsed=2 would_break=0
+reactjs-jsx-ppx:parsed=1727 would_break=0
+readline:parsed=3 would_break=0
+reanalyze:parsed=97 would_break=0
+reason:parsed=212 would_break=0
+reason-react:parsed=2 would_break=0
+record_builder:parsed=6 would_break=0
+records:parsed=4 would_break=0
+red-black-tree:parsed=4 would_break=0
+redirect:parsed=2 would_break=0
+redis:parsed=26 would_break=0
+redis-async:parsed=41 would_break=0
+reedsolomon:parsed=14 would_break=0
+regex_parser_intf:parsed=1 would_break=0
+remu_ts:parsed=0 would_break=0
+reparse:parsed=14 would_break=0
+reparse-unix:parsed=17 would_break=0
+res:parsed=13 would_break=0
+resource-pooling:parsed=5 would_break=0
+resource_cache:parsed=23 would_break=0
+resp:parsed=18 would_break=0
+resto:parsed=27 would_break=0
+result:parsed=4 would_break=0
+revops:parsed=10 would_break=0
+rfc6287:parsed=5 would_break=0
+rfsm:parsed=148 would_break=0
+rhythm:parsed=0 would_break=0
+riot:parsed=115 would_break=0
+river:parsed=9 would_break=0
+rocq-stdlib:parsed=2 would_break=0
+roman:parsed=3 would_break=0
+root1d:parsed=6 would_break=0
+rope:parsed=8 would_break=0
+rosa:parsed=7 would_break=0
+rosetta:parsed=2 would_break=0
+routes:parsed=7 would_break=0
+rpc_parallel:parsed=104 would_break=0
+rpmfile:parsed=24 would_break=0
+rpmfile-cli:parsed=22 would_break=0
+rresult:parsed=7 would_break=0
+rss:parsed=7 would_break=0
+rtree:parsed=10 would_break=0
+rungen:parsed=1 would_break=0
+runtime_events_tools:parsed=5 would_break=0
+rusage:parsed=1 would_break=0
+safa:parsed=28 would_break=0
+safemoney:parsed=19 would_break=0
+safepass:parsed=2 would_break=0
+salsa20:parsed=3 would_break=0
+salsa20-core:parsed=3 would_break=0
+samplerate:parsed=4 would_break=0
+sanddb:parsed=11 would_break=0
+sarif:parsed=9 would_break=0
+satex:parsed=4 would_break=0
+sattools:parsed=33 would_break=0
+saturn:parsed=103 would_break=0
+saturn_lockfree:parsed=77 would_break=0
+sawja:parsed=104 would_break=0
+scad_ml:parsed=25 would_break=0
+scfg:parsed=10 would_break=0
+scgi:parsed=24 would_break=0
+scrypt:parsed=2 would_break=0
+scrypt-kdf:parsed=3 would_break=0
+search:parsed=7 would_break=0
+searchTree:parsed=2 would_break=0
+secp256k1-internal:parsed=9 would_break=0
+sedlex:parsed=24 would_break=0
+sek:parsed=70 would_break=0
+sel:parsed=8 would_break=0
+semantic_version:parsed=5 would_break=0
+semaphore-compat:parsed=6 would_break=0
+semv:parsed=3 would_break=0
+semver:test/test_semver.ml:  "inc", `Quick, (fun _ ->
+semver:test/test_semver.ml:    eq ([31;1mv"[39;22m0.0.1") (Semver.succ `Patch ([31;1mv"[39;22m0.0.0"));
+semver:test/test_semver.ml:    eq ([31;1mv"[39;22m0.1.0") (Semver.succ `Minor ([31;1mv"[39;22m0.0.0"));
+semver:test/test_semver.ml:    eq ([31;1mv"[39;22m1.0.0") (Semver.succ `Major ([31;1mv"[39;22m0.0.0"));
+semver:test/test_semver.ml:
+semver:test/test_semver.ml:    eq ([31;1mv"[39;22m0.1.3") (Semver.succ `Patch ([31;1mv"[39;22m0.1.2"));
+semver:test/test_semver.ml:    eq ([31;1mv"[39;22m1.1.0") (Semver.succ `Minor ([31;1mv"[39;22m1.0.2"));
+semver:test/test_semver.ml:    eq ([31;1mv"[39;22m1.0.0") (Semver.succ `Major ([31;1mv"[39;22m0.1.2"));
+semver:test/test_semver.ml:  );
+semver:---
+semver:test/test_semver.ml:  "cmp", `Quick, (fun _ ->
+semver:test/test_semver.ml:    eq ([31;1mv"[39;22m1.1.1") ([31;1mv"[39;22m1.1.1");
+semver:test/test_semver.ml:
+semver:test/test_semver.ml:    gt ([31;1mv"[39;22m1.1.1") ([31;1mv"[39;22m1.1.0");
+semver:test/test_semver.ml:    gt ([31;1mv"[39;22m1.1.1") ([31;1mv"[39;22m1.0.1");
+semver:test/test_semver.ml:    gt ([31;1mv"[39;22m1.1.1") ([31;1mv"[39;22m0.1.1");
+semver:test/test_semver.ml:  );
+semver:---
+semver:test/test_semver.ml:  "query", `Quick, (fun _ ->
+semver:test/test_semver.ml:    q "1.1.1" ["1.1.1"] (Some ([31;1mv"[39;22m1.1.1"));
+semver:test/test_semver.ml:    q "1.1" ["1.1.1"] (Some ([31;1mv"[39;22m1.1.1"));
+semver:test/test_semver.ml:    q "1" ["1.1.1"] (Some ([31;1mv"[39;22m1.1.1"));
+semver:test/test_semver.ml:    q "2" ["1.1.1"] None;
+semver:---
+semver:test/test_semver.ml:
+semver:test/test_semver.ml:    q "1.1.1" ["2.1.1"; "1.1.1"; "1.1.0"; "1.1.2"; "1.2.1"] (Some ([31;1mv"[39;22m1.1.1"));
+semver:test/test_semver.ml:    q "1.1" ["2.1.1"; "1.1.1"; "1.1.0"; "1.1.2"; "1.2.1"] (Some ([31;1mv"[39;22m1.1.2"));
+semver:test/test_semver.ml:    q "1" ["2.1.1"; "1.1.1"; "1.1.0"; "1.1.2"; "1.2.1"] (Some ([31;1mv"[39;22m1.2.1"));
+semver:test/test_semver.ml:    q "2.1" ["2.1.1"; "1.1.1"; "1.1.0"; "1.1.2"; "1.2.1"] (Some ([31;1mv"[39;22m2.1.1"));
+semver:test/test_semver.ml:    q "0.5" ["2.1.1"; "1.1.1"; "1.1.0"; "1.1.2"; "1.2.1"] None;
+semver:parsed=3 would_break=1
+semver2:parsed=3 would_break=0
+sendmsg:test/test-ounit.ml:    with_socketpair @@ fun (s1, s2) ->
+sendmsg:test/test-ounit.ml:      let b1 = [31;1mb"[39;22mabcdef" and b2 = [31;1mb"[39;22m......" in
+sendmsg:test/test-ounit.ml:      assert_equal ~msg:"send1" 4 (Sendmsg.send s1 b1 0 4);
+sendmsg:---
+sendmsg:test/test-ounit.ml:    with_socketpair @@ fun (s1, s2) ->
+sendmsg:test/test-ounit.ml:      let b1 = [| [31;1mb"[39;22m."; [31;1mb"[39;22m." |]
+sendmsg:test/test-ounit.ml:      and b2 = [| [31;1mb"[39;22m..."; [31;1mb"[39;22m..." |] in
+sendmsg:test/test-ounit.ml:      Sendmsg.sendv s1 [| [31;1mb"[39;22mab"; [31;1mb"[39;22mcd" |]
+sendmsg:test/test-ounit.ml:        |> assert_equal ~msg:"sendv1" 4;
+sendmsg:test/test-ounit.ml:      Sendmsg.sendv s1 [| [31;1mb"[39;22me"; [31;1mb"[39;22mf" |]
+sendmsg:test/test-ounit.ml:        |> assert_equal ~msg:"sendv2" 2;
+sendmsg:---
+sendmsg:test/test-ounit.ml:        |> assert_equal ~msg:"recvv" (4, None);
+sendmsg:test/test-ounit.ml:      assert_equal ~msg:"b1" b1 [| [31;1mb"[39;22ma"; [31;1mb"[39;22mb" |];
+sendmsg:test/test-ounit.ml:      assert_equal ~msg:"b2" b2 [| [31;1mb"[39;22mcde"; [31;1mb"[39;22mf.." |]
+sendmsg:test/test-ounit.ml:  );
+sendmsg:---
+sendmsg:test/test-ounit.ml:      with_socketpair @@ fun (x1, x2) ->
+sendmsg:test/test-ounit.ml:        let b0 = [31;1mb"[39;22m.!!" in
+sendmsg:test/test-ounit.ml:        Sendmsg.send s1 ~fd:x1 b0 0 1 |> ignore;
+sendmsg:---
+sendmsg:test/test-ounit.ml:            close fd;
+sendmsg:test/test-ounit.ml:            assert_equal ~msg:"endgame" b0 ([31;1mb"[39;22m...")
+sendmsg:test/test-ounit.ml:        | _ -> assert_failure "socket not passed"
+sendmsg:---
+sendmsg:test/test-ounit.ml:      ) in
+sendmsg:test/test-ounit.ml:      assert_equal ~msg:"res" resn [([31;1mb"[39;22mx", true); ([31;1mb"[39;22my", true); ([31;1mb"[39;22mz", true)]
+sendmsg:test/test-ounit.ml:  );
+sendmsg:---
+sendmsg:test/test-ounit.ml:      for _ = 1 to 100000 do
+sendmsg:test/test-ounit.ml:        Sendmsg.send s1 ~fd:stdout ([31;1mb"[39;22mx") 0 1 |> ignore;
+sendmsg:test/test-ounit.ml:        match Sendmsg.recv s2 (b ".") 0 1 with
+sendmsg:parsed=9 would_break=1
+seqes:parsed=29 would_break=0
+sequence:parsed=5 would_break=0
+sequencer_table:parsed=3 would_break=0
+serde:parsed=14 would_break=0
+serde_debug:parsed=41 would_break=0
+serial:parsed=11 would_break=0
+server-reason-react:parsed=113 would_break=0
+session:parsed=29 would_break=0
+setcore:parsed=1 would_break=0
+sexp:parsed=107 would_break=0
+sexp_decode:parsed=2 would_break=0
+sexp_diff:parsed=9 would_break=0
+sexp_grammar:parsed=28 would_break=0
+sexp_macro:parsed=11 would_break=0
+sexp_pretty:parsed=10 would_break=0
+sexp_select:parsed=15 would_break=0
+sexp_string_quickcheck:parsed=8 would_break=0
+sexplib:parsed=50 would_break=0
+sexplib0:parsed=19 would_break=0
+sfml:parsed=108 would_break=0
+sgf:parsed=5 would_break=0
+sha:parsed=9 would_break=0
+shades:parsed=3 would_break=0
+shapefile:parsed=16 would_break=0
+shared-block-ring:parsed=9 would_break=0
+shared-memory-ring:parsed=14 would_break=0
+shared-secret:parsed=6 would_break=0
+shell:parsed=23 would_break=0
+shexp:parsed=47 would_break=0
+shine:parsed=4 would_break=0
+shuttle:parsed=52 would_break=0
+shuttle_http:parsed=49 would_break=0
+sifun:parsed=28 would_break=0
+signal:parsed=3 would_break=0
+sihl:parsed=128 would_break=0
+sihl-contract:parsed=140 would_break=0
+sihl-type:parsed=125 would_break=0
+simlog:parsed=7 would_break=0
+simple-diff:parsed=4 would_break=0
+simple63:parsed=2 would_break=0
+sitemap:parsed=2 would_break=0
+slack:parsed=16 would_break=0
+slipshow:parsed=155 would_break=0
+slug:parsed=5 would_break=0
+smart-print:parsed=3 would_break=0
+smaws-clients:parsed=445 would_break=0
+smol:parsed=18 would_break=0
+smtlib-utils:parsed=6 would_break=0
+smtml:parsed=93 would_break=0
+smtp:parsed=10 would_break=0
+snappy:parsed=3 would_break=0
+snoke:parsed=3 would_break=0
+solidity-common:parsed=36 would_break=0
+solo5:parsed=0 would_break=0
+solo5-bindings-hvt:parsed=0 would_break=0
+solo5-elftool:parsed=4 would_break=0
+solo5-kernel-muen:parsed=0 would_break=0
+sortedseq_intersect:parsed=2 would_break=0
+soundtouch:parsed=4 would_break=0
+soupault:parsed=33 would_break=0
+spatial-shell:parsed=36 would_break=0
+spawn:parsed=9 would_break=0
+spdx_licenses:parsed=11 would_break=0
+spectrum:parsed=6 would_break=0
+speed:parsed=22 would_break=0
+spelll:parsed=3 would_break=0
+spin:parsed=115 would_break=0
+spirv:parsed=4 would_break=0
+splay_tree:parsed=6 would_break=0
+splittable_random:parsed=4 would_break=0
+spoke:parsed=7 would_break=0
+spotify-web-api:parsed=5 would_break=0
+spotify_ml:parsed=5 would_break=0
+sqids:parsed=8 would_break=0
+sqlgg:parsed=30 would_break=0
+sqlite3:parsed=13 would_break=0
+sqlite3_utils:parsed=3 would_break=0
+squirrel:parsed=97 would_break=0
+srt:parsed=11 would_break=0
+ssh-agent:parsed=11 would_break=0
+ssl:parsed=17 would_break=0
+starpath:parsed=3 would_break=0
+starred_ml:parsed=6 would_break=0
+stb_image:parsed=2 would_break=0
+stb_image_write:parsed=2 would_break=0
+stb_truetype:parsed=3 would_break=0
+stdcompat:parsed=1147 would_break=0
+stdint:parsed=18 would_break=0
+stdint-literals:parsed=2 would_break=0
+stdio:parsed=6 would_break=0
+stdlib-diff:parsed=0 would_break=0
+stdlib-random:parsed=17 would_break=0
+stdlib-shims:parsed=2 would_break=0
+stk:parsed=132 would_break=0
+stog:parsed=146 would_break=0
+store:parsed=21 would_break=0
+stored_reversed:parsed=4 would_break=0
+stramon-lib:parsed=36 would_break=0
+streamable:parsed=140 would_break=0
+streaming:parsed=18 would_break=0
+stringCodepointSplitter:parsed=2 would_break=0
+string_dict:parsed=6 would_break=0
+stringext:parsed=4 would_break=0
+strymonas-pure:parsed=41 would_break=0
+sturgeon:parsed=18 would_break=0
+styled-ppx:parsed=30 would_break=0
+subtype-refinement:parsed=3 would_break=0
+sun:parsed=1 would_break=0
+sundialsml:parsed=272 would_break=0
+svmwrap:parsed=4 would_break=0
+swapfs:parsed=6 would_break=0
+swhid:parsed=11 would_break=0
+swhid_compute:parsed=3 would_break=0
+swhid_core:parsed=6 would_break=0
+swhid_types:parsed=3 would_break=0
+swipl:parsed=11 would_break=0
+symkat:parsed=16 would_break=0
+syncweb:parsed=40 would_break=0
+syndic:parsed=25 would_break=0
+sys-socket:parsed=19 would_break=0
+syslog:parsed=2 would_break=0
+syslog-message:parsed=3 would_break=0
+syslog-rfc5424:parsed=5 would_break=0
+systemverilog:parsed=5 would_break=0
+tablecloth-base:parsed=53 would_break=0
+tabr:parsed=12 would_break=0
+taglib:parsed=6 would_break=0
+talaria-bibtex:parsed=7 would_break=0
+tar:parsed=17 would_break=0
+tcalc:parsed=5 would_break=0
+tcpip:parsed=103 would_break=0
+tcx:parsed=5 would_break=0
+tdigest:parsed=7 would_break=0
+telemetry:parsed=4 would_break=0
+telltime:parsed=6 would_break=0
+tensorboard:parsed=46 would_break=0
+term-indexing:parsed=25 would_break=0
+term-tools:parsed=21 would_break=0
+terminal_size:parsed=3 would_break=0
+terml:parsed=23 would_break=0
+testo:parsed=64 would_break=0
+testu01:parsed=14 would_break=0
+textmate-language:parsed=11 would_break=0
+textrazor:parsed=25 would_break=0
+textutils:parsed=25 would_break=0
+textutils_kernel:parsed=9 would_break=0
+textwrap:parsed=3 would_break=0
+tezos-base58:parsed=2 would_break=0
+tezos-bls12-381-polynomial:parsed=70 would_break=0
+tezos-clic:parsed=9563 would_break=0
+tezos-context-hash:parsed=11 would_break=0
+tezos-hacl-glue:parsed=5026 would_break=0
+tezos-rust-libs:parsed=0 would_break=0
+tezos-sapling-parameters:parsed=0 would_break=0
+tezt:parsed=54 would_break=0
+thread-local-storage:parsed=6 would_break=0
+thread-table:parsed=5 would_break=0
+tidy_email:parsed=15 would_break=0
+tilde_f:parsed=2 would_break=0
+time_now:parsed=2 would_break=0
+timed:parsed=10 would_break=0
+timedesc:parsed=111 would_break=0
+timere:parsed=111 would_break=0
+timezone:parsed=5 would_break=0
+timmy:parsed=61 would_break=0
+tiny_httpd:parsed=69 would_break=0
+tip-parser:parsed=5 would_break=0
+tjr_simple_earley:parsed=21 would_break=0
+tldr:parsed=6 would_break=0
+tls:parsed=80 would_break=0
+toc:parsed=6 would_break=0
+tofn:parsed=2 would_break=0
+togglelog:parsed=8 would_break=0
+toml:parsed=22 would_break=0
+tophide:parsed=1 would_break=0
+topiary:parsed=51 would_break=0
+topkg:parsed=99 would_break=0
+topkg-care:parsed=99 would_break=0
+toplevel_backend:parsed=2 would_break=0
+toplevel_expect_test:parsed=7 would_break=0
+topojson:parsed=7 would_break=0
+topological_sort:parsed=7 would_break=0
+torch:parsed=162 would_break=0
+tplib:parsed=53 would_break=0
+tqdm:parsed=11 would_break=0
+tracing:parsed=31 would_break=0
+tracy-client:parsed=5 would_break=0
+trail:parsed=24 would_break=0
+traits:parsed=12 would_break=0
+trampoline:parsed=3 would_break=0
+transept:parsed=46 would_break=0
+travesty:parsed=68 would_break=0
+trax:parsed=4 would_break=0
+tree_layout:parsed=15 would_break=0
+trexio:parsed=3 would_break=0
+trie:parsed=2 would_break=0
+trs:parsed=4 would_break=0
+tsdl:parsed=16 would_break=0
+tsdl-image:parsed=5 would_break=0
+tsdl-mixer:parsed=4 would_break=0
+tsdl-ttf:parsed=5 would_break=0
+tsort:parsed=4 would_break=0
+ttweetnacl:parsed=6 would_break=0
+tty:parsed=9 would_break=0
+tuareg:parsed=0 would_break=0
+tube:parsed=2 would_break=0
+tuntap:parsed=9 would_break=0
+twirp_cohttp_lwt_unix:parsed=16 would_break=0
+twostep:parsed=10 would_break=0
+tyabt:parsed=4 would_break=0
+type_eq:parsed=3 would_break=0
+type_id:parsed=3 would_break=0
+typeid:parsed=10 would_break=0
+typerep:parsed=19 would_break=0
+typeset:parsed=8 would_break=0
+tyre:parsed=9 would_break=0
+tyxml:test/test_ppx.ml:  "let fun",
+tyxml:test/test_ppx.ml:  [let%html f x = "<p>"[31;1mx"[39;22m</p>" in f [a []]],
+tyxml:test/test_ppx.ml:  [p [a []]] ;
+tyxml:parsed=56 would_break=1
+u2f:parsed=5 would_break=0
+ubase:parsed=6 would_break=0
+ubpf:parsed=2 would_break=0
+uchar:parsed=8 would_break=0
+uecc:parsed=5 would_break=0
+uint:parsed=13 would_break=0
+ulid:parsed=3 would_break=0
+um-abt:parsed=5 would_break=0
+unidecode:parsed=6 would_break=0
+unionFind:parsed=15 would_break=0
+unisim_archisec:parsed=6 would_break=0
+unison:parsed=149 would_break=0
+universal-portal:parsed=0 would_break=0
+unix-dirent:parsed=13 would_break=0
+unix-errno:parsed=14 would_break=0
+unix-unistd:parsed=11 would_break=0
+unstrctrd:parsed=8 would_break=0
+uopt:parsed=4 would_break=0
+uri:parsed=16 would_break=0
+uring:parsed=20 would_break=0
+uring-trace:parsed=13 would_break=0
+uritemplate:parsed=16 would_break=0
+urn:parsed=4 would_break=0
+user-agent-parser:parsed=4 would_break=0
+user-setup:parsed=16 would_break=0
+username_kernel:parsed=3 would_break=0
+uspf:parsed=13 would_break=0
+utop:parsed=21 would_break=0
+uucd:parsed=6 would_break=0
+uucp:parsed=106 would_break=0
+uuidm:parsed=8 would_break=0
+uunf:parsed=17 would_break=0
+uuseg:parsed=21 would_break=0
+uutf:parsed=7 would_break=0
+uuuu:parsed=5 would_break=0
+validate:parsed=28 would_break=0
+validator:parsed=3 would_break=0
+variantslib:parsed=1 would_break=0
+varray:parsed=10 would_break=0
+vcardgen:parsed=2 would_break=0
+vchan:parsed=32 would_break=0
+vdom:parsed=14 would_break=0
+vec:parsed=3 would_break=0
+vector:parsed=3 would_break=0
+vector3:parsed=2 would_break=0
+vendredi:parsed=6 would_break=0
+versioned_polling_state_rpc:parsed=3 would_break=0
+vg:parsed=48 would_break=0
+vhd-format:parsed=22 would_break=0
+virtual_dom:parsed=88 would_break=0
+visitors:parsed=97 would_break=0
+vlt:parsed=93 would_break=0
+voaacenc:parsed=2 would_break=0
+vocal:parsed=22 would_break=0
+voqc:parsed=36 would_break=0
+vpt:parsed=4 would_break=0
+vscoq-language-server:parsed=46 would_break=0
+vue-jsoo:parsed=21 would_break=0
+vue-ppx:parsed=3 would_break=0
+wall:parsed=23 would_break=0
+wasm:parsed=0 would_break=0
+wasmer:parsed=7 would_break=0
+wasmtime:parsed=26 would_break=0
+wayland:parsed=36 would_break=0
+waylaunch:parsed=3 would_break=0
+wcwidth:parsed=4 would_break=0
+webauthn:parsed=5 would_break=0
+webbrowser:parsed=7 would_break=0
+webidl:parsed=0 would_break=0
+webmachine:parsed=16 would_break=0
+websocket:parsed=13 would_break=0
+websocketml:parsed=11 would_break=0
+webtest:parsed=12 would_break=0
+why3:parsed=534 would_break=0
+why3find:parsed=87 would_break=0
+wikitext:parsed=10 would_break=0
+win-error:parsed=7 would_break=0
+win-eventlog:parsed=7 would_break=0
+ws-server:parsed=3 would_break=0
+wtf8:parsed=3 would_break=0
+wtr:parsed=8 would_break=0
+wu-manber-fuzzy-search:parsed=12 would_break=0
+x509:parsed=30 would_break=0
+xapi-backtrace:parsed=2 would_break=0
+xapi-inventory:parsed=1 would_break=0
+xapi-rrd:parsed=11 would_break=0
+xapi-stdext-date:parsed=24 would_break=0
+xcursor:parsed=12 would_break=0
+xdg-basedir:parsed=3 would_break=0
+xedbindings:parsed=7 would_break=0
+xen-evtchn:parsed=5 would_break=0
+xen-gnt:parsed=5 would_break=0
+xenstore:parsed=33 would_break=0
+xenstore_transport:parsed=8 would_break=0
+xkbcommon:parsed=5 would_break=0
+xlsx2csv:parsed=7 would_break=0
+xmelly:parsed=3 would_break=0
+xml-light:parsed=14 would_break=0
+xmldiff:parsed=5 would_break=0
+xmlm:parsed=9 would_break=0
+xmlplaylist:parsed=2 would_break=0
+xtmpl:parsed=20 would_break=0
+yaml:parsed=27 would_break=0
+yocaml:parsed=175 would_break=0
+yocaml_cmark:parsed=74 would_break=0
+yojson:parsed=14 would_break=0
+yojson-bench:parsed=35 would_break=0
+yosqlite:parsed=3 would_break=0
+yurt:parsed=12 would_break=0
+yuscii:parsed=3 would_break=0
+yuujinchou:parsed=23 would_break=0
+z3:parsed=3 would_break=0
+z3_tptp:parsed=3 would_break=0
+zar:parsed=8 would_break=0
+zarith:parsed=19 would_break=0
+zarith-xen:parsed=15 would_break=0
+zarith_stubs_js:parsed=34 would_break=0
+zarr:parsed=51 would_break=0
+zdd:parsed=19 would_break=0
+zed:parsed=21 would_break=0
+zeit:parsed=20 would_break=0
+zelus:parsed=140 would_break=0
+zenon:parsed=73 would_break=0
+zenon_modulo:parsed=111 would_break=0
+zipc:parsed=12 would_break=0
+zlib:parsed=3 would_break=0
+zlist:parsed=3 would_break=0
+zmq:parsed=36 would_break=0
+zstandard:parsed=6 would_break=0
+zstd:parsed=5 would_break=0
+zxcvbn:parsed=4 would_break=0
