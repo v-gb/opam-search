@@ -588,35 +588,41 @@ rule token = parse
       { FLOAT (lit, Some modif) }
   | (float_literal | hex_float_literal | int_literal) identchar+ as invalid
       { error lexbuf (Invalid_literal invalid) }
-  | "\""
-      { let s, loc = wrap_string_lexer string lexbuf in
+  | (['A'-'Z'] | "" as u) "\""
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        let s, loc = wrap_string_lexer string lexbuf in
         STRING (s, loc, None) }
-  | "{" (delim_ext as raw_name) '|'
-      { let delim = validate_delim lexbuf raw_name in
+  | (['A'-'Z'] | "" as u) "{" (delim_ext as raw_name) '|'
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        let delim = validate_delim lexbuf raw_name in
         let s, loc = wrap_string_lexer (quoted_string delim) lexbuf in
         STRING (s, loc, Some delim)
        }
-  | "{%" (extattrident as raw_id) "|"
-      { let orig_loc = Location.curr lexbuf in
+  | (['A'-'Z'] | "" as u) "{%" (extattrident as raw_id) "|"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        let orig_loc = Location.curr lexbuf in
         let id = validate_ext lexbuf raw_id in
         let s, loc = wrap_string_lexer (quoted_string "") lexbuf in
         let idloc = compute_quoted_string_idloc orig_loc 2 id in
         QUOTED_STRING_EXPR (id, idloc, s, loc, Some "") }
-  | "{%" (extattrident as raw_id) blank+ (delim_ext as raw_delim) "|"
-      { let orig_loc = Location.curr lexbuf in
+  | (['A'-'Z'] | "" as u) "{%" (extattrident as raw_id) blank+ (delim_ext as raw_delim) "|"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        let orig_loc = Location.curr lexbuf in
         let id = validate_ext lexbuf raw_id in
         let delim = validate_delim lexbuf raw_delim in
         let s, loc = wrap_string_lexer (quoted_string delim) lexbuf in
         let idloc = compute_quoted_string_idloc orig_loc 2 id in
         QUOTED_STRING_EXPR (id, idloc, s, loc, Some delim) }
-  | "{%%" (extattrident as raw_id) "|"
-      { let orig_loc = Location.curr lexbuf in
+  | (['A'-'Z'] | "" as u) "{%%" (extattrident as raw_id) "|"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        let orig_loc = Location.curr lexbuf in
         let id = validate_ext lexbuf raw_id in
         let s, loc = wrap_string_lexer (quoted_string "") lexbuf in
         let idloc = compute_quoted_string_idloc orig_loc 3 id in
         QUOTED_STRING_ITEM (id, idloc, s, loc, Some "") }
-  | "{%%" (extattrident as raw_id) blank+ (delim_ext as raw_delim) "|"
-      { let orig_loc = Location.curr lexbuf in
+  | (['A'-'Z'] | "" as u) "{%%" (extattrident as raw_id) blank+ (delim_ext as raw_delim) "|"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        let orig_loc = Location.curr lexbuf in
         let id = validate_ext lexbuf raw_id in
         let delim = validate_delim lexbuf raw_delim in
         let s, loc = wrap_string_lexer (quoted_string delim) lexbuf in
