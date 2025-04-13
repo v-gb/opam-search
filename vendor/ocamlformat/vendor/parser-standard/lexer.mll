@@ -622,20 +622,26 @@ rule token = parse
         let s, loc = wrap_string_lexer (quoted_string delim) lexbuf in
         let idloc = compute_quoted_string_idloc orig_loc 3 id in
         QUOTED_STRING_ITEM (id, idloc, s, loc, Some delim) }
-  | "\'" newline "\'"
-      { update_loc lexbuf None 1 false 1;
+  | ((['a'-'z' 'A'-'Z'] | "") as u) "\'" newline "\'"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        update_loc lexbuf None 1 false 1;
         (* newline is ('\013'* '\010') *)
         CHAR '\n' }
-  | "\'" ([^ '\\' '\'' '\010' '\013'] as c) "\'"
-      { CHAR c }
-  | "\'\\" (['\\' '\'' '\"' 'n' 't' 'b' 'r' ' '] as c) "\'"
-      { CHAR (char_for_backslash c) }
-  | "\'\\" ['0'-'9'] ['0'-'9'] ['0'-'9'] "\'"
-      { CHAR(char_for_decimal_code lexbuf 2) }
-  | "\'\\" 'o' ['0'-'7'] ['0'-'7'] ['0'-'7'] "\'"
-      { CHAR(char_for_octal_code lexbuf 3) }
-  | "\'\\" 'x' ['0'-'9' 'a'-'f' 'A'-'F'] ['0'-'9' 'a'-'f' 'A'-'F'] "\'"
-      { CHAR(char_for_hexadecimal_code lexbuf 3) }
+  | ((['a'-'z' 'A'-'Z'] | "") as u) "\'" ([^ '\\' '\'' '\010' '\013'] as c) "\'"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        CHAR c }
+  | ((['a'-'z' 'A'-'Z'] | "") as u) "\'\\" (['\\' '\'' '\"' 'n' 't' 'b' 'r' ' '] as c) "\'"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        CHAR (char_for_backslash c) }
+  | ((['a'-'z' 'A'-'Z'] | "") as u) "\'\\" ['0'-'9'] ['0'-'9'] ['0'-'9'] "\'"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        CHAR(char_for_decimal_code lexbuf 2) }
+  | ((['a'-'z' 'A'-'Z'] | "") as u) "\'\\" 'o' ['0'-'7'] ['0'-'7'] ['0'-'7'] "\'"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        CHAR(char_for_octal_code lexbuf 3) }
+  | ((['a'-'z' 'A'-'Z'] | "") as u) "\'\\" 'x' ['0'-'9' 'a'-'f' 'A'-'F'] ['0'-'9' 'a'-'f' 'A'-'F'] "\'"
+      { if u <> "" then (bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !bad);
+        CHAR(char_for_hexadecimal_code lexbuf 3) }
   | "\'" ("\\" [^ '#'] as esc)
       { error lexbuf (Illegal_escape (esc, None)) }
   | "\'\'"
