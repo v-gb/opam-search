@@ -66,7 +66,7 @@ let () =
                       start_of_line + if start_of_line = 0 then 0 else 1
                     in
                     let end_of_line =
-                      let i = index_default input bstart.pos_cnum '\n' in
+                      let i = index_default input bend.pos_cnum '\n' in
                       index_default input (min (String.length input) (i + 1)) '\n'
                     in
                     (start_of_line, bstart.pos_cnum, bend.pos_cnum, end_of_line))

@@ -11,9 +11,11 @@
    sexplib
    unix
    xdg)
+ (modules opam_search)
  (preprocess (pps ppx_sexp_conv ppx_compare ppx_sexp_value ppx_hash ppx_let ppx_partial ppx_pipebang)))
 
 (executable
  (name syntax_grep)
  (public_name syntax-grep)
- (libraries base ocamlformat_parser_standard))
+ (libraries base ocamlformat_parser_standard)
+ (modules syntax_grep))
