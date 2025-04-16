@@ -35,78 +35,108 @@ let () =
   let stats_found = ref 0 in
   let stats_parsed = ref 0 in
   let stats_would_break = ref 0 in
+  let separated = ref 0 in
+  let unseparated = ref 0 in
+  let unseparated_expect = ref 0 in
+  let lines = ref 0 in
   let first = ref true in
   List.iter
     (fun fname ->
       P.Lexer.init ();
       let input = read_file fname in
+      lines := !lines + List.length (Base.String.split_lines input);
       let lexbuf = Lexing.from_string input in
       let rec z () =
         match P.Lexer.token lexbuf with
         | exception e -> Error e
         | EOF -> Ok ()
+        | STRING _ ->
+            (let p = lexbuf.lex_start_p in
+             if
+               p.pos_cnum > 0
+               &&
+               match input.[p.pos_cnum - 1] with
+               | 'a' .. 'z' | 'A' .. 'Z' | '_' -> true
+               | _ -> false
+             then
+               if
+                 p.pos_cnum >= String.length "%%expect"
+                 && subi input (p.pos_cnum - String.length "%%expect") p.pos_cnum
+                    = "%%expect"
+               then incr unseparated_expect
+               else (
+                 P.Lexer.bad := (lexbuf.lex_start_p, lexbuf.lex_curr_p) :: !P.Lexer.bad;
+                 incr unseparated)
+             else incr separated);
+            z ()
         | _ -> z ()
       in
       incr stats_found;
       match z () with
       | Error _ -> () (* people using custom syntaxes, like cppo *)
-      | Ok () -> (
-          incr stats_parsed;
-          match List.rev !P.Lexer.bad with
-          | [] -> ()
-          | bads ->
-              incr stats_would_break;
-              ( ListLabels.map bads
-                  ~f:(fun ((bstart : Lexing.position), (bend : Lexing.position)) ->
-                    let start_of_line =
-                      let i = rindex_default input bstart.pos_cnum '\n' in
-                      rindex_default input (max 0 (i - 1)) '\n'
-                    in
-                    let start_of_line =
-                      start_of_line + if start_of_line = 0 then 0 else 1
-                    in
-                    let end_of_line =
-                      let i = index_default input bend.pos_cnum '\n' in
-                      index_default input (min (String.length input) (i + 1)) '\n'
-                    in
-                    (start_of_line, bstart.pos_cnum, bend.pos_cnum, end_of_line))
-              |> fun l ->
-                let rec join l1 (cs, matches, ce) l2 =
-                  match l2 with
-                  | (ns, nm1, nm2, ne) :: tl2 ->
-                      if ce >= ns
-                      then join l1 (cs, (nm1, nm2) :: matches, ne) tl2
-                      else
-                        join
-                          ((cs, List.rev matches, ce) :: l1)
-                          (ns, [ (nm1, nm2) ], ne)
-                          tl2
-                  | [] -> List.rev ((cs, List.rev matches, ce) :: l1)
-                in
-                match l with
-                | [] -> []
-                | (ns, nm1, nm2, ne) :: tl -> join [] (ns, [ (nm1, nm2) ], ne) tl )
-              |> fun l ->
-              List.iter
-                (fun (cs, matches, ce) ->
-                  if not !first then print_string "---\n";
-                  let b = Buffer.create 14 in
-                  let from = ref cs in
-                  List.iter
-                    (fun (m1, m2) ->
-                      Buffer.add_string b (subi input !from m1);
-                      Buffer.add_string b "[31;1m";
-                      Buffer.add_string b (subi input m1 m2);
-                      Buffer.add_string b "[39;22m";
-                      from := m2)
-                    matches;
-                  Buffer.add_string b (subi input !from ce);
-                  let s = Buffer.contents b in
-                  Base.String.split_lines s
-                  |> List.map (fun x -> fname ^ ":" ^ x)
-                  |> Base.String.concat_lines
-                  |> print_string;
-                  first := false)
-                l))
+      | Ok () ->
+          if Option.is_none (Sys.getenv_opt "Z")
+          then ()
+          else (
+            incr stats_parsed;
+            match List.rev !P.Lexer.bad with
+            | [] -> ()
+            | bads ->
+                incr stats_would_break;
+                ( ListLabels.map bads
+                    ~f:(fun ((bstart : Lexing.position), (bend : Lexing.position)) ->
+                      let start_of_line =
+                        let i = rindex_default input bstart.pos_cnum '\n' in
+                        rindex_default input (max 0 (i - 1)) '\n'
+                      in
+                      let start_of_line =
+                        start_of_line + if start_of_line = 0 then 0 else 1
+                      in
+                      let end_of_line =
+                        let i = index_default input bend.pos_cnum '\n' in
+                        index_default input (min (String.length input) (i + 1)) '\n'
+                      in
+                      (start_of_line, bstart.pos_cnum, bend.pos_cnum, end_of_line))
+                |> fun l ->
+                  let rec join l1 (cs, matches, ce) l2 =
+                    match l2 with
+                    | (ns, nm1, nm2, ne) :: tl2 ->
+                        if ce >= ns
+                        then join l1 (cs, (nm1, nm2) :: matches, ne) tl2
+                        else
+                          join
+                            ((cs, List.rev matches, ce) :: l1)
+                            (ns, [ (nm1, nm2) ], ne)
+                            tl2
+                    | [] -> List.rev ((cs, List.rev matches, ce) :: l1)
+                  in
+                  match l with
+                  | [] -> []
+                  | (ns, nm1, nm2, ne) :: tl -> join [] (ns, [ (nm1, nm2) ], ne) tl )
+                |> fun l ->
+                List.iter
+                  (fun (cs, matches, ce) ->
+                    if not !first then print_string "---\n";
+                    let b = Buffer.create 14 in
+                    let from = ref cs in
+                    List.iter
+                      (fun (m1, m2) ->
+                        Buffer.add_string b (subi input !from m1);
+                        Buffer.add_string b "[31;1m";
+                        Buffer.add_string b (subi input m1 m2);
+                        Buffer.add_string b "[39;22m";
+                        from := m2)
+                      matches;
+                    Buffer.add_string b (subi input !from ce);
+                    let s = Buffer.contents b in
+                    Base.String.split_lines s
+                    |> List.map (fun x -> fname ^ ":" ^ x)
+                    |> Base.String.concat_lines
+                    |> print_string;
+                    first := false)
+                  l))
     fnames;
-  Printf.printf "parsed=%d would_break=%d\n" !stats_parsed !stats_would_break
+  Printf.printf "%d,%d,%d,%d,%d\n" !separated !unseparated !unseparated_expect
+    (List.length fnames) !lines;
+  if false
+  then Printf.printf "parsed=%d would_break=%d\n" !stats_parsed !stats_would_break

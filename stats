@@ -1,0 +1,6 @@
+$ cat result | cut -d : -f 2- | awk -vFS=, '{ good+=$1; bad+=$2; bad_expect+=$3; nfiles+=$4; nlines+=$5 } END { print "good=" good, "bad=" bad, "bad_expect=" bad_expect, "nfiles=" nfiles, "nlines=" nlines, "good/bad=" good/bad, "nfiles/bad=" nfiles/bad, "nlines/bad=" nlines/bad, "nlines/good=" nlines/good, "nfiles/good=" nfiles/good, "nlines/nfiles=" nlines/nfiles }'
+good=3310774 bad=6343 bad_expect=2631 nfiles=135625 nlines=29392434 good/bad=521.957 nfiles/bad=21.3818 nlines/bad=4633.84 nlines/good=8.87781 nfiles/good=0.0409647 nlines/nfiles=216.718
+
+$ cat result | cut -d : -f 2- | awk -vFS=, '$2 != 0 { good+=$1; bad+=$2; bad_expect+=$3; nfiles+=$4; nlines+=$5 } END { print "good=" good, "bad=" bad, "bad_expect=" bad_expect, "nfiles=" nfiles, "nlines=" nlines, "good/bad=" good/bad, "nfiles/bad=" nfiles/bad, "nlines/bad=" nlines/bad, "nlines/good=" nlines/good, "nfiles/good=" nfiles/good, "nlines/nfiles=" nlines/nfiles }'
+good=701244 bad=6343 bad_expect=2244 nfiles=27595 nlines=7764443 good/bad=110.554 nfiles/bad=4.35047 nlines/bad=1224.1 nlines/good=11.0724 nfiles/good=0.0393515 nlines/nfiles=281.371
+
