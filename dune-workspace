@@ -1,0 +1,12 @@
+(lang dune 3.17)
+
+(lock_dir
+ (repositories opam-pinned overlay-pinned))
+
+(repository
+ (name opam-pinned)
+  (url "git+https://github.com/ocaml/opam-repository.git#fa0e8c74bf53d0b4373e7cf144e08b669d2d1970"))
+
+(repository
+ (name overlay-pinned)
+  (url "git+https://github.com/ocaml-dune/opam-overlays.git#a538aecc5f1c4a775c41ea156d96bfd173caa43b"))

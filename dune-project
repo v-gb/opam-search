@@ -27,4 +27,6 @@
    domainslib
    ppx_partial
    xdg
+   ;; from vendor/ocamlformat/vendor/*/dune
+   menhirLib
  ))
