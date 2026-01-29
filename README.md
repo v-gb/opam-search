@@ -20,9 +20,14 @@ Concretely, a use might look like this:
 opam-search -x 1 -- grep -r --include '*.ml' -F '(*)'
 ```
 
-A second executable, syntax-grep, is provided. It can be used as argument for
-opam-search.  It does nothing useful by default, but the way to use it is to modify
-vendor/ocamlformat/vendor/parser-standard/lexer.mll to detect the situations you want
-(see other branches in the repo for examples). An example of use is finding what would
-break if `#` started a line comment (without the actual lexer, you'd find "#" in string
-literals, or comments, or method calls, etc).
+(`-x 1` to ignore grep's exit code of 1 in the absence of matches, `grep r --include
+'*.ml'` to grep all .ml files in the repository, `-F '(*)'` to grep for the literal
+string `(*)`, which could be an interesting thing to look at).
+
+For the specific purpose of grepping ocaml syntax in a structured way, the repository
+contains syntax-grep. This executable does nothing useful by default, but the intended
+use is by modifying vendor/ocamlformat/vendor/parser-standard/lexer.mll to detect the
+situations you want (see other branches in the repo for examples), and then use it as
+an argument to opam-search. An example of use is finding what would break if `#`
+started a line comment (without the actual lexer, you'd find "#" in string literals, or
+comments, or method calls, etc).
