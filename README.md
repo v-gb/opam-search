@@ -20,9 +20,24 @@ Concretely, a use might look like this:
 opam-search -x 1 -- grep -r --include '*.ml' -F '(*)'
 ```
 
-(`-x 1` to ignore grep's exit code of 1 in the absence of matches, `grep r --include
+(`-x 1` to ignore grep's exit code of 1 in the absence of matches, `grep -r --include
 '*.ml'` to grep all .ml files in the repository, `-F '(*)'` to grep for the literal
 string `(*)`, which could be an interesting thing to look at).
+
+Note that these won't work:
+
+```
+opam-search -- grep foo
+# no file provided, so greps stdin, which is empty.
+# You should provide filenames, either implicitly using -r, or explicitly.
+# (and also opam-search -x 1)
+
+opam-search -- rg foo
+# no file provided, so rg uses heuristics for what to grep, which is likely
+# to omit all files here (because there is no git repo).
+# You may want to use opam-search -- rg foo . (and also opam-search -x 1)
+```
+
 
 For the specific purpose of grepping ocaml syntax in a structured way, the repository
 contains syntax-grep. This executable does nothing useful by default, but the intended

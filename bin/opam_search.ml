@@ -392,8 +392,9 @@ let cmd =
       and argv =
         flag "--" escape
           ~doc:
-            "ARGS The command to run on all source files, for instance grep -R foo. The \
-             working directory of the command will be the root of the package."
+            "ARGS The command to run, for instance grep -R foo. The command will not be \
+             provided any argument, instead it will be run at in directory containing \
+             the package's source code."
       and exit_codes =
         flag "-x" (listed int)
           ~doc:
