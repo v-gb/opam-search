@@ -23,9 +23,9 @@ let compute_env env_changes =
     let env_filtered =
       Unix.environment ()
       |> Array.filter_map ~f:(fun kv ->
-             match String.lsplit2 kv ~on:'=' with
-             | Some (k, _) when Map.mem env_changes_map k -> None
-             | _ -> Some kv)
+          match String.lsplit2 kv ~on:'=' with
+          | Some (k, _) when Map.mem env_changes_map k -> None
+          | _ -> Some kv)
     in
     Array.append env_filtered
       (Array.of_list
@@ -204,19 +204,28 @@ let run ~cache_uncompressed ~packages ~src f =
     match packages with
     | _ :: _ -> packages
     | [] ->
-       read_file_or_cache "/tmp/opam-cache-packages" (fun f ->
-           Printf.printf "computing packages coinstallable with ocaml 5.4, which can take minutes... (but will be cached once done). You could specify specific packages like \"-p cmdliner -p dream\" if you want to search in something else.\n%!";
+        read_file_or_cache "/tmp/opam-cache-packages" (fun f ->
+            Printf.printf
+              "computing packages coinstallable with ocaml 5.4, which can take \
+               minutes... (but will be cached once done). You could specify specific \
+               packages like \"-p cmdliner -p dream\" if you want to search in something \
+               else.\n\
+               %!";
             command_exn
               ("opam list -a --short --coinstallable-with=ocaml.5.4 | LANG=C sort > "
-              ^ Sys.quote f ^ ".tmp && mv " ^ Sys.quote f ^ ".tmp " ^ Sys.quote f))
+              ^ Sys.quote f
+              ^ ".tmp && mv "
+              ^ Sys.quote f
+              ^ ".tmp "
+              ^ Sys.quote f))
         |> String.split_lines
         |> List.filter ~f:(function
-             | "llvm" when not cache_uncompressed ->
-                 false
-                 (* This one package brings search time from 6s to 16s, because
+          | "llvm" when not cache_uncompressed ->
+              false
+              (* This one package brings search time from 6s to 16s, because
                          it's compressed with xz, which is dog slow. It's fine if we
                          cache the decompression, but seems unreasonable otherwise. *)
-             | _ -> true)
+          | _ -> true)
   in
   (* let packages = List.take packages 500 in *)
   let digest = Md5.to_hex (Md5.digest_string (String.concat_lines packages)) in
@@ -225,13 +234,13 @@ let run ~cache_uncompressed ~packages ~src f =
       match packages with
       | [] -> []
       | _ :: _ ->
-         read_file_or_cache ("/tmp/opam-cache-show-" ^ digest) (fun f ->
-             command_exn
-               ("opam show "
+          read_file_or_cache ("/tmp/opam-cache-show-" ^ digest) (fun f ->
+              command_exn
+                ("opam show "
                 ^ Sys.concat_quoted packages
                 ^ " -f name,dev-repo,url.checksum --raw > "
                 ^ Sys.quote f))
-         |> String.split_lines
+          |> String.split_lines
     in
     let name = ref None in
     let key = ref None in
@@ -285,9 +294,9 @@ let run ~cache_uncompressed ~packages ~src f =
         let seen = Hash_set.create (module String_pair) in
         package_infos
         |> List.filter_map ~f:(fun (name, md5, _) ->
-               match Hash_set.strict_add seen md5 with
-               | Error _ -> None
-               | Ok () -> Some (md5, name))
+            match Hash_set.strict_add seen md5 with
+            | Error _ -> None
+            | Ok () -> Some (md5, name))
         |> Array.of_list
       in
       let string_of_exn name e =
@@ -389,8 +398,8 @@ let cmd =
         match argv with
         | None | Some [] ->
             failwith
-              "the command to execute is required. opam-search -x 1 -- grep -r --include '*.ml' the-pattern, for \
-               instance"
+              "the command to execute is required. opam-search -x 1 -- grep -r --include \
+               '*.ml' the-pattern, for instance"
         | Some argv ->
             run ~packages ~src ~cache_uncompressed:true (fun ~name dir ->
                 let first_stage =

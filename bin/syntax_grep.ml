@@ -29,7 +29,7 @@ let () =
               |> String.split_on_char '\n'
               |> List.filter (function "" -> false | _ -> true)
               |> List.map (fun s ->
-                     Option.value (Base.String.chop_prefix ~prefix:"./" s) ~default:s)
+                  Option.value (Base.String.chop_prefix ~prefix:"./" s) ~default:s)
           | n -> exit n)
   in
   let stats_found = ref 0 in
