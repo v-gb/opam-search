@@ -2,6 +2,11 @@ module ZUnix = Unix
 open Core
 module Unix = ZUnix
 
+let command_exn cmd =
+  match Stdlib.Sys.command cmd with
+  | 0 -> ()
+  | n -> raise_s [%sexp "command exited with code", (n : int), (cmd : string)]
+
 module Process_res = struct
   type (_, _) t =
     | Raise : ('a, 'a) t
@@ -75,7 +80,7 @@ let run_process ?env ?cwd process_res argv =
       In_channel.input_all stdout)
 
 let read_file_or_cache fname f =
-  if not (Sys_unix.file_exists_exn fname) then f fname;
+  if not (Stdlib.Sys.file_exists fname) then f fname;
   In_channel.read_all fname
 
 let concurrently a f =
@@ -114,15 +119,15 @@ let concurrently a f =
   drain 0 (Map.empty (module Int)) ndoms
 
 let with_tmpdir f =
-  let tmp_fname = Filename_unix.temp_dir "opam-search" "" in
+  let tmp_fname = Stdlib.Filename.temp_dir "opam-search" "" in
   Exn.protect
-    ~finally:(fun () -> Sys_unix.command_exn ("rm -rf -- " ^ Sys.quote tmp_fname))
+    ~finally:(fun () -> command_exn ("rm -rf -- " ^ Sys.quote tmp_fname))
     ~f:(fun () -> f tmp_fname)
 
-let mkdir_p dir = Sys_unix.command_exn ("mkdir -p -- " ^ Sys.quote dir)
+let mkdir_p dir = command_exn ("mkdir -p -- " ^ Sys.quote dir)
 
 let curl ~dst_is_cache ~dst url =
-  if dst_is_cache && Sys_unix.file_exists_exn dst
+  if dst_is_cache && Stdlib.Sys.file_exists dst
   then true
   else (
     mkdir_p (Filename.dirname dst);
@@ -161,7 +166,7 @@ let curl_untar ~cache url =
   in
   if
     match cache with
-    | `Cache (_, `Uncompressed) when Sys_unix.file_exists_exn dst_uncompressed -> true
+    | `Cache (_, `Uncompressed) when Stdlib.Sys.file_exists dst_uncompressed -> true
     | _ ->
         curl
           ~dst_is_cache:(match cache with `No_cache _ -> false | `Cache _ -> true)
@@ -200,7 +205,7 @@ let run ~cache_uncompressed ~packages ~src f =
     | _ :: _ -> packages
     | [] ->
         read_file_or_cache "/tmp/opam-cache-packages" (fun f ->
-            Sys_unix.command_exn
+            command_exn
               ("opam list -a --short --coinstallable-with=ocaml.5.2 | LANG=C sort > "
               ^ Sys.quote f))
         |> String.split_lines
@@ -216,7 +221,7 @@ let run ~cache_uncompressed ~packages ~src f =
   let digest = Md5.to_hex (Md5.digest_string (String.concat_lines packages)) in
   let package_infos =
     read_file_or_cache ("/tmp/opam-cache-show-" ^ digest) (fun f ->
-        Sys_unix.command_exn
+        command_exn
           ("opam show "
           ^ Sys.concat_quoted packages
           ^ " -f name,dev-repo,url.checksum --raw > "
@@ -399,5 +404,63 @@ let cmd =
                   | Error (WEXITED n, _) when List.mem exit_codes n ~equal:( = ) -> ()
                   | Error (_, sexp) -> raise_s sexp))]
 
-let main () = Command_unix.run ~version:"%%VERSION%%" cmd
+let main () =
+  (* maybe go back to core_unix once https://github.com/janestreet/core_unix/issues/18
+     has actually landed somewhere useful *)
+  let module Command_unix = Command.Private.For_unix (struct
+    module Version_util = struct
+      module Time = Unit
+
+      let version_list = []
+      let reprint_build_info _ = ""
+    end
+
+    module Pid = struct
+      type t = int
+
+      let to_int = Fn.id
+    end
+
+    module Signal = struct
+      type t
+    end
+
+    module Thread = struct
+      type t
+
+      let create ~on_uncaught_exn:_ _ _ = assert false
+      let join _ = assert false
+    end
+
+    module Unix = struct
+      module File_descr = struct
+        type t
+      end
+
+      let getpid = Unix.getpid
+      let close ?restart:_ _ = assert false
+      let in_channel_of_descr _ = assert false
+      let putenv ~key:_ ~data:_ = ()
+      let unsetenv _ = ()
+      let unsafe_getenv = Sys.getenv
+      let exec ~prog:_ ~argv:_ ?use_path:_ ?env:_ () = assert false
+
+      module Process_info = struct
+        type t =
+          { pid : Pid.t
+          ; stdin : File_descr.t
+          ; stdout : File_descr.t
+          ; stderr : File_descr.t
+          }
+      end
+
+      let create_process_env ?working_dir:_ ?prog_search_path:_ ?argv0:_ ~prog:_ ~args:_
+          ~env:_ () =
+        assert false
+
+      let wait _ = assert false
+    end
+  end) in
+  Command_unix.run ~version:"%%VERSION%%" cmd
+
 let () = main ()

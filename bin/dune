@@ -3,10 +3,9 @@
  (public_name opam-search)
  (libraries
    base
+   core
    core.command
    core.filename_base
-   core_unix.command_unix
-   core_unix.filename_unix
    domainslib
    sexplib
    unix

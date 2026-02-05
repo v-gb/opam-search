@@ -13,10 +13,10 @@ depends: [
   "dune" {>= "3.15"}
   "base"
   "core"
-  "core_unix"
   "domainslib"
   "ppx_partial"
   "xdg"
+  "menhir"
   "menhirLib"
   "odoc" {with-doc}
 ]

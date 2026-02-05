@@ -23,7 +23,6 @@
    ;;
    base
    core
-   core_unix
    domainslib
    ppx_partial
    xdg
