@@ -204,10 +204,11 @@ let run ~cache_uncompressed ~packages ~src f =
     match packages with
     | _ :: _ -> packages
     | [] ->
-        read_file_or_cache "/tmp/opam-cache-packages" (fun f ->
+       read_file_or_cache "/tmp/opam-cache-packages" (fun f ->
+           Printf.printf "computing packages coinstallable with ocaml 5.4, which can take minutes... (but will be cached once done). You could specify specific packages like \"-p cmdliner -p dream\" if you want to search in something else.\n%!";
             command_exn
-              ("opam list -a --short --coinstallable-with=ocaml.5.2 | LANG=C sort > "
-              ^ Sys.quote f))
+              ("opam list -a --short --coinstallable-with=ocaml.5.4 | LANG=C sort > "
+              ^ Sys.quote f ^ ".tmp && mv " ^ Sys.quote f ^ ".tmp " ^ Sys.quote f))
         |> String.split_lines
         |> List.filter ~f:(function
              | "llvm" when not cache_uncompressed ->
@@ -220,14 +221,18 @@ let run ~cache_uncompressed ~packages ~src f =
   (* let packages = List.take packages 500 in *)
   let digest = Md5.to_hex (Md5.digest_string (String.concat_lines packages)) in
   let package_infos =
-    read_file_or_cache ("/tmp/opam-cache-show-" ^ digest) (fun f ->
-        command_exn
-          ("opam show "
-          ^ Sys.concat_quoted packages
-          ^ " -f name,dev-repo,url.checksum --raw > "
-          ^ Sys.quote f))
-    |> String.split_lines
-    |> fun l ->
+    let l =
+      match packages with
+      | [] -> []
+      | _ :: _ ->
+         read_file_or_cache ("/tmp/opam-cache-show-" ^ digest) (fun f ->
+             command_exn
+               ("opam show "
+                ^ Sys.concat_quoted packages
+                ^ " -f name,dev-repo,url.checksum --raw > "
+                ^ Sys.quote f))
+         |> String.split_lines
+    in
     let name = ref None in
     let key = ref None in
     let current_checksum = ref None in
@@ -362,7 +367,7 @@ let cmd =
         flag "-p" (listed string)
           ~doc:
             "PACKAGE which opam packages to run on. If not specified, run on all \
-             packages compatible with ocaml 5.2."
+             packages compatible with ocaml 5.4."
       and argv =
         flag "--" escape
           ~doc:
@@ -384,7 +389,7 @@ let cmd =
         match argv with
         | None | Some [] ->
             failwith
-              "the command to execute is required. opam-search -- rg -g '*.ml', for \
+              "the command to execute is required. opam-search -x 1 -- grep -r --include '*.ml' the-pattern, for \
                instance"
         | Some argv ->
             run ~packages ~src ~cache_uncompressed:true (fun ~name dir ->
