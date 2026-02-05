@@ -1,4 +1,4 @@
-(version 3.18.0)
+(version 3.21.0)
 
 (build
  (all_platforms
@@ -11,11 +11,11 @@
 
 (depends
  (all_platforms
-  (dune ocaml)))
+  (dune ocaml base-unix csexp)))
 
 (source
  (fetch
   (url
-   https://github.com/ocaml/dune/releases/download/3.18.0/dune-3.18.0.tbz)
+   https://github.com/ocaml/dune/releases/download/3.21.0/dune-3.21.0.tbz)
   (checksum
-   sha256=b7450daeadc3786f6d229f1b8be98a3de1d8d7017446d8c43a3940aa37db2ffb)))
+   sha256=e76d4d89368a0a70025193aeaf4f7c5b54031dba3f59bf9d2af1971dc0eceddd)))

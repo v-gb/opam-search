@@ -1,4 +1,4 @@
-(version 0.5.1)
+(version 0.5.2)
 
 (build
  (all_platforms
@@ -14,6 +14,6 @@
 (source
  (fetch
   (url
-   https://github.com/ocaml-multicore/domainslib/releases/download/0.5.1/domainslib-0.5.1.tbz)
+   https://github.com/ocaml-multicore/domainslib/releases/download/0.5.2/domainslib-0.5.2.tbz)
   (checksum
-   sha256=28c25dfba5d999449736c5d6fca5e0be716d818f6f383796def84befb9835d01)))
+   sha256=a720ece2cb41b2a591ad1a44a2db9ecd5573e8b7b5112e8d46d0f275f9af1caf)))
