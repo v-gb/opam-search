@@ -198,8 +198,9 @@ let curl_untar ~cache url =
     Some dst_uncompressed)
   else None
 
-let run ~cache_uncompressed ~packages ~src f =
+let run ~warn ~cache_uncompressed ~packages ~src f =
   let xdg = Xdg.create ~env:Sys.getenv () in
+  let specified_packages = not (List.is_empty packages) in
   let packages =
     match packages with
     | _ :: _ -> packages
@@ -251,7 +252,18 @@ let run ~cache_uncompressed ~packages ~src f =
       (match (!name, !current_checksum, !dev_repo) with
       | Some name, Some checksum, Some dev_repo ->
           Queue.enqueue q (name, checksum, dev_repo)
-      | _ -> ());
+      | _ ->
+          Option.iter !name ~f:(fun name ->
+              if specified_packages
+              then
+                warn
+                  (Printf.sprintf "skipping over %s (due to opam not returning %s)\n" name
+                     ([ ("checksum", Option.is_some !current_checksum)
+                      ; ("dev-repo url", Option.is_some !dev_repo)
+                      ]
+                     |> List.filter_map ~f:(fun (name, b) ->
+                         if b then None else Some name)
+                     |> String.concat ~sep:", "))));
       name := None;
       current_checksum := None;
       dev_repo := None
@@ -393,7 +405,7 @@ let cmd =
             "by default, the name of the package is added in front of lines of output. \
              This option disables the behavior. Instead, the command can consult the \
              PACKAGE env var to clarify what package the output is from."
-      in
+      and quiet = flag "-q" no_arg ~doc:"silence warnings" in
       fun () ->
         match argv with
         | None | Some [] ->
@@ -401,7 +413,8 @@ let cmd =
               "the command to execute is required. opam-search -x 1 -- grep -r --include \
                '*.ml' the-pattern, for instance"
         | Some argv ->
-            run ~packages ~src ~cache_uncompressed:true (fun ~name dir ->
+            let warn s = if not quiet then Printf.eprintf "Info: %s%!" s in
+            run ~warn ~packages ~src ~cache_uncompressed:true (fun ~name dir ->
                 let first_stage =
                   run_process ~env:[ ("PACKAGE", Some name) ] Detailed ~cwd:dir argv
                 in
